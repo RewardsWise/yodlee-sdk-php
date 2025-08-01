@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UserDetail Class Doc Comment
@@ -58,11 +58,11 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\UserResponsePreferences',
-        'address' => '\OpenAPI\Client\Model\UserAddress',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponsePreferences',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress',
         'phone_number' => 'string',
         'login_name' => 'string',
-        'name' => '\OpenAPI\Client\Model\Name',
+        'name' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Name',
         'id' => 'int',
         'role_type' => 'string',
         'email' => 'string',
@@ -371,7 +371,7 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\UserResponsePreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponsePreferences|null
      */
     public function getPreferences()
     {
@@ -381,7 +381,7 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\UserResponsePreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponsePreferences|null $preferences preferences
      *
      * @return self
      */
@@ -398,7 +398,7 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\UserAddress|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress|null
      */
     public function getAddress()
     {
@@ -408,7 +408,7 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\UserAddress|null $address address
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress|null $address address
      *
      * @return self
      */
@@ -479,7 +479,7 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\Name|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null
      */
     public function getName()
     {
@@ -489,7 +489,7 @@ class UserDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\Name|null $name name
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null $name name
      *
      * @return self
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerifyAccountApi Class Doc Comment
@@ -132,12 +132,12 @@ class VerifyAccountApi
      * Verify Accounts Using Transactions
      *
      * @param  string $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateAccountVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VerifyAccountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function initiateAccountVerification($provider_account_id, $verification_param, string $contentType = self::contentTypes['initiateAccountVerification'][0])
     {
@@ -151,12 +151,12 @@ class VerifyAccountApi
      * Verify Accounts Using Transactions
      *
      * @param  string $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateAccountVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VerifyAccountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function initiateAccountVerificationWithHttpInfo($provider_account_id, $verification_param, string $contentType = self::contentTypes['initiateAccountVerification'][0])
     {
@@ -188,13 +188,13 @@ class VerifyAccountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\VerifyAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -216,7 +216,7 @@ class VerifyAccountApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\VerifyAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse',
                 $request,
                 $response,
             );
@@ -225,7 +225,7 @@ class VerifyAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VerifyAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -233,7 +233,7 @@ class VerifyAccountApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -251,7 +251,7 @@ class VerifyAccountApi
      * Verify Accounts Using Transactions
      *
      * @param  string $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateAccountVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class VerifyAccountApi
      * Verify Accounts Using Transactions
      *
      * @param  string $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateAccountVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class VerifyAccountApi
      */
     public function initiateAccountVerificationAsyncWithHttpInfo($provider_account_id, $verification_param, string $contentType = self::contentTypes['initiateAccountVerification'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VerifyAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse';
         $request = $this->initiateAccountVerificationRequest($provider_account_id, $verification_param, $contentType);
 
         return $this->client
@@ -324,7 +324,7 @@ class VerifyAccountApi
      * Create request for operation 'initiateAccountVerification'
      *
      * @param  string $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest $verification_param verificationParam (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateAccountVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

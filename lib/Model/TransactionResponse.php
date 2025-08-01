@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionResponse Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transaction' => '\OpenAPI\Client\Model\TransactionWithDateTime[]'
+        'transaction' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionWithDateTime[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class TransactionResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets transaction
      *
-     * @return \OpenAPI\Client\Model\TransactionWithDateTime[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionWithDateTime[]|null
      */
     public function getTransaction()
     {
@@ -303,7 +303,7 @@ class TransactionResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets transaction
      *
-     * @param \OpenAPI\Client\Model\TransactionWithDateTime[]|null $transaction transaction
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionWithDateTime[]|null $transaction transaction
      *
      * @return self
      */

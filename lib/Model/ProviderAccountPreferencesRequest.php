@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderAccountPreferencesRequest Class Doc Comment
@@ -58,7 +58,7 @@ class ProviderAccountPreferencesRequest implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\ProviderAccountPreferences'
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ProviderAccountPreferencesRequest implements ModelInterface, ArrayAccess, 
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\ProviderAccountPreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences|null
      */
     public function getPreferences()
     {
@@ -303,7 +303,7 @@ class ProviderAccountPreferencesRequest implements ModelInterface, ArrayAccess, 
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\ProviderAccountPreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences|null $preferences preferences
      *
      * @return self
      */

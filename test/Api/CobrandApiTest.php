@@ -26,11 +26,11 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client\Test\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Test\Api;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use \RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**

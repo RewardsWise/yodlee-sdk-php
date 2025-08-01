@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionCategorizationRuleResponse Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionCategorizationRuleResponse implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'txn_rules' => '\OpenAPI\Client\Model\TransactionCategorizationRule[]'
+        'txn_rules' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class TransactionCategorizationRuleResponse implements ModelInterface, ArrayAcce
     /**
      * Gets txn_rules
      *
-     * @return \OpenAPI\Client\Model\TransactionCategorizationRule[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]|null
      */
     public function getTxnRules()
     {
@@ -303,7 +303,7 @@ class TransactionCategorizationRuleResponse implements ModelInterface, ArrayAcce
     /**
      * Sets txn_rules
      *
-     * @param \OpenAPI\Client\Model\TransactionCategorizationRule[]|null $txn_rules txn_rules
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]|null $txn_rules txn_rules
      *
      * @return self
      */

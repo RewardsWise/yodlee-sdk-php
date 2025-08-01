@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationHolderProfile Class Doc Comment
@@ -59,11 +59,11 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'account_id' => 'int',
-        'address' => '\OpenAPI\Client\Model\AbstractAddress[]',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber[]',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AbstractAddress[]',
+        'phone_number' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\PhoneNumber[]',
         'provider_account_id' => 'int',
-        'holder' => '\OpenAPI\Client\Model\VerificationHolder[]',
-        'email' => '\OpenAPI\Client\Model\Email[]'
+        'holder' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationHolder[]',
+        'email' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Email[]'
     ];
 
     /**
@@ -355,7 +355,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\AbstractAddress[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AbstractAddress[]|null
      */
     public function getAddress()
     {
@@ -365,7 +365,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\AbstractAddress[]|null $address The account holder's address available at the profile and account levels
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AbstractAddress[]|null $address The account holder's address available at the profile and account levels
      *
      * @return self
      */
@@ -382,7 +382,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PhoneNumber[]|null
      */
     public function getPhoneNumber()
     {
@@ -392,7 +392,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber[]|null $phone_number The account holder's phone number available at the profile and account levels
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\PhoneNumber[]|null $phone_number The account holder's phone number available at the profile and account levels
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets holder
      *
-     * @return \OpenAPI\Client\Model\VerificationHolder[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationHolder[]|null
      */
     public function getHolder()
     {
@@ -446,7 +446,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets holder
      *
-     * @param \OpenAPI\Client\Model\VerificationHolder[]|null $holder The holder entity is account-specific and captures the ownership status and the name details of the user
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationHolder[]|null $holder The holder entity is account-specific and captures the ownership status and the name details of the user
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets email
      *
-     * @return \OpenAPI\Client\Model\Email[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Email[]|null
      */
     public function getEmail()
     {
@@ -473,7 +473,7 @@ class VerificationHolderProfile implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets email
      *
-     * @param \OpenAPI\Client\Model\Email[]|null $email The account holder's email ID available at the profile and account levels
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Email[]|null $email The account holder's email ID available at the profile and account levels
      *
      * @return self
      */

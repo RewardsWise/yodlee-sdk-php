@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsEventResponse Class Doc Comment
@@ -58,7 +58,7 @@ class DataExtractsEventResponse implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event' => '\OpenAPI\Client\Model\DataExtractsEvent'
+        'event' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEvent'
     ];
 
     /**
@@ -293,7 +293,7 @@ class DataExtractsEventResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets event
      *
-     * @return \OpenAPI\Client\Model\DataExtractsEvent|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEvent|null
      */
     public function getEvent()
     {
@@ -303,7 +303,7 @@ class DataExtractsEventResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets event
      *
-     * @param \OpenAPI\Client\Model\DataExtractsEvent|null $event event
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEvent|null $event event
      *
      * @return self
      */

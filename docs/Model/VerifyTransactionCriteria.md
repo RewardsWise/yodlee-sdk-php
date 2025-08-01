@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date** | **string** |  |
 **amount** | **float** |  |
-**verified_transaction** | [**\OpenAPI\Client\Model\Transaction[]**](Transaction.md) |  | [optional] [readonly]
+**verified_transaction** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\Transaction[]**](Transaction.md) |  | [optional] [readonly]
 **matched** | **string** | Indicates if the criteria is matched or not. &lt;br&gt;&lt;b&gt;Applicable Values&lt;/b&gt;&lt;br&gt; | [optional] [readonly]
 **keyword** | **string** |  | [optional]
 **date_variance** | **string** |  | [optional]

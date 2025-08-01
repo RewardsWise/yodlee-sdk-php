@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AddedProviderAccountResponse Class Doc Comment
@@ -58,7 +58,7 @@ class AddedProviderAccountResponse implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'provider_account' => '\OpenAPI\Client\Model\AddedProviderAccount[]'
+        'provider_account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccount[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class AddedProviderAccountResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets provider_account
      *
-     * @return \OpenAPI\Client\Model\AddedProviderAccount[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccount[]|null
      */
     public function getProviderAccount()
     {
@@ -303,7 +303,7 @@ class AddedProviderAccountResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets provider_account
      *
-     * @param \OpenAPI\Client\Model\AddedProviderAccount[]|null $provider_account provider_account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccount[]|null $provider_account provider_account
      *
      * @return self
      */

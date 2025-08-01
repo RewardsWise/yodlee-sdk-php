@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedHoldingsAccount Class Doc Comment
@@ -59,7 +59,7 @@ class DerivedHoldingsAccount implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'value' => '\OpenAPI\Client\Model\Money'
+        'value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -327,7 +327,7 @@ class DerivedHoldingsAccount implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getValue()
     {
@@ -337,7 +337,7 @@ class DerivedHoldingsAccount implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets value
      *
-     * @param \OpenAPI\Client\Model\Money|null $value value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $value value
      *
      * @return self
      */

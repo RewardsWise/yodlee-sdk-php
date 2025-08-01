@@ -26,14 +26,14 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client;
+namespace RewardsWise\Yodlee\OpenAPI\Client;
 
 use ArrayAccess;
 use DateTime;
 use GuzzleHttp\Psr7\Utils;
 use Psr\Http\Message\StreamInterface;
 use SplFileObject;
-use OpenAPI\Client\Model\ModelInterface;
+use RewardsWise\Yodlee\OpenAPI\Client\Model\ModelInterface;
 
 /**
  * FormDataProcessor Class Doc Comment

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ClassificationSummaryTransactionSummary Class Doc Comment
@@ -67,7 +67,7 @@ class ClassificationSummaryTransactionSummary implements ModelInterface, ArrayAc
         'mortgage_payments' => 'bool',
         'salary_credits' => 'bool',
         'is_active_account' => 'bool',
-        'latest_transactions' => '\OpenAPI\Client\Model\ClassificationSummaryTransaction[]',
+        'latest_transactions' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransaction[]',
         'income_credits' => 'bool'
     ];
 
@@ -606,7 +606,7 @@ class ClassificationSummaryTransactionSummary implements ModelInterface, ArrayAc
     /**
      * Gets latest_transactions
      *
-     * @return \OpenAPI\Client\Model\ClassificationSummaryTransaction[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransaction[]|null
      */
     public function getLatestTransactions()
     {
@@ -616,7 +616,7 @@ class ClassificationSummaryTransactionSummary implements ModelInterface, ArrayAc
     /**
      * Sets latest_transactions
      *
-     * @param \OpenAPI\Client\Model\ClassificationSummaryTransaction[]|null $latest_transactions An array that lists the details about the latest 3 transactions that occurred in the user's account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransaction[]|null $latest_transactions An array that lists the details about the latest 3 transactions that occurred in the user's account
      *
      * @return self
      */

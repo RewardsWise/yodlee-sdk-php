@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Row Class Doc Comment
@@ -59,7 +59,7 @@ class Row implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'field_row_choice' => 'string',
-        'field' => '\OpenAPI\Client\Model\Field[]',
+        'field' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Field[]',
         'form' => 'string',
         'id' => 'string',
         'label' => 'string'
@@ -348,7 +348,7 @@ class Row implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets field
      *
-     * @return \OpenAPI\Client\Model\Field[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Field[]|null
      */
     public function getField()
     {
@@ -358,7 +358,7 @@ class Row implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets field
      *
-     * @param \OpenAPI\Client\Model\Field[]|null $field Details of fields that belong to the row.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Field[]|null $field Details of fields that belong to the row.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>
      *
      * @return self
      */

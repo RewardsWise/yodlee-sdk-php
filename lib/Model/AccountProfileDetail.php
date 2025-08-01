@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AccountProfileDetail Class Doc Comment
@@ -58,10 +58,10 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identifier' => '\OpenAPI\Client\Model\Identifier[]',
-        'address' => '\OpenAPI\Client\Model\AccountAddress[]',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber[]',
-        'email' => '\OpenAPI\Client\Model\Email[]'
+        'identifier' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress[]',
+        'phone_number' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\PhoneNumber[]',
+        'email' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Email[]'
     ];
 
     /**
@@ -314,7 +314,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets identifier
      *
-     * @return \OpenAPI\Client\Model\Identifier[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]|null
      */
     public function getIdentifier()
     {
@@ -324,7 +324,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets identifier
      *
-     * @param \OpenAPI\Client\Model\Identifier[]|null $identifier Identifiers available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]|null $identifier Identifiers available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
      *
      * @return self
      */
@@ -341,7 +341,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\AccountAddress[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress[]|null
      */
     public function getAddress()
     {
@@ -351,7 +351,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\AccountAddress[]|null $address Address available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress[]|null $address Address available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PhoneNumber[]|null
      */
     public function getPhoneNumber()
     {
@@ -378,7 +378,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber[]|null $phone_number Phone number available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\PhoneNumber[]|null $phone_number Phone number available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
      *
      * @return self
      */
@@ -395,7 +395,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets email
      *
-     * @return \OpenAPI\Client\Model\Email[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Email[]|null
      */
     public function getEmail()
     {
@@ -405,7 +405,7 @@ class AccountProfileDetail implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets email
      *
-     * @param \OpenAPI\Client\Model\Email[]|null $email Email Id available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Email[]|null $email Email Id available in the profile page of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
      *
      * @return self
      */

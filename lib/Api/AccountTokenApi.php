@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AccountTokenApi Class Doc Comment
@@ -134,12 +134,12 @@ class AccountTokenApi
      *
      * Create Account Token
      *
-     * @param  \OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generatePaymentProcessorToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentProcessorTokenResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function generatePaymentProcessorToken($token_request, string $contentType = self::contentTypes['generatePaymentProcessorToken'][0])
     {
@@ -152,12 +152,12 @@ class AccountTokenApi
      *
      * Create Account Token
      *
-     * @param  \OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generatePaymentProcessorToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentProcessorTokenResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function generatePaymentProcessorTokenWithHttpInfo($token_request, string $contentType = self::contentTypes['generatePaymentProcessorToken'][0])
     {
@@ -189,13 +189,13 @@ class AccountTokenApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaymentProcessorTokenResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -217,7 +217,7 @@ class AccountTokenApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaymentProcessorTokenResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse',
                 $request,
                 $response,
             );
@@ -226,7 +226,7 @@ class AccountTokenApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentProcessorTokenResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -234,7 +234,7 @@ class AccountTokenApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -251,7 +251,7 @@ class AccountTokenApi
      *
      * Create Account Token
      *
-     * @param  \OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generatePaymentProcessorToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -272,7 +272,7 @@ class AccountTokenApi
      *
      * Create Account Token
      *
-     * @param  \OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generatePaymentProcessorToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -280,7 +280,7 @@ class AccountTokenApi
      */
     public function generatePaymentProcessorTokenAsyncWithHttpInfo($token_request, string $contentType = self::contentTypes['generatePaymentProcessorToken'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentProcessorTokenResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse';
         $request = $this->generatePaymentProcessorTokenRequest($token_request, $contentType);
 
         return $this->client
@@ -322,7 +322,7 @@ class AccountTokenApi
     /**
      * Create request for operation 'generatePaymentProcessorToken'
      *
-     * @param  \OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest $token_request account information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generatePaymentProcessorToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -418,7 +418,7 @@ class AccountTokenApi
      * @param  string $processor_token The token that you want to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokePaymentProcessorToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -435,7 +435,7 @@ class AccountTokenApi
      * @param  string $processor_token The token that you want to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokePaymentProcessorToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -472,7 +472,7 @@ class AccountTokenApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

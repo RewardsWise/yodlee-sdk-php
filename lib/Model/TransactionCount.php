@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionCount Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionCount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total' => '\OpenAPI\Client\Model\TransactionTotal'
+        'total' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionTotal'
     ];
 
     /**
@@ -293,7 +293,7 @@ class TransactionCount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total
      *
-     * @return \OpenAPI\Client\Model\TransactionTotal|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionTotal|null
      */
     public function getTotal()
     {
@@ -303,7 +303,7 @@ class TransactionCount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total
      *
-     * @param \OpenAPI\Client\Model\TransactionTotal|null $total total
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionTotal|null $total total
      *
      * @return self
      */

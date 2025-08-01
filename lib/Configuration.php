@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client;
+namespace RewardsWise\Yodlee\OpenAPI\Client;
 
 /**
  * Configuration Class Doc Comment

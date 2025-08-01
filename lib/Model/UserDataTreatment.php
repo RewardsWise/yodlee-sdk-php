@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UserDataTreatment Class Doc Comment
@@ -58,8 +58,8 @@ class UserDataTreatment implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data_handling' => '\OpenAPI\Client\Model\DataHandling',
-        'cdr_policy' => '\OpenAPI\Client\Model\CdrPolicy',
+        'data_handling' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataHandling',
+        'cdr_policy' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CdrPolicy',
         'description' => 'string'
     ];
 
@@ -316,7 +316,7 @@ class UserDataTreatment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets data_handling
      *
-     * @return \OpenAPI\Client\Model\DataHandling
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataHandling
      */
     public function getDataHandling()
     {
@@ -326,7 +326,7 @@ class UserDataTreatment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets data_handling
      *
-     * @param \OpenAPI\Client\Model\DataHandling $data_handling data_handling
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataHandling $data_handling data_handling
      *
      * @return self
      */
@@ -343,7 +343,7 @@ class UserDataTreatment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets cdr_policy
      *
-     * @return \OpenAPI\Client\Model\CdrPolicy
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CdrPolicy
      */
     public function getCdrPolicy()
     {
@@ -353,7 +353,7 @@ class UserDataTreatment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets cdr_policy
      *
-     * @param \OpenAPI\Client\Model\CdrPolicy $cdr_policy cdr_policy
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CdrPolicy $cdr_policy cdr_policy
      *
      * @return self
      */

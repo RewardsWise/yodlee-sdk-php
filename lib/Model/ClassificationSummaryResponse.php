@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ClassificationSummaryResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ClassificationSummaryResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account_summary' => '\OpenAPI\Client\Model\ClassificationSummaryAccountSummary[]'
+        'account_summary' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryAccountSummary[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ClassificationSummaryResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets account_summary
      *
-     * @return \OpenAPI\Client\Model\ClassificationSummaryAccountSummary[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryAccountSummary[]|null
      */
     public function getAccountSummary()
     {
@@ -303,7 +303,7 @@ class ClassificationSummaryResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets account_summary
      *
-     * @param \OpenAPI\Client\Model\ClassificationSummaryAccountSummary[]|null $account_summary The account summary entity encapsulates the account-level summary information, and the transaction entity provides a transaction-level summary for an account passed.
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryAccountSummary[]|null $account_summary The account summary entity encapsulates the account-level summary information, and the transaction entity provides a transaction-level summary for an account passed.
      *
      * @return self
      */

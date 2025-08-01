@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedHoldingSummaryResponse Class Doc Comment
@@ -58,8 +58,8 @@ class DerivedHoldingSummaryResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'holding_summary' => '\OpenAPI\Client\Model\DerivedHoldingsSummary[]',
-        'link' => '\OpenAPI\Client\Model\DerivedHoldingsLinks'
+        'holding_summary' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsSummary[]',
+        'link' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsLinks'
     ];
 
     /**
@@ -300,7 +300,7 @@ class DerivedHoldingSummaryResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets holding_summary
      *
-     * @return \OpenAPI\Client\Model\DerivedHoldingsSummary[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsSummary[]|null
      */
     public function getHoldingSummary()
     {
@@ -310,7 +310,7 @@ class DerivedHoldingSummaryResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets holding_summary
      *
-     * @param \OpenAPI\Client\Model\DerivedHoldingsSummary[]|null $holding_summary holding_summary
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsSummary[]|null $holding_summary holding_summary
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class DerivedHoldingSummaryResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets link
      *
-     * @return \OpenAPI\Client\Model\DerivedHoldingsLinks|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsLinks|null
      */
     public function getLink()
     {
@@ -337,7 +337,7 @@ class DerivedHoldingSummaryResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets link
      *
-     * @param \OpenAPI\Client\Model\DerivedHoldingsLinks|null $link link
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsLinks|null $link link
      *
      * @return self
      */

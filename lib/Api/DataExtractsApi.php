@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsApi Class Doc Comment
@@ -139,9 +139,9 @@ class DataExtractsApi
      * @param  string $to_date To DateTime (YYYY-MM-DDThh:mm:ssZ) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDataExtractsEvents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DataExtractsEventResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getDataExtractsEvents($event_name, $from_date, $to_date, string $contentType = self::contentTypes['getDataExtractsEvents'][0])
     {
@@ -159,9 +159,9 @@ class DataExtractsApi
      * @param  string $to_date To DateTime (YYYY-MM-DDThh:mm:ssZ) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDataExtractsEvents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DataExtractsEventResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDataExtractsEventsWithHttpInfo($event_name, $from_date, $to_date, string $contentType = self::contentTypes['getDataExtractsEvents'][0])
     {
@@ -193,13 +193,13 @@ class DataExtractsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DataExtractsEventResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -221,7 +221,7 @@ class DataExtractsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DataExtractsEventResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse',
                 $request,
                 $response,
             );
@@ -230,7 +230,7 @@ class DataExtractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DataExtractsEventResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -238,7 +238,7 @@ class DataExtractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class DataExtractsApi
      */
     public function getDataExtractsEventsAsyncWithHttpInfo($event_name, $from_date, $to_date, string $contentType = self::contentTypes['getDataExtractsEvents'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DataExtractsEventResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse';
         $request = $this->getDataExtractsEventsRequest($event_name, $from_date, $to_date, $contentType);
 
         return $this->client
@@ -464,9 +464,9 @@ class DataExtractsApi
      * @param  string $to_date To DateTime (YYYY-MM-DDThh:mm:ssZ) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDataExtractsUserData'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DataExtractsUserDataResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getDataExtractsUserData($from_date, $login_name, $to_date, string $contentType = self::contentTypes['getDataExtractsUserData'][0])
     {
@@ -484,9 +484,9 @@ class DataExtractsApi
      * @param  string $to_date To DateTime (YYYY-MM-DDThh:mm:ssZ) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDataExtractsUserData'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DataExtractsUserDataResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDataExtractsUserDataWithHttpInfo($from_date, $login_name, $to_date, string $contentType = self::contentTypes['getDataExtractsUserData'][0])
     {
@@ -518,13 +518,13 @@ class DataExtractsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DataExtractsUserDataResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -546,7 +546,7 @@ class DataExtractsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DataExtractsUserDataResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse',
                 $request,
                 $response,
             );
@@ -555,7 +555,7 @@ class DataExtractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DataExtractsUserDataResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -563,7 +563,7 @@ class DataExtractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -613,7 +613,7 @@ class DataExtractsApi
      */
     public function getDataExtractsUserDataAsyncWithHttpInfo($from_date, $login_name, $to_date, string $contentType = self::contentTypes['getDataExtractsUserData'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DataExtractsUserDataResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse';
         $request = $this->getDataExtractsUserDataRequest($from_date, $login_name, $to_date, $contentType);
 
         return $this->client

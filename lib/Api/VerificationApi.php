@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationApi Class Doc Comment
@@ -149,9 +149,9 @@ class VerificationApi
      * @param  string $account_id accountId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getClassificationSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ClassificationSummaryResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getClassificationSummary($account_id, string $contentType = self::contentTypes['getClassificationSummary'][0])
     {
@@ -167,9 +167,9 @@ class VerificationApi
      * @param  string $account_id accountId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getClassificationSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ClassificationSummaryResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getClassificationSummaryWithHttpInfo($account_id, string $contentType = self::contentTypes['getClassificationSummary'][0])
     {
@@ -201,13 +201,13 @@ class VerificationApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ClassificationSummaryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -229,7 +229,7 @@ class VerificationApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ClassificationSummaryResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse',
                 $request,
                 $response,
             );
@@ -238,7 +238,7 @@ class VerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ClassificationSummaryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -246,7 +246,7 @@ class VerificationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -292,7 +292,7 @@ class VerificationApi
      */
     public function getClassificationSummaryAsyncWithHttpInfo($account_id, string $contentType = self::contentTypes['getClassificationSummary'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ClassificationSummaryResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse';
         $request = $this->getClassificationSummaryRequest($account_id, $contentType);
 
         return $this->client
@@ -433,9 +433,9 @@ class VerificationApi
      * @param  string|null $account_id accountId (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHolderProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HolderProfileResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getHolderProfile($provider_account_id, $account_id = null, string $contentType = self::contentTypes['getHolderProfile'][0])
     {
@@ -452,9 +452,9 @@ class VerificationApi
      * @param  string|null $account_id accountId (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHolderProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HolderProfileResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHolderProfileWithHttpInfo($provider_account_id, $account_id = null, string $contentType = self::contentTypes['getHolderProfile'][0])
     {
@@ -486,13 +486,13 @@ class VerificationApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HolderProfileResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -514,7 +514,7 @@ class VerificationApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\HolderProfileResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse',
                 $request,
                 $response,
             );
@@ -523,7 +523,7 @@ class VerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HolderProfileResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -531,7 +531,7 @@ class VerificationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -579,7 +579,7 @@ class VerificationApi
      */
     public function getHolderProfileAsyncWithHttpInfo($provider_account_id, $account_id = null, string $contentType = self::contentTypes['getHolderProfile'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\HolderProfileResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse';
         $request = $this->getHolderProfileRequest($provider_account_id, $account_id, $contentType);
 
         return $this->client
@@ -732,9 +732,9 @@ class VerificationApi
      * @param  string|null $verification_type verificationType (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerificationStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VerificationStatusResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getVerificationStatus($account_id = null, $provider_account_id = null, $verification_type = null, string $contentType = self::contentTypes['getVerificationStatus'][0])
     {
@@ -752,9 +752,9 @@ class VerificationApi
      * @param  string|null $verification_type verificationType (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerificationStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VerificationStatusResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVerificationStatusWithHttpInfo($account_id = null, $provider_account_id = null, $verification_type = null, string $contentType = self::contentTypes['getVerificationStatus'][0])
     {
@@ -786,13 +786,13 @@ class VerificationApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\VerificationStatusResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -814,7 +814,7 @@ class VerificationApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\VerificationStatusResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse',
                 $request,
                 $response,
             );
@@ -823,7 +823,7 @@ class VerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VerificationStatusResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class VerificationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class VerificationApi
      */
     public function getVerificationStatusAsyncWithHttpInfo($account_id = null, $provider_account_id = null, $verification_type = null, string $contentType = self::contentTypes['getVerificationStatus'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VerificationStatusResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse';
         $request = $this->getVerificationStatusRequest($account_id, $provider_account_id, $verification_type, $contentType);
 
         return $this->client
@@ -1040,9 +1040,9 @@ class VerificationApi
      * @param  string|null $verification_status Comma separated verificationStatus. Allowed values are SUCCESS, FAILED &lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; If no value is passed, the implicit default value is SUCCESS. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VerifiedAccountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getVerifiedAccounts($provider_account_id, $account_id = null, $is_selected = null, $verification_status = null, string $contentType = self::contentTypes['getVerifiedAccounts'][0])
     {
@@ -1061,9 +1061,9 @@ class VerificationApi
      * @param  string|null $verification_status Comma separated verificationStatus. Allowed values are SUCCESS, FAILED &lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; If no value is passed, the implicit default value is SUCCESS. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VerifiedAccountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVerifiedAccountsWithHttpInfo($provider_account_id, $account_id = null, $is_selected = null, $verification_status = null, string $contentType = self::contentTypes['getVerifiedAccounts'][0])
     {
@@ -1095,13 +1095,13 @@ class VerificationApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\VerifiedAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1123,7 +1123,7 @@ class VerificationApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\VerifiedAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse',
                 $request,
                 $response,
             );
@@ -1132,7 +1132,7 @@ class VerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VerifiedAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1140,7 +1140,7 @@ class VerificationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1192,7 +1192,7 @@ class VerificationApi
      */
     public function getVerifiedAccountsAsyncWithHttpInfo($provider_account_id, $account_id = null, $is_selected = null, $verification_status = null, string $contentType = self::contentTypes['getVerifiedAccounts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VerifiedAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse';
         $request = $this->getVerifiedAccountsRequest($provider_account_id, $account_id, $is_selected, $verification_status, $contentType);
 
         return $this->client
@@ -1362,12 +1362,12 @@ class VerificationApi
      *
      * Initiaite Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateMatchingOrChallengeDepositeVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VerificationResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function initiateMatchingOrChallengeDepositeVerification($verification_param, string $contentType = self::contentTypes['initiateMatchingOrChallengeDepositeVerification'][0])
     {
@@ -1380,12 +1380,12 @@ class VerificationApi
      *
      * Initiaite Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateMatchingOrChallengeDepositeVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VerificationResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function initiateMatchingOrChallengeDepositeVerificationWithHttpInfo($verification_param, string $contentType = self::contentTypes['initiateMatchingOrChallengeDepositeVerification'][0])
     {
@@ -1417,13 +1417,13 @@ class VerificationApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\VerificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1445,7 +1445,7 @@ class VerificationApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\VerificationResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse',
                 $request,
                 $response,
             );
@@ -1454,7 +1454,7 @@ class VerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VerificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1462,7 +1462,7 @@ class VerificationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1479,7 +1479,7 @@ class VerificationApi
      *
      * Initiaite Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateMatchingOrChallengeDepositeVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1500,7 +1500,7 @@ class VerificationApi
      *
      * Initiaite Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateMatchingOrChallengeDepositeVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1508,7 +1508,7 @@ class VerificationApi
      */
     public function initiateMatchingOrChallengeDepositeVerificationAsyncWithHttpInfo($verification_param, string $contentType = self::contentTypes['initiateMatchingOrChallengeDepositeVerification'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VerificationResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse';
         $request = $this->initiateMatchingOrChallengeDepositeVerificationRequest($verification_param, $contentType);
 
         return $this->client
@@ -1550,7 +1550,7 @@ class VerificationApi
     /**
      * Create request for operation 'initiateMatchingOrChallengeDepositeVerification'
      *
-     * @param  \OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['initiateMatchingOrChallengeDepositeVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1643,12 +1643,12 @@ class VerificationApi
      *
      * Verify Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['verifyChallengeDeposit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VerificationResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function verifyChallengeDeposit($verification_param, string $contentType = self::contentTypes['verifyChallengeDeposit'][0])
     {
@@ -1661,12 +1661,12 @@ class VerificationApi
      *
      * Verify Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['verifyChallengeDeposit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VerificationResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function verifyChallengeDepositWithHttpInfo($verification_param, string $contentType = self::contentTypes['verifyChallengeDeposit'][0])
     {
@@ -1698,13 +1698,13 @@ class VerificationApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\VerificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1726,7 +1726,7 @@ class VerificationApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\VerificationResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse',
                 $request,
                 $response,
             );
@@ -1735,7 +1735,7 @@ class VerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VerificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1743,7 +1743,7 @@ class VerificationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1760,7 +1760,7 @@ class VerificationApi
      *
      * Verify Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['verifyChallengeDeposit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1781,7 +1781,7 @@ class VerificationApi
      *
      * Verify Challenge Deposit
      *
-     * @param  \OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['verifyChallengeDeposit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1789,7 +1789,7 @@ class VerificationApi
      */
     public function verifyChallengeDepositAsyncWithHttpInfo($verification_param, string $contentType = self::contentTypes['verifyChallengeDeposit'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VerificationResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse';
         $request = $this->verifyChallengeDepositRequest($verification_param, $contentType);
 
         return $this->client
@@ -1831,7 +1831,7 @@ class VerificationApi
     /**
      * Create request for operation 'verifyChallengeDeposit'
      *
-     * @param  \OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest $verification_param verification information (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['verifyChallengeDeposit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

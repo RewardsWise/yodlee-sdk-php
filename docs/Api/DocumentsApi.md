@@ -1,4 +1,4 @@
-# OpenAPI\Client\DocumentsApi
+# RewardsWise\Yodlee\OpenAPI\Client\DocumentsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DocumentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -67,7 +67,7 @@ No authorization required
 ## `downloadDocument()`
 
 ```php
-downloadDocument($document_id): \OpenAPI\Client\Model\DocumentDownloadResponse
+downloadDocument($document_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentDownloadResponse
 ```
 
 Download a Document
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DocumentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DocumentDownloadResponse**](../Model/DocumentDownloadResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentDownloadResponse**](../Model/DocumentDownloadResponse.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `getDocuments()`
 
 ```php
-getDocuments($keyword, $account_id, $doc_type, $from_date, $to_date): \OpenAPI\Client\Model\DocumentResponse
+getDocuments($keyword, $account_id, $doc_type, $from_date, $to_date): \RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentResponse
 ```
 
 Get Documents
@@ -138,7 +138,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DocumentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -169,7 +169,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DocumentResponse**](../Model/DocumentResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentResponse**](../Model/DocumentResponse.md)
 
 ### Authorization
 

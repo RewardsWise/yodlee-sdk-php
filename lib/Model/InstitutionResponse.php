@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * InstitutionResponse Class Doc Comment
@@ -58,7 +58,7 @@ class InstitutionResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'institution' => '\OpenAPI\Client\Model\Institution[]'
+        'institution' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Institution[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class InstitutionResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets institution
      *
-     * @return \OpenAPI\Client\Model\Institution[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Institution[]|null
      */
     public function getInstitution()
     {
@@ -303,7 +303,7 @@ class InstitutionResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets institution
      *
-     * @param \OpenAPI\Client\Model\Institution[]|null $institution institution
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Institution[]|null $institution institution
      *
      * @return self
      */

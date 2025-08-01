@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ConfigsPublicKeyResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ConfigsPublicKeyResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'public_key' => '\OpenAPI\Client\Model\ConfigsPublicKey'
+        'public_key' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKey'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ConfigsPublicKeyResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets public_key
      *
-     * @return \OpenAPI\Client\Model\ConfigsPublicKey|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKey|null
      */
     public function getPublicKey()
     {
@@ -303,7 +303,7 @@ class ConfigsPublicKeyResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets public_key
      *
-     * @param \OpenAPI\Client\Model\ConfigsPublicKey|null $public_key public_key
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKey|null $public_key public_key
      *
      * @return self
      */

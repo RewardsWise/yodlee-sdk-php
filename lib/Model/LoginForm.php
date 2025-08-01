@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * LoginForm Class Doc Comment
@@ -66,7 +66,7 @@ class LoginForm implements ModelInterface, ArrayAccess, \JsonSerializable
         'login_help' => 'string',
         'mfa_timeout' => 'int',
         'id' => 'int',
-        'row' => '\OpenAPI\Client\Model\Row[]'
+        'row' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Row[]'
     ];
 
     /**
@@ -603,7 +603,7 @@ class LoginForm implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets row
      *
-     * @return \OpenAPI\Client\Model\Row[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Row[]|null
      */
     public function getRow()
     {
@@ -613,7 +613,7 @@ class LoginForm implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets row
      *
-     * @param \OpenAPI\Client\Model\Row[]|null $row This indicates one row in the form. The row will have one label. But it may have single or multiple fields.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Row[]|null $row This indicates one row in the form. The row will have one label. But it may have single or multiple fields.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>
      *
      * @return self
      */

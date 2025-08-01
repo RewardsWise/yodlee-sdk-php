@@ -1,4 +1,4 @@
-# OpenAPI\Client\PaymentProcessorApi
+# RewardsWise\Yodlee\OpenAPI\Client\PaymentProcessorApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getVerifiedAccount()`
 
 ```php
-getVerifiedAccount($processor_token): \OpenAPI\Client\Model\PaymentAccountResponse
+getVerifiedAccount($processor_token): \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse
 ```
 
 Get Account Details
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentProcessorApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\PaymentProcessorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -50,7 +50,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentAccountResponse**](../Model/PaymentAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse**](../Model/PaymentAccountResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getVerifiedAccountBalance()`
 
 ```php
-getVerifiedAccountBalance($processor_token): \OpenAPI\Client\Model\PaymentAccountBalanceResponse
+getVerifiedAccountBalance($processor_token): \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse
 ```
 
 Get Account Balance
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentProcessorApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\PaymentProcessorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentAccountBalanceResponse**](../Model/PaymentAccountBalanceResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse**](../Model/PaymentAccountBalanceResponse.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `getVerifiedAccountHolder()`
 
 ```php
-getVerifiedAccountHolder($processor_token): \OpenAPI\Client\Model\PaymentAccountHolderResponse
+getVerifiedAccountHolder($processor_token): \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse
 ```
 
 Get Account Holder Details
@@ -139,7 +139,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentProcessorApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\PaymentProcessorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentAccountHolderResponse**](../Model/PaymentAccountHolderResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse**](../Model/PaymentAccountHolderResponse.md)
 
 ### Authorization
 

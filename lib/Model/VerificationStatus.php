@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationStatus Class Doc Comment
@@ -65,7 +65,7 @@ class VerificationStatus implements ModelInterface, ArrayAccess, \JsonSerializab
         'single_ach_txn' => 'bool',
         'additional_message' => 'string',
         'verification_type' => 'string',
-        'account' => '\OpenAPI\Client\Model\VerificationAccount',
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationAccount',
         'remaining_attempts' => 'int',
         'verification_date' => 'string',
         'verification_id' => 'int'
@@ -722,7 +722,7 @@ class VerificationStatus implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\VerificationAccount|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationAccount|null
      */
     public function getAccount()
     {
@@ -732,7 +732,7 @@ class VerificationStatus implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\VerificationAccount|null $account account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationAccount|null $account account
      *
      * @return self
      */

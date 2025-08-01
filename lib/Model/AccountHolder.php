@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AccountHolder Class Doc Comment
@@ -58,10 +58,10 @@ class AccountHolder implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identifier' => '\OpenAPI\Client\Model\Identifier[]',
+        'identifier' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]',
         'gender' => 'string',
         'ownership' => 'string',
-        'name' => '\OpenAPI\Client\Model\Name'
+        'name' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Name'
     ];
 
     /**
@@ -358,7 +358,7 @@ class AccountHolder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets identifier
      *
-     * @return \OpenAPI\Client\Model\Identifier[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]|null
      */
     public function getIdentifier()
     {
@@ -368,7 +368,7 @@ class AccountHolder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets identifier
      *
-     * @param \OpenAPI\Client\Model\Identifier[]|null $identifier Identifiers of the account holder.<br><br><b>Aggregated / Manual</b>: Aggregated <br><b>Applicable containers</b>: bank<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]|null $identifier Identifiers of the account holder.<br><br><b>Aggregated / Manual</b>: Aggregated <br><b>Applicable containers</b>: bank<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li></ul>
      *
      * @return self
      */
@@ -449,7 +449,7 @@ class AccountHolder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\Name|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null
      */
     public function getName()
     {
@@ -459,7 +459,7 @@ class AccountHolder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\Name|null $name name
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null $name name
      *
      * @return self
      */

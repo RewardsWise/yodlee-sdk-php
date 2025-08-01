@@ -1,4 +1,4 @@
-# OpenAPI\Client\TransactionsApi
+# RewardsWise\Yodlee\OpenAPI\Client\TransactionsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -38,7 +38,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -95,12 +95,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$transaction_category_request = new \OpenAPI\Client\Model\TransactionCategoryRequest(); // \OpenAPI\Client\Model\TransactionCategoryRequest | User Transaction Category in JSON format
+$transaction_category_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest | User Transaction Category in JSON format
 
 try {
     $apiInstance->createTransactionCategory($transaction_category_request);
@@ -113,7 +113,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **transaction_category_request** | [**\OpenAPI\Client\Model\TransactionCategoryRequest**](../Model/TransactionCategoryRequest.md)| User Transaction Category in JSON format | |
+| **transaction_category_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest**](../Model/TransactionCategoryRequest.md)| User Transaction Category in JSON format | |
 
 ### Return type
 
@@ -150,7 +150,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -205,7 +205,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -245,7 +245,7 @@ No authorization required
 ## `getTransactionCategories()`
 
 ```php
-getTransactionCategories(): \OpenAPI\Client\Model\TransactionCategoryResponse
+getTransactionCategories(): \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse
 ```
 
 Get Transaction Category List
@@ -260,7 +260,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -280,7 +280,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionCategoryResponse**](../Model/TransactionCategoryResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse**](../Model/TransactionCategoryResponse.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 ## `getTransactionCategorizationRules()`
 
 ```php
-getTransactionCategorizationRules(): \OpenAPI\Client\Model\TransactionCategorizationRuleResponse
+getTransactionCategorizationRules(): \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse
 ```
 
 Get Transaction Categorization Rules
@@ -313,7 +313,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -333,7 +333,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionCategorizationRuleResponse**](../Model/TransactionCategorizationRuleResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse**](../Model/TransactionCategorizationRuleResponse.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ No authorization required
 ## `getTransactionCategorizationRulesDeprecated()`
 
 ```php
-getTransactionCategorizationRulesDeprecated(): \OpenAPI\Client\Model\TransactionCategorizationRule[]
+getTransactionCategorizationRulesDeprecated(): \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]
 ```
 
 Get Transaction Categorization Rules
@@ -366,7 +366,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -386,7 +386,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionCategorizationRule[]**](../Model/TransactionCategorizationRule.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]**](../Model/TransactionCategorizationRule.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ No authorization required
 ## `getTransactions()`
 
 ```php
-getTransactions($account_id, $base_type, $category_id, $category_type, $container, $convert_to_currency, $detail_category_id, $from_date, $high_level_category_id, $keyword, $skip, $to_date, $top, $type): \OpenAPI\Client\Model\TransactionResponse
+getTransactions($account_id, $base_type, $category_id, $category_type, $container, $convert_to_currency, $detail_category_id, $from_date, $high_level_category_id, $keyword, $skip, $to_date, $top, $type): \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse
 ```
 
 Get Transactions
@@ -419,7 +419,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -468,7 +468,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionResponse**](../Model/TransactionResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse**](../Model/TransactionResponse.md)
 
 ### Authorization
 
@@ -486,7 +486,7 @@ No authorization required
 ## `getTransactionsCount()`
 
 ```php
-getTransactionsCount($account_id, $base_type, $category_id, $category_type, $container, $detail_category_id, $from_date, $high_level_category_id, $keyword, $to_date, $type): \OpenAPI\Client\Model\TransactionCountResponse
+getTransactionsCount($account_id, $base_type, $category_id, $category_type, $container, $detail_category_id, $from_date, $high_level_category_id, $keyword, $to_date, $type): \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse
 ```
 
 Get Transactions Count
@@ -501,7 +501,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -544,7 +544,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionCountResponse**](../Model/TransactionCountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse**](../Model/TransactionCountResponse.md)
 
 ### Authorization
 
@@ -577,7 +577,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -634,12 +634,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$transaction_request = new \OpenAPI\Client\Model\TransactionRequest(); // \OpenAPI\Client\Model\TransactionRequest | transactionRequest
+$transaction_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest | transactionRequest
 
 try {
     $apiInstance->updateTransaction($transaction_request);
@@ -652,7 +652,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **transaction_request** | [**\OpenAPI\Client\Model\TransactionRequest**](../Model/TransactionRequest.md)| transactionRequest | |
+| **transaction_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest**](../Model/TransactionRequest.md)| transactionRequest | |
 
 ### Return type
 
@@ -689,13 +689,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $transaction_id = 56; // int | transactionId
-$transaction_request = new \OpenAPI\Client\Model\TransactionRequest(); // \OpenAPI\Client\Model\TransactionRequest | transactionRequest
+$transaction_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest | transactionRequest
 
 try {
     $apiInstance->updateTransaction1($transaction_id, $transaction_request);
@@ -709,7 +709,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **transaction_id** | **int**| transactionId | |
-| **transaction_request** | [**\OpenAPI\Client\Model\TransactionRequest**](../Model/TransactionRequest.md)| transactionRequest | |
+| **transaction_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest**](../Model/TransactionRequest.md)| transactionRequest | |
 
 ### Return type
 
@@ -746,13 +746,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $rule_id = 56; // int | ruleId
-$transaction_categories_rule_request = new \OpenAPI\Client\Model\TransactionCategorizationRuleRequest(); // \OpenAPI\Client\Model\TransactionCategorizationRuleRequest | transactionCategoriesRuleRequest
+$transaction_categories_rule_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest | transactionCategoriesRuleRequest
 
 try {
     $apiInstance->updateTransactionCategorizationRule($rule_id, $transaction_categories_rule_request);
@@ -766,7 +766,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **rule_id** | **int**| ruleId | |
-| **transaction_categories_rule_request** | [**\OpenAPI\Client\Model\TransactionCategorizationRuleRequest**](../Model/TransactionCategorizationRuleRequest.md)| transactionCategoriesRuleRequest | |
+| **transaction_categories_rule_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest**](../Model/TransactionCategorizationRuleRequest.md)| transactionCategoriesRuleRequest | |
 
 ### Return type
 
@@ -803,12 +803,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$update_category_request = new \OpenAPI\Client\Model\UpdateCategoryRequest(); // \OpenAPI\Client\Model\UpdateCategoryRequest | updateCategoryRequest
+$update_category_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest | updateCategoryRequest
 
 try {
     $apiInstance->updateTransactionCategory($update_category_request);
@@ -821,7 +821,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **update_category_request** | [**\OpenAPI\Client\Model\UpdateCategoryRequest**](../Model/UpdateCategoryRequest.md)| updateCategoryRequest | |
+| **update_category_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest**](../Model/UpdateCategoryRequest.md)| updateCategoryRequest | |
 
 ### Return type
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account_balance** | [**\OpenAPI\Client\Model\AccountLatestBalance[]**](AccountLatestBalance.md) |  | [optional] [readonly]
+**account_balance** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountLatestBalance[]**](AccountLatestBalance.md) |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsUserData Class Doc Comment
@@ -58,12 +58,12 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'holding' => '\OpenAPI\Client\Model\DataExtractsHolding[]',
+        'holding' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsHolding[]',
         'total_transactions_count' => 'int',
-        'user' => '\OpenAPI\Client\Model\DataExtractsUser',
-        'account' => '\OpenAPI\Client\Model\DataExtractsAccount[]',
-        'transaction' => '\OpenAPI\Client\Model\DataExtractsTransaction[]',
-        'provider_account' => '\OpenAPI\Client\Model\DataExtractsProviderAccount[]'
+        'user' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUser',
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsAccount[]',
+        'transaction' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsTransaction[]',
+        'provider_account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsProviderAccount[]'
     ];
 
     /**
@@ -328,7 +328,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets holding
      *
-     * @return \OpenAPI\Client\Model\DataExtractsHolding[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsHolding[]|null
      */
     public function getHolding()
     {
@@ -338,7 +338,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets holding
      *
-     * @param \OpenAPI\Client\Model\DataExtractsHolding[]|null $holding holding
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsHolding[]|null $holding holding
      *
      * @return self
      */
@@ -382,7 +382,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets user
      *
-     * @return \OpenAPI\Client\Model\DataExtractsUser|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUser|null
      */
     public function getUser()
     {
@@ -392,7 +392,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets user
      *
-     * @param \OpenAPI\Client\Model\DataExtractsUser|null $user user
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUser|null $user user
      *
      * @return self
      */
@@ -409,7 +409,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\DataExtractsAccount[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsAccount[]|null
      */
     public function getAccount()
     {
@@ -419,7 +419,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\DataExtractsAccount[]|null $account account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsAccount[]|null $account account
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets transaction
      *
-     * @return \OpenAPI\Client\Model\DataExtractsTransaction[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsTransaction[]|null
      */
     public function getTransaction()
     {
@@ -446,7 +446,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets transaction
      *
-     * @param \OpenAPI\Client\Model\DataExtractsTransaction[]|null $transaction transaction
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsTransaction[]|null $transaction transaction
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets provider_account
      *
-     * @return \OpenAPI\Client\Model\DataExtractsProviderAccount[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsProviderAccount[]|null
      */
     public function getProviderAccount()
     {
@@ -473,7 +473,7 @@ class DataExtractsUserData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets provider_account
      *
-     * @param \OpenAPI\Client\Model\DataExtractsProviderAccount[]|null $provider_account provider_account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsProviderAccount[]|null $provider_account provider_account
      *
      * @return self
      */

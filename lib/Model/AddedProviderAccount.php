@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AddedProviderAccount Class Doc Comment
@@ -66,7 +66,7 @@ class AddedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerializ
         'is_manual' => 'bool',
         'id' => 'int',
         'auth_type' => 'string',
-        'dataset' => '\OpenAPI\Client\Model\AccountDataset[]',
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]',
         'status' => 'string'
     ];
 
@@ -716,7 +716,7 @@ class AddedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\AccountDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null
      */
     public function getDataset()
     {
@@ -726,7 +726,7 @@ class AddedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */

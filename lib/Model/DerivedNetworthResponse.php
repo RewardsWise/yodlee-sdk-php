@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedNetworthResponse Class Doc Comment
@@ -58,7 +58,7 @@ class DerivedNetworthResponse implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'networth' => '\OpenAPI\Client\Model\DerivedNetworth[]'
+        'networth' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworth[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class DerivedNetworthResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets networth
      *
-     * @return \OpenAPI\Client\Model\DerivedNetworth[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworth[]|null
      */
     public function getNetworth()
     {
@@ -303,7 +303,7 @@ class DerivedNetworthResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets networth
      *
-     * @param \OpenAPI\Client\Model\DerivedNetworth[]|null $networth networth
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworth[]|null $networth networth
      *
      * @return self
      */

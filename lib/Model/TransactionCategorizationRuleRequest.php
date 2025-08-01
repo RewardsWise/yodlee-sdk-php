@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionCategorizationRuleRequest Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionCategorizationRuleRequest implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rule' => '\OpenAPI\Client\Model\TransactionCategorizationRuleInfo'
+        'rule' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleInfo'
     ];
 
     /**
@@ -296,7 +296,7 @@ class TransactionCategorizationRuleRequest implements ModelInterface, ArrayAcces
     /**
      * Gets rule
      *
-     * @return \OpenAPI\Client\Model\TransactionCategorizationRuleInfo
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleInfo
      */
     public function getRule()
     {
@@ -306,7 +306,7 @@ class TransactionCategorizationRuleRequest implements ModelInterface, ArrayAcces
     /**
      * Sets rule
      *
-     * @param \OpenAPI\Client\Model\TransactionCategorizationRuleInfo $rule rule
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleInfo $rule rule
      *
      * @return self
      */

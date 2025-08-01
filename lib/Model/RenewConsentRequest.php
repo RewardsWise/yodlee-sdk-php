@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * RenewConsentRequest Class Doc Comment
@@ -58,11 +58,11 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\RenewConsentPreferences',
-        'cdr_insights_disclosure' => '\OpenAPI\Client\Model\CDRInsightsDisclosure',
-        'renewal' => '\OpenAPI\Client\Model\RenewalConsent',
-        'business_user_detail' => '\OpenAPI\Client\Model\BusinessUserDetail',
-        'client_trusted_advisor' => '\OpenAPI\Client\Model\ClientTrustedAdvisor[]'
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentPreferences',
+        'cdr_insights_disclosure' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure',
+        'renewal' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewalConsent',
+        'business_user_detail' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetail',
+        'client_trusted_advisor' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]'
     ];
 
     /**
@@ -321,7 +321,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\RenewConsentPreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentPreferences|null
      */
     public function getPreferences()
     {
@@ -331,7 +331,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\RenewConsentPreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentPreferences|null $preferences preferences
      *
      * @return self
      */
@@ -348,7 +348,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets cdr_insights_disclosure
      *
-     * @return \OpenAPI\Client\Model\CDRInsightsDisclosure|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure|null
      */
     public function getCdrInsightsDisclosure()
     {
@@ -358,7 +358,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets cdr_insights_disclosure
      *
-     * @param \OpenAPI\Client\Model\CDRInsightsDisclosure|null $cdr_insights_disclosure cdr_insights_disclosure
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure|null $cdr_insights_disclosure cdr_insights_disclosure
      *
      * @return self
      */
@@ -375,7 +375,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets renewal
      *
-     * @return \OpenAPI\Client\Model\RenewalConsent|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewalConsent|null
      */
     public function getRenewal()
     {
@@ -385,7 +385,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets renewal
      *
-     * @param \OpenAPI\Client\Model\RenewalConsent|null $renewal renewal
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewalConsent|null $renewal renewal
      *
      * @return self
      */
@@ -402,7 +402,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets business_user_detail
      *
-     * @return \OpenAPI\Client\Model\BusinessUserDetail|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetail|null
      */
     public function getBusinessUserDetail()
     {
@@ -412,7 +412,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets business_user_detail
      *
-     * @param \OpenAPI\Client\Model\BusinessUserDetail|null $business_user_detail business_user_detail
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetail|null $business_user_detail business_user_detail
      *
      * @return self
      */
@@ -429,7 +429,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets client_trusted_advisor
      *
-     * @return \OpenAPI\Client\Model\ClientTrustedAdvisor[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]|null
      */
     public function getClientTrustedAdvisor()
     {
@@ -439,7 +439,7 @@ class RenewConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets client_trusted_advisor
      *
-     * @param \OpenAPI\Client\Model\ClientTrustedAdvisor[]|null $client_trusted_advisor describes information of client trusted advisor.
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]|null $client_trusted_advisor describes information of client trusted advisor.
      *
      * @return self
      */

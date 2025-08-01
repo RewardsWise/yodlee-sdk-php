@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ClassificationSummaryTransaction Class Doc Comment
@@ -59,9 +59,9 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
       */
     protected static $openAPITypes = [
         'date' => 'string',
-        'amount' => '\OpenAPI\Client\Model\Money',
-        'description' => '\OpenAPI\Client\Model\Description',
-        'merchant' => '\OpenAPI\Client\Model\ClassificationSummaryMerchant',
+        'amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'description' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Description',
+        'merchant' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryMerchant',
         'base_type' => 'string'
     ];
 
@@ -372,7 +372,7 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAmount()
     {
@@ -382,7 +382,7 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $amount amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $amount amount
      *
      * @return self
      */
@@ -399,7 +399,7 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Gets description
      *
-     * @return \OpenAPI\Client\Model\Description|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Description|null
      */
     public function getDescription()
     {
@@ -409,7 +409,7 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Sets description
      *
-     * @param \OpenAPI\Client\Model\Description|null $description description
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Description|null $description description
      *
      * @return self
      */
@@ -426,7 +426,7 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Gets merchant
      *
-     * @return \OpenAPI\Client\Model\ClassificationSummaryMerchant|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryMerchant|null
      */
     public function getMerchant()
     {
@@ -436,7 +436,7 @@ class ClassificationSummaryTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Sets merchant
      *
-     * @param \OpenAPI\Client\Model\ClassificationSummaryMerchant|null $merchant merchant
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryMerchant|null $merchant merchant
      *
      * @return self
      */

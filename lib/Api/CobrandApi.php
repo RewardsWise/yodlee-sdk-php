@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * CobrandApi Class Doc Comment
@@ -149,12 +149,12 @@ class CobrandApi
      *
      * Cobrand Login
      *
-     * @param  \OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CobrandLoginResponse|\OpenAPI\Client\Model\YodleeError|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function cobrandLogin($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
@@ -167,12 +167,12 @@ class CobrandApi
      *
      * Cobrand Login
      *
-     * @param  \OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CobrandLoginResponse|\OpenAPI\Client\Model\YodleeError|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function cobrandLoginWithHttpInfo($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
@@ -204,19 +204,19 @@ class CobrandApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CobrandLoginResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -238,7 +238,7 @@ class CobrandApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CobrandLoginResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse',
                 $request,
                 $response,
             );
@@ -247,7 +247,7 @@ class CobrandApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CobrandLoginResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class CobrandApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class CobrandApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,7 +280,7 @@ class CobrandApi
      *
      * Cobrand Login
      *
-     * @param  \OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -301,7 +301,7 @@ class CobrandApi
      *
      * Cobrand Login
      *
-     * @param  \OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -309,7 +309,7 @@ class CobrandApi
      */
     public function cobrandLoginAsyncWithHttpInfo($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CobrandLoginResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse';
         $request = $this->cobrandLoginRequest($cobrand_login_request, $contentType);
 
         return $this->client
@@ -351,7 +351,7 @@ class CobrandApi
     /**
      * Create request for operation 'cobrandLogin'
      *
-     * @param  \OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -446,7 +446,7 @@ class CobrandApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -462,7 +462,7 @@ class CobrandApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -643,10 +643,10 @@ class CobrandApi
      * Subscribe Event
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      * @deprecated
@@ -662,10 +662,10 @@ class CobrandApi
      * Subscribe Event
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
@@ -703,7 +703,7 @@ class CobrandApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -721,7 +721,7 @@ class CobrandApi
      * Subscribe Event
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -744,7 +744,7 @@ class CobrandApi
      * Subscribe Event
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -783,7 +783,7 @@ class CobrandApi
      * Create request for operation 'createSubscriptionEvent'
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -895,7 +895,7 @@ class CobrandApi
      * @param  string $event_name eventName (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      * @deprecated
@@ -913,7 +913,7 @@ class CobrandApi
      * @param  string $event_name eventName (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
@@ -951,7 +951,7 @@ class CobrandApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1125,9 +1125,9 @@ class CobrandApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CobrandPublicKeyResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse
      * @deprecated
      */
     public function getPublicKey(string $contentType = self::contentTypes['getPublicKey'][0])
@@ -1143,9 +1143,9 @@ class CobrandApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CobrandPublicKeyResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function getPublicKeyWithHttpInfo(string $contentType = self::contentTypes['getPublicKey'][0])
@@ -1178,7 +1178,7 @@ class CobrandApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CobrandPublicKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse',
                         $request,
                         $response,
                     );
@@ -1200,7 +1200,7 @@ class CobrandApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CobrandPublicKeyResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse',
                 $request,
                 $response,
             );
@@ -1209,7 +1209,7 @@ class CobrandApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CobrandPublicKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1255,7 +1255,7 @@ class CobrandApi
      */
     public function getPublicKeyAsyncWithHttpInfo(string $contentType = self::contentTypes['getPublicKey'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CobrandPublicKeyResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse';
         $request = $this->getPublicKeyRequest($contentType);
 
         return $this->client
@@ -1379,9 +1379,9 @@ class CobrandApi
      * @param  string|null $event_name eventName (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CobrandNotificationResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse
      * @deprecated
      */
     public function getSubscribedEvents($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
@@ -1398,9 +1398,9 @@ class CobrandApi
      * @param  string|null $event_name eventName (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CobrandNotificationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function getSubscribedEventsWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
@@ -1433,7 +1433,7 @@ class CobrandApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CobrandNotificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
                         $request,
                         $response,
                     );
@@ -1455,7 +1455,7 @@ class CobrandApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CobrandNotificationResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
                 $request,
                 $response,
             );
@@ -1464,7 +1464,7 @@ class CobrandApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CobrandNotificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1512,7 +1512,7 @@ class CobrandApi
      */
     public function getSubscribedEventsAsyncWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CobrandNotificationResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse';
         $request = $this->getSubscribedEventsRequest($event_name, $contentType);
 
         return $this->client
@@ -1645,10 +1645,10 @@ class CobrandApi
      * Update Subscription
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      * @deprecated
@@ -1664,10 +1664,10 @@ class CobrandApi
      * Update Subscription
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
@@ -1705,7 +1705,7 @@ class CobrandApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1723,7 +1723,7 @@ class CobrandApi
      * Update Subscription
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1746,7 +1746,7 @@ class CobrandApi
      * Update Subscription
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1785,7 +1785,7 @@ class CobrandApi
      * Create request for operation 'updateSubscribedEvent'
      *
      * @param  string $event_name eventName (required)
-     * @param  \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

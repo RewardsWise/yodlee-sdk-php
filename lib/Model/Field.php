@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Field Class Doc Comment
@@ -70,7 +70,7 @@ class Field implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'value' => 'string',
         'max_length' => 'int',
-        'option' => '\OpenAPI\Client\Model\Option[]'
+        'option' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Option[]'
     ];
 
     /**
@@ -760,7 +760,7 @@ class Field implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets option
      *
-     * @return \OpenAPI\Client\Model\Option[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Option[]|null
      */
     public function getOption()
     {
@@ -770,7 +770,7 @@ class Field implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets option
      *
-     * @param \OpenAPI\Client\Model\Option[]|null $option Provides the different values that are available for the user to choose. This field is applicable for drop-down or radio field types.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Option[]|null $option Provides the different values that are available for the user to choose. This field is applicable for drop-down or radio field types.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>
      *
      * @return self
      */

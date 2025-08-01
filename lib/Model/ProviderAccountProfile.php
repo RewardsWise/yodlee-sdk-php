@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderAccountProfile Class Doc Comment
@@ -58,7 +58,7 @@ class ProviderAccountProfile implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'profile' => '\OpenAPI\Client\Model\Profile[]',
+        'profile' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Profile[]',
         'id' => 'int'
     ];
 
@@ -300,7 +300,7 @@ class ProviderAccountProfile implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets profile
      *
-     * @return \OpenAPI\Client\Model\Profile[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Profile[]|null
      */
     public function getProfile()
     {
@@ -310,7 +310,7 @@ class ProviderAccountProfile implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets profile
      *
-     * @param \OpenAPI\Client\Model\Profile[]|null $profile PII related data like address, name, phoneNumber, identifier and email.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/profile</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Profile[]|null $profile PII related data like address, name, phoneNumber, identifier and email.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/profile</li></ul>
      *
      * @return self
      */

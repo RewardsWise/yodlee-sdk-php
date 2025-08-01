@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rule_clause** | [**\OpenAPI\Client\Model\FieldOperation[]**](FieldOperation.md) |  |
+**rule_clause** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\FieldOperation[]**](FieldOperation.md) |  |
 **source** | **string** |  | [optional]
 **priority** | **int** |  | [optional]
 **category_id** | **int** |  |

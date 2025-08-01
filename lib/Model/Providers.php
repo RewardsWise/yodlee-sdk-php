@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Providers Class Doc Comment
@@ -64,7 +64,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
         'associated_provider_ids' => 'int[]',
         'login_help' => 'string',
         'is_tan_supported' => 'bool',
-        'capability' => '\OpenAPI\Client\Model\Capability[]',
+        'capability' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Capability[]',
         'is_consent_required' => 'bool',
         'login_url' => 'string',
         'is_auto_refresh_enabled' => 'bool',
@@ -83,8 +83,8 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
         'base_url' => 'string',
         'name' => 'string',
         'last_modified' => 'string',
-        'dataset' => '\OpenAPI\Client\Model\ProvidersDataset[]',
-        'uptime_metrics' => '\OpenAPI\Client\Model\UptimeMetrics',
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]',
+        'uptime_metrics' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UptimeMetrics',
         'status' => 'string'
     ];
 
@@ -796,7 +796,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets capability
      *
-     * @return \OpenAPI\Client\Model\Capability[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Capability[]|null
      */
     public function getCapability()
     {
@@ -806,7 +806,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets capability
      *
-     * @param \OpenAPI\Client\Model\Capability[]|null $capability Capability of the site<br><br><b>Endpoints</b>:<ul><li>GET providers/{providerId}</li><li>GET providers</li></ul><br><b>Note : </b> capability has been deprecated
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Capability[]|null $capability Capability of the site<br><br><b>Endpoints</b>:<ul><li>GET providers/{providerId}</li><li>GET providers</li></ul><br><b>Note : </b> capability has been deprecated
      *
      * @return self
      */
@@ -1347,7 +1347,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\ProvidersDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]|null
      */
     public function getDataset()
     {
@@ -1357,7 +1357,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\ProvidersDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents<br><br><b>Endpoints</b>:<ul><li>GET providers/{providerId}</li><li>GET providers</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents<br><br><b>Endpoints</b>:<ul><li>GET providers/{providerId}</li><li>GET providers</li></ul>
      *
      * @return self
      */
@@ -1374,7 +1374,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets uptime_metrics
      *
-     * @return \OpenAPI\Client\Model\UptimeMetrics|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UptimeMetrics|null
      */
     public function getUptimeMetrics()
     {
@@ -1384,7 +1384,7 @@ class Providers implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets uptime_metrics
      *
-     * @param \OpenAPI\Client\Model\UptimeMetrics|null $uptime_metrics uptime_metrics
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UptimeMetrics|null $uptime_metrics uptime_metrics
      *
      * @return self
      */

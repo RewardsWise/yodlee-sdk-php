@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateAccountInfo Class Doc Comment
@@ -60,17 +60,17 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'container' => 'string',
         'include_in_net_worth' => 'string',
-        'address' => '\OpenAPI\Client\Model\AccountAddress',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress',
         'account_name' => 'string',
         'due_date' => 'string',
         'memo' => 'string',
-        'home_value' => '\OpenAPI\Client\Model\Money',
+        'home_value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_number' => 'string',
         'frequency' => 'string',
         'account_status' => 'string',
-        'amount_due' => '\OpenAPI\Client\Model\Money',
+        'amount_due' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'linked_account_ids' => 'int[]',
-        'balance' => '\OpenAPI\Client\Model\Money',
+        'balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'is_ebill_enrolled' => 'string',
         'nickname' => 'string'
     ];
@@ -613,7 +613,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\AccountAddress|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress|null
      */
     public function getAddress()
     {
@@ -623,7 +623,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\AccountAddress|null $address address
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress|null $address address
      *
      * @return self
      */
@@ -735,7 +735,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets home_value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getHomeValue()
     {
@@ -745,7 +745,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets home_value
      *
-     * @param \OpenAPI\Client\Model\Money|null $home_value home_value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $home_value home_value
      *
      * @return self
      */
@@ -873,7 +873,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets amount_due
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAmountDue()
     {
@@ -883,7 +883,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets amount_due
      *
-     * @param \OpenAPI\Client\Model\Money|null $amount_due amount_due
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $amount_due amount_due
      *
      * @return self
      */
@@ -927,7 +927,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getBalance()
     {
@@ -937,7 +937,7 @@ class UpdateAccountInfo implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $balance balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $balance balance
      *
      * @return self
      */

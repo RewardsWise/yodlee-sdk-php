@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsAccount Class Doc Comment
@@ -58,36 +58,36 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'available_cash' => '\OpenAPI\Client\Model\Money',
+        'available_cash' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'include_in_net_worth' => 'bool',
-        'money_market_balance' => '\OpenAPI\Client\Model\Money',
+        'money_market_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'enrollment_date' => 'string',
         'estimated_date' => 'string',
         'memo' => 'string',
         'guarantor' => 'string',
-        'interest_paid_last_year' => '\OpenAPI\Client\Model\Money',
+        'interest_paid_last_year' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'last_updated' => 'string',
-        'balance' => '\OpenAPI\Client\Model\Money',
+        'balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'nscc_member_clearing_code' => 'string',
         'home_insurance_type' => 'string',
         'id' => 'int',
-        'cash' => '\OpenAPI\Client\Model\Money',
-        'total_credit_line' => '\OpenAPI\Client\Model\Money',
+        'cash' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'total_credit_line' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'provider_name' => 'string',
         'valuation_type' => 'string',
-        'margin_balance' => '\OpenAPI\Client\Model\Money',
+        'margin_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'apr' => 'float',
-        'available_credit' => '\OpenAPI\Client\Model\Money',
+        'available_credit' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'source_product_name' => 'string',
-        'current_balance' => '\OpenAPI\Client\Model\Money',
+        'current_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'is_manual' => 'bool',
-        'escrow_balance' => '\OpenAPI\Client\Model\Money',
+        'escrow_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'next_level' => 'string',
         'classification' => 'string',
-        'loan_payoff_amount' => '\OpenAPI\Client\Model\Money',
+        'loan_payoff_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'interest_rate_type' => 'string',
         'loan_pay_by_date' => 'string',
-        'face_amount' => '\OpenAPI\Client\Model\Money',
+        'face_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'policy_from_date' => 'string',
         'source_loan_offset_enabled' => 'bool',
         'dtcc_member_clearing_code' => 'string',
@@ -95,85 +95,85 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
         'policy_term' => 'string',
         'repayment_plan_type' => 'string',
         'aggregated_account_type' => 'string',
-        'available_balance' => '\OpenAPI\Client\Model\Money',
+        'available_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_status' => 'string',
         'life_insurance_type' => 'string',
-        'premium' => '\OpenAPI\Client\Model\Money',
+        'premium' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'aggregation_source' => 'string',
         'is_deleted' => 'bool',
-        'over_draft_limit' => '\OpenAPI\Client\Model\Money',
+        'over_draft_limit' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'nickname' => 'string',
         'term' => 'string',
         'interest_rate' => 'float',
-        'death_benefit' => '\OpenAPI\Client\Model\Money',
-        'address' => '\OpenAPI\Client\Model\AccountAddress',
+        'death_benefit' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress',
         'source_loan_repayment_type' => 'string',
-        'cash_value' => '\OpenAPI\Client\Model\Money',
-        '_401k_loan' => '\OpenAPI\Client\Model\Money',
-        'home_value' => '\OpenAPI\Client\Model\Money',
+        'cash_value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        '_401k_loan' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'home_value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_number' => 'string',
         'created_date' => 'string',
-        'interest_paid_ytd' => '\OpenAPI\Client\Model\Money',
-        'business_information' => '\OpenAPI\Client\Model\BusinessInformation',
-        'max_redraw' => '\OpenAPI\Client\Model\Money',
+        'interest_paid_ytd' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'business_information' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessInformation',
+        'max_redraw' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'provider_account_id' => 'int',
         'is_selected_for_aggregation' => 'bool',
         'collateral' => 'string',
-        'dataset' => '\OpenAPI\Client\Model\AccountDataset[]',
-        'running_balance' => '\OpenAPI\Client\Model\Money',
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]',
+        'running_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'source_id' => 'string',
         'due_date' => 'string',
         'frequency' => 'string',
         'source_account_ownership' => 'string',
-        'maturity_amount' => '\OpenAPI\Client\Model\Money',
+        'maturity_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'associated_provider_account_id' => 'int[]',
         'is_asset' => 'bool',
-        'principal_balance' => '\OpenAPI\Client\Model\Money',
-        'total_cash_limit' => '\OpenAPI\Client\Model\Money',
+        'principal_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'total_cash_limit' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'maturity_date' => 'string',
-        'minimum_amount_due' => '\OpenAPI\Client\Model\Money',
+        'minimum_amount_due' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'annual_percentage_yield' => 'float',
         'account_type' => 'string',
         'origination_date' => 'string',
-        'total_vested_balance' => '\OpenAPI\Client\Model\Money',
-        'reward_balance' => '\OpenAPI\Client\Model\RewardBalance[]',
+        'total_vested_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'reward_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\RewardBalance[]',
         'source_account_status' => 'string',
         'linked_account_ids' => 'int[]',
         'derived_apr' => 'float',
         'policy_effective_date' => 'string',
-        'total_unvested_balance' => '\OpenAPI\Client\Model\Money',
-        'annuity_balance' => '\OpenAPI\Client\Model\Money',
+        'total_unvested_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'annuity_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_category' => 'string',
         'account_name' => 'string',
-        'total_credit_limit' => '\OpenAPI\Client\Model\Money',
+        'total_credit_limit' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'policy_status' => 'string',
-        'short_balance' => '\OpenAPI\Client\Model\Money',
+        'short_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'lender' => 'string',
-        'last_employee_contribution_amount' => '\OpenAPI\Client\Model\Money',
+        'last_employee_contribution_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'provider_id' => 'string',
         'last_payment_date' => 'string',
         'primary_reward_unit' => 'string',
-        'last_payment_amount' => '\OpenAPI\Client\Model\Money',
-        'remaining_balance' => '\OpenAPI\Client\Model\Money',
+        'last_payment_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'remaining_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'user_classification' => 'string',
-        'bank_transfer_code' => '\OpenAPI\Client\Model\BankTransferCode[]',
+        'bank_transfer_code' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]',
         'expiration_date' => 'string',
-        'coverage' => '\OpenAPI\Client\Model\Coverage[]',
+        'coverage' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Coverage[]',
         'cash_apr' => 'float',
         'oauth_migration_status' => 'string',
         'displayed_name' => 'string',
         'source_provider_account_id' => 'int',
-        'amount_due' => '\OpenAPI\Client\Model\Money',
+        'amount_due' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'current_level' => 'string',
-        'original_loan_amount' => '\OpenAPI\Client\Model\Money',
+        'original_loan_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'policy_to_date' => 'string',
-        'loan_payoff_details' => '\OpenAPI\Client\Model\LoanPayoffDetails',
+        'loan_payoff_details' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\LoanPayoffDetails',
         'container' => 'string',
         'is_owned_at_source' => 'bool',
         'last_employee_contribution_date' => 'string',
-        'last_payment' => '\OpenAPI\Client\Model\Money',
-        'recurring_payment' => '\OpenAPI\Client\Model\Money',
-        'min_redraw' => '\OpenAPI\Client\Model\Money'
+        'last_payment' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'recurring_payment' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'min_redraw' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -1542,7 +1542,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets available_cash
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableCash()
     {
@@ -1552,7 +1552,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets available_cash
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_cash available_cash
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_cash available_cash
      *
      * @return self
      */
@@ -1596,7 +1596,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets money_market_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMoneyMarketBalance()
     {
@@ -1606,7 +1606,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets money_market_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $money_market_balance money_market_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $money_market_balance money_market_balance
      *
      * @return self
      */
@@ -1731,7 +1731,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets interest_paid_last_year
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getInterestPaidLastYear()
     {
@@ -1741,7 +1741,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets interest_paid_last_year
      *
-     * @param \OpenAPI\Client\Model\Money|null $interest_paid_last_year interest_paid_last_year
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $interest_paid_last_year interest_paid_last_year
      *
      * @return self
      */
@@ -1785,7 +1785,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getBalance()
     {
@@ -1795,7 +1795,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $balance balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $balance balance
      *
      * @return self
      */
@@ -1903,7 +1903,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets cash
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCash()
     {
@@ -1913,7 +1913,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets cash
      *
-     * @param \OpenAPI\Client\Model\Money|null $cash cash
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $cash cash
      *
      * @return self
      */
@@ -1930,7 +1930,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets total_credit_line
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getTotalCreditLine()
     {
@@ -1940,7 +1940,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets total_credit_line
      *
-     * @param \OpenAPI\Client\Model\Money|null $total_credit_line total_credit_line
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $total_credit_line total_credit_line
      *
      * @return self
      */
@@ -2021,7 +2021,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets margin_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMarginBalance()
     {
@@ -2031,7 +2031,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets margin_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $margin_balance margin_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $margin_balance margin_balance
      *
      * @return self
      */
@@ -2075,7 +2075,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets available_credit
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableCredit()
     {
@@ -2085,7 +2085,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets available_credit
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_credit available_credit
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_credit available_credit
      *
      * @return self
      */
@@ -2129,7 +2129,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets current_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCurrentBalance()
     {
@@ -2139,7 +2139,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets current_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $current_balance current_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $current_balance current_balance
      *
      * @return self
      */
@@ -2183,7 +2183,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets escrow_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getEscrowBalance()
     {
@@ -2193,7 +2193,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets escrow_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $escrow_balance escrow_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $escrow_balance escrow_balance
      *
      * @return self
      */
@@ -2274,7 +2274,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets loan_payoff_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLoanPayoffAmount()
     {
@@ -2284,7 +2284,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets loan_payoff_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $loan_payoff_amount loan_payoff_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $loan_payoff_amount loan_payoff_amount
      *
      * @return self
      */
@@ -2365,7 +2365,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets face_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getFaceAmount()
     {
@@ -2375,7 +2375,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets face_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $face_amount face_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $face_amount face_amount
      *
      * @return self
      */
@@ -2591,7 +2591,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets available_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableBalance()
     {
@@ -2601,7 +2601,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets available_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_balance available_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_balance available_balance
      *
      * @return self
      */
@@ -2692,7 +2692,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets premium
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPremium()
     {
@@ -2702,7 +2702,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets premium
      *
-     * @param \OpenAPI\Client\Model\Money|null $premium premium
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $premium premium
      *
      * @return self
      */
@@ -2783,7 +2783,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets over_draft_limit
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getOverDraftLimit()
     {
@@ -2793,7 +2793,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets over_draft_limit
      *
-     * @param \OpenAPI\Client\Model\Money|null $over_draft_limit over_draft_limit
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $over_draft_limit over_draft_limit
      *
      * @return self
      */
@@ -2891,7 +2891,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets death_benefit
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getDeathBenefit()
     {
@@ -2901,7 +2901,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets death_benefit
      *
-     * @param \OpenAPI\Client\Model\Money|null $death_benefit death_benefit
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $death_benefit death_benefit
      *
      * @return self
      */
@@ -2918,7 +2918,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\AccountAddress|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress|null
      */
     public function getAddress()
     {
@@ -2928,7 +2928,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\AccountAddress|null $address address
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress|null $address address
      *
      * @return self
      */
@@ -2972,7 +2972,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets cash_value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCashValue()
     {
@@ -2982,7 +2982,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets cash_value
      *
-     * @param \OpenAPI\Client\Model\Money|null $cash_value cash_value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $cash_value cash_value
      *
      * @return self
      */
@@ -2999,7 +2999,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets _401k_loan
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function get401kLoan()
     {
@@ -3009,7 +3009,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets _401k_loan
      *
-     * @param \OpenAPI\Client\Model\Money|null $_401k_loan _401k_loan
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $_401k_loan _401k_loan
      *
      * @return self
      */
@@ -3026,7 +3026,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets home_value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getHomeValue()
     {
@@ -3036,7 +3036,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets home_value
      *
-     * @param \OpenAPI\Client\Model\Money|null $home_value home_value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $home_value home_value
      *
      * @return self
      */
@@ -3107,7 +3107,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets interest_paid_ytd
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getInterestPaidYtd()
     {
@@ -3117,7 +3117,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets interest_paid_ytd
      *
-     * @param \OpenAPI\Client\Model\Money|null $interest_paid_ytd interest_paid_ytd
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $interest_paid_ytd interest_paid_ytd
      *
      * @return self
      */
@@ -3134,7 +3134,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets business_information
      *
-     * @return \OpenAPI\Client\Model\BusinessInformation|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessInformation|null
      */
     public function getBusinessInformation()
     {
@@ -3144,7 +3144,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets business_information
      *
-     * @param \OpenAPI\Client\Model\BusinessInformation|null $business_information business_information
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessInformation|null $business_information business_information
      *
      * @return self
      */
@@ -3161,7 +3161,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets max_redraw
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMaxRedraw()
     {
@@ -3171,7 +3171,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets max_redraw
      *
-     * @param \OpenAPI\Client\Model\Money|null $max_redraw max_redraw
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $max_redraw max_redraw
      *
      * @return self
      */
@@ -3269,7 +3269,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\AccountDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null
      */
     public function getDataset()
     {
@@ -3279,7 +3279,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: All containers<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: All containers<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */
@@ -3296,7 +3296,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets running_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getRunningBalance()
     {
@@ -3306,7 +3306,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets running_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $running_balance running_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $running_balance running_balance
      *
      * @return self
      */
@@ -3441,7 +3441,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets maturity_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMaturityAmount()
     {
@@ -3451,7 +3451,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets maturity_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $maturity_amount maturity_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $maturity_amount maturity_amount
      *
      * @return self
      */
@@ -3522,7 +3522,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets principal_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPrincipalBalance()
     {
@@ -3532,7 +3532,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets principal_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $principal_balance principal_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $principal_balance principal_balance
      *
      * @return self
      */
@@ -3549,7 +3549,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets total_cash_limit
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getTotalCashLimit()
     {
@@ -3559,7 +3559,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets total_cash_limit
      *
-     * @param \OpenAPI\Client\Model\Money|null $total_cash_limit total_cash_limit
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $total_cash_limit total_cash_limit
      *
      * @return self
      */
@@ -3603,7 +3603,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets minimum_amount_due
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMinimumAmountDue()
     {
@@ -3613,7 +3613,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets minimum_amount_due
      *
-     * @param \OpenAPI\Client\Model\Money|null $minimum_amount_due minimum_amount_due
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $minimum_amount_due minimum_amount_due
      *
      * @return self
      */
@@ -3711,7 +3711,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets total_vested_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getTotalVestedBalance()
     {
@@ -3721,7 +3721,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets total_vested_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $total_vested_balance total_vested_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $total_vested_balance total_vested_balance
      *
      * @return self
      */
@@ -3738,7 +3738,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets reward_balance
      *
-     * @return \OpenAPI\Client\Model\RewardBalance[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RewardBalance[]|null
      */
     public function getRewardBalance()
     {
@@ -3748,7 +3748,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets reward_balance
      *
-     * @param \OpenAPI\Client\Model\RewardBalance[]|null $reward_balance Information of different reward balances associated with the account.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: reward<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\RewardBalance[]|null $reward_balance Information of different reward balances associated with the account.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: reward<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */
@@ -3883,7 +3883,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets total_unvested_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getTotalUnvestedBalance()
     {
@@ -3893,7 +3893,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets total_unvested_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $total_unvested_balance total_unvested_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $total_unvested_balance total_unvested_balance
      *
      * @return self
      */
@@ -3910,7 +3910,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets annuity_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAnnuityBalance()
     {
@@ -3920,7 +3920,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets annuity_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $annuity_balance annuity_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $annuity_balance annuity_balance
      *
      * @return self
      */
@@ -3991,7 +3991,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets total_credit_limit
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getTotalCreditLimit()
     {
@@ -4001,7 +4001,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets total_credit_limit
      *
-     * @param \OpenAPI\Client\Model\Money|null $total_credit_limit total_credit_limit
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $total_credit_limit total_credit_limit
      *
      * @return self
      */
@@ -4055,7 +4055,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets short_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getShortBalance()
     {
@@ -4065,7 +4065,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets short_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $short_balance short_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $short_balance short_balance
      *
      * @return self
      */
@@ -4109,7 +4109,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets last_employee_contribution_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLastEmployeeContributionAmount()
     {
@@ -4119,7 +4119,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets last_employee_contribution_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $last_employee_contribution_amount last_employee_contribution_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $last_employee_contribution_amount last_employee_contribution_amount
      *
      * @return self
      */
@@ -4217,7 +4217,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets last_payment_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLastPaymentAmount()
     {
@@ -4227,7 +4227,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets last_payment_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $last_payment_amount last_payment_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $last_payment_amount last_payment_amount
      *
      * @return self
      */
@@ -4244,7 +4244,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets remaining_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getRemainingBalance()
     {
@@ -4254,7 +4254,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets remaining_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $remaining_balance remaining_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $remaining_balance remaining_balance
      *
      * @return self
      */
@@ -4308,7 +4308,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets bank_transfer_code
      *
-     * @return \OpenAPI\Client\Model\BankTransferCode[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]|null
      */
     public function getBankTransferCode()
     {
@@ -4318,7 +4318,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets bank_transfer_code
      *
-     * @param \OpenAPI\Client\Model\BankTransferCode[]|null $bank_transfer_code Bank and branch identification information.<br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank, investment, loan<br><b>Endpoints</b>:<br><ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]|null $bank_transfer_code Bank and branch identification information.<br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank, investment, loan<br><b>Endpoints</b>:<br><ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */
@@ -4362,7 +4362,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets coverage
      *
-     * @return \OpenAPI\Client\Model\Coverage[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Coverage[]|null
      */
     public function getCoverage()
     {
@@ -4372,7 +4372,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets coverage
      *
-     * @param \OpenAPI\Client\Model\Coverage[]|null $coverage The coverage-related details of the account.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: insurance,investment<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Coverage[]|null $coverage The coverage-related details of the account.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: insurance,investment<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */
@@ -4507,7 +4507,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets amount_due
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAmountDue()
     {
@@ -4517,7 +4517,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets amount_due
      *
-     * @param \OpenAPI\Client\Model\Money|null $amount_due amount_due
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $amount_due amount_due
      *
      * @return self
      */
@@ -4561,7 +4561,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets original_loan_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getOriginalLoanAmount()
     {
@@ -4571,7 +4571,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets original_loan_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $original_loan_amount original_loan_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $original_loan_amount original_loan_amount
      *
      * @return self
      */
@@ -4615,7 +4615,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets loan_payoff_details
      *
-     * @return \OpenAPI\Client\Model\LoanPayoffDetails|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\LoanPayoffDetails|null
      */
     public function getLoanPayoffDetails()
     {
@@ -4625,7 +4625,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets loan_payoff_details
      *
-     * @param \OpenAPI\Client\Model\LoanPayoffDetails|null $loan_payoff_details loan_payoff_details
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\LoanPayoffDetails|null $loan_payoff_details loan_payoff_details
      *
      * @return self
      */
@@ -4733,7 +4733,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets last_payment
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLastPayment()
     {
@@ -4743,7 +4743,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets last_payment
      *
-     * @param \OpenAPI\Client\Model\Money|null $last_payment last_payment
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $last_payment last_payment
      *
      * @return self
      */
@@ -4760,7 +4760,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets recurring_payment
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getRecurringPayment()
     {
@@ -4770,7 +4770,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets recurring_payment
      *
-     * @param \OpenAPI\Client\Model\Money|null $recurring_payment recurring_payment
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $recurring_payment recurring_payment
      *
      * @return self
      */
@@ -4787,7 +4787,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets min_redraw
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMinRedraw()
     {
@@ -4797,7 +4797,7 @@ class DataExtractsAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets min_redraw
      *
-     * @param \OpenAPI\Client\Model\Money|null $min_redraw min_redraw
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $min_redraw min_redraw
      *
      * @return self
      */

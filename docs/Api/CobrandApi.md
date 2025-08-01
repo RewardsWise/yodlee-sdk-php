@@ -1,4 +1,4 @@
-# OpenAPI\Client\CobrandApi
+# RewardsWise\Yodlee\OpenAPI\Client\CobrandApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `cobrandLogin()`
 
 ```php
-cobrandLogin($cobrand_login_request): \OpenAPI\Client\Model\CobrandLoginResponse
+cobrandLogin($cobrand_login_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse
 ```
 
 Cobrand Login
@@ -31,12 +31,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$cobrand_login_request = new \OpenAPI\Client\Model\CobrandLoginRequest(); // \OpenAPI\Client\Model\CobrandLoginRequest | cobrandLoginRequest
+$cobrand_login_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest | cobrandLoginRequest
 
 try {
     $result = $apiInstance->cobrandLogin($cobrand_login_request);
@@ -50,11 +50,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **cobrand_login_request** | [**\OpenAPI\Client\Model\CobrandLoginRequest**](../Model/CobrandLoginRequest.md)| cobrandLoginRequest | |
+| **cobrand_login_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest**](../Model/CobrandLoginRequest.md)| cobrandLoginRequest | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CobrandLoginResponse**](../Model/CobrandLoginResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse**](../Model/CobrandLoginResponse.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -139,13 +139,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $event_name = 'event_name_example'; // string | eventName
-$event_request = new \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest(); // \OpenAPI\Client\Model\CreateCobrandNotificationEventRequest | eventRequest
+$event_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest | eventRequest
 
 try {
     $apiInstance->createSubscriptionEvent($event_name, $event_request);
@@ -159,7 +159,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **event_name** | **string**| eventName | |
-| **event_request** | [**\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest**](../Model/CreateCobrandNotificationEventRequest.md)| eventRequest | |
+| **event_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest**](../Model/CreateCobrandNotificationEventRequest.md)| eventRequest | |
 
 ### Return type
 
@@ -196,7 +196,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -236,7 +236,7 @@ No authorization required
 ## `getPublicKey()`
 
 ```php
-getPublicKey(): \OpenAPI\Client\Model\CobrandPublicKeyResponse
+getPublicKey(): \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse
 ```
 
 Get Public Key
@@ -251,7 +251,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -271,7 +271,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CobrandPublicKeyResponse**](../Model/CobrandPublicKeyResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse**](../Model/CobrandPublicKeyResponse.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ No authorization required
 ## `getSubscribedEvents()`
 
 ```php
-getSubscribedEvents($event_name): \OpenAPI\Client\Model\CobrandNotificationResponse
+getSubscribedEvents($event_name): \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse
 ```
 
 Get Subscribed Events
@@ -304,7 +304,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -327,7 +327,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CobrandNotificationResponse**](../Model/CobrandNotificationResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse**](../Model/CobrandNotificationResponse.md)
 
 ### Authorization
 
@@ -360,13 +360,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CobrandApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\CobrandApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $event_name = 'event_name_example'; // string | eventName
-$event_request = new \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest(); // \OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest | eventRequest
+$event_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest | eventRequest
 
 try {
     $apiInstance->updateSubscribedEvent($event_name, $event_request);
@@ -380,7 +380,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **event_name** | **string**| eventName | |
-| **event_request** | [**\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest**](../Model/UpdateCobrandNotificationEventRequest.md)| eventRequest | |
+| **event_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest**](../Model/UpdateCobrandNotificationEventRequest.md)| eventRequest | |
 
 ### Return type
 

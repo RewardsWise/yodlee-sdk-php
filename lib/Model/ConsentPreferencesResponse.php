@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ConsentPreferencesResponse Class Doc Comment
@@ -59,8 +59,8 @@ class ConsentPreferencesResponse implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'consent_id' => 'int',
-        'preferences' => '\OpenAPI\Client\Model\Preferences',
-        'custom_display_data' => '\OpenAPI\Client\Model\CustomDisplayData'
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Preferences',
+        'custom_display_data' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CustomDisplayData'
     ];
 
     /**
@@ -343,7 +343,7 @@ class ConsentPreferencesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\Preferences
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Preferences
      */
     public function getPreferences()
     {
@@ -353,7 +353,7 @@ class ConsentPreferencesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\Preferences $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Preferences $preferences preferences
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class ConsentPreferencesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets custom_display_data
      *
-     * @return \OpenAPI\Client\Model\CustomDisplayData
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CustomDisplayData
      */
     public function getCustomDisplayData()
     {
@@ -380,7 +380,7 @@ class ConsentPreferencesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets custom_display_data
      *
-     * @param \OpenAPI\Client\Model\CustomDisplayData $custom_display_data custom_display_data
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CustomDisplayData $custom_display_data custom_display_data
      *
      * @return self
      */

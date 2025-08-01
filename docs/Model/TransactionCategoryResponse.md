@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**transaction_category** | [**\OpenAPI\Client\Model\TransactionCategory[]**](TransactionCategory.md) |  | [optional] [readonly]
+**transaction_category** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategory[]**](TransactionCategory.md) |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

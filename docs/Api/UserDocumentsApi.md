@@ -1,4 +1,4 @@
-# OpenAPI\Client\UserDocumentsApi
+# RewardsWise\Yodlee\OpenAPI\Client\UserDocumentsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserDocumentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserDocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$delete_documents_request = new \OpenAPI\Client\Model\DeleteDocumentsRequest(); // \OpenAPI\Client\Model\DeleteDocumentsRequest | deleteDocumentsRequest
+$delete_documents_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest | deleteDocumentsRequest
 
 try {
     $apiInstance->deleteuserdocuments($delete_documents_request);
@@ -44,7 +44,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **delete_documents_request** | [**\OpenAPI\Client\Model\DeleteDocumentsRequest**](../Model/DeleteDocumentsRequest.md)| deleteDocumentsRequest | |
+| **delete_documents_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest**](../Model/DeleteDocumentsRequest.md)| deleteDocumentsRequest | |
 
 ### Return type
 
@@ -66,7 +66,7 @@ No authorization required
 ## `getuserdocuments()`
 
 ```php
-getuserdocuments($get_documents_request): \OpenAPI\Client\Model\GetDocumentsResponse
+getuserdocuments($get_documents_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse
 ```
 
 Get User Documents
@@ -81,12 +81,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserDocumentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserDocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$get_documents_request = new \OpenAPI\Client\Model\GetDocumentsRequest(); // \OpenAPI\Client\Model\GetDocumentsRequest | getDocumentsRequest
+$get_documents_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest | getDocumentsRequest
 
 try {
     $result = $apiInstance->getuserdocuments($get_documents_request);
@@ -100,11 +100,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **get_documents_request** | [**\OpenAPI\Client\Model\GetDocumentsRequest**](../Model/GetDocumentsRequest.md)| getDocumentsRequest | [optional] |
+| **get_documents_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest**](../Model/GetDocumentsRequest.md)| getDocumentsRequest | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetDocumentsResponse**](../Model/GetDocumentsResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse**](../Model/GetDocumentsResponse.md)
 
 ### Authorization
 

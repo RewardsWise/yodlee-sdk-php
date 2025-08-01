@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **container** | **string** |  |
 **is_physical** | **bool** |  | [optional]
 **detail_category_id** | **int** |  | [optional]
-**description** | [**\OpenAPI\Client\Model\Description**](Description.md) |  | [optional]
+**description** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\Description**](Description.md) |  | [optional]
 **memo** | **string** |  | [optional]
 **transaction_source_id** | **string** |  |
 **merchant_type** | **string** |  | [optional]

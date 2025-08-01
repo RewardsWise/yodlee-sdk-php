@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ClassificationSummaryAccountSummary Class Doc Comment
@@ -64,8 +64,8 @@ class ClassificationSummaryAccountSummary implements ModelInterface, ArrayAccess
         'account_name' => 'string',
         'account_type' => 'string',
         'account_open_date' => 'string',
-        'transaction_summary' => '\OpenAPI\Client\Model\ClassificationSummaryTransactionSummary',
-        'available_balance' => '\OpenAPI\Client\Model\Money'
+        'transaction_summary' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransactionSummary',
+        'available_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -504,7 +504,7 @@ class ClassificationSummaryAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_summary
      *
-     * @return \OpenAPI\Client\Model\ClassificationSummaryTransactionSummary|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransactionSummary|null
      */
     public function getTransactionSummary()
     {
@@ -514,7 +514,7 @@ class ClassificationSummaryAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_summary
      *
-     * @param \OpenAPI\Client\Model\ClassificationSummaryTransactionSummary|null $transaction_summary transaction_summary
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransactionSummary|null $transaction_summary transaction_summary
      *
      * @return self
      */
@@ -531,7 +531,7 @@ class ClassificationSummaryAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets available_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableBalance()
     {
@@ -541,7 +541,7 @@ class ClassificationSummaryAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets available_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_balance available_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_balance available_balance
      *
      * @return self
      */

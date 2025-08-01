@@ -1,4 +1,4 @@
-# OpenAPI\Client\ProviderAccountsApi
+# RewardsWise\Yodlee\OpenAPI\Client\ProviderAccountsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -32,7 +32,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -72,7 +72,7 @@ No authorization required
 ## `editCredentialsOrRefreshProviderAccount()`
 
 ```php
-editCredentialsOrRefreshProviderAccount($provider_account_ids, $provider_account_request): \OpenAPI\Client\Model\UpdatedProviderAccountResponse
+editCredentialsOrRefreshProviderAccount($provider_account_ids, $provider_account_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse
 ```
 
 Update Account
@@ -87,13 +87,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $provider_account_ids = 'provider_account_ids_example'; // string | comma separated providerAccountIds
-$provider_account_request = new \OpenAPI\Client\Model\ProviderAccountRequest(); // \OpenAPI\Client\Model\ProviderAccountRequest | loginForm or field entity
+$provider_account_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest | loginForm or field entity
 
 try {
     $result = $apiInstance->editCredentialsOrRefreshProviderAccount($provider_account_ids, $provider_account_request);
@@ -108,11 +108,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **provider_account_ids** | **string**| comma separated providerAccountIds | |
-| **provider_account_request** | [**\OpenAPI\Client\Model\ProviderAccountRequest**](../Model/ProviderAccountRequest.md)| loginForm or field entity | [optional] |
+| **provider_account_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest**](../Model/ProviderAccountRequest.md)| loginForm or field entity | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UpdatedProviderAccountResponse**](../Model/UpdatedProviderAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse**](../Model/UpdatedProviderAccountResponse.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 ## `getAllProviderAccounts()`
 
 ```php
-getAllProviderAccounts($include, $provider_ids): \OpenAPI\Client\Model\ProviderAccountResponse
+getAllProviderAccounts($include, $provider_ids): \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse
 ```
 
 Get Provider Accounts
@@ -145,7 +145,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -170,7 +170,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProviderAccountResponse**](../Model/ProviderAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse**](../Model/ProviderAccountResponse.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 ## `getProviderAccount()`
 
 ```php
-getProviderAccount($provider_account_id, $include, $request_id): \OpenAPI\Client\Model\ProviderAccountDetailResponse
+getProviderAccount($provider_account_id, $include, $request_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse
 ```
 
 Get Provider Account Details
@@ -203,7 +203,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -230,7 +230,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProviderAccountDetailResponse**](../Model/ProviderAccountDetailResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse**](../Model/ProviderAccountDetailResponse.md)
 
 ### Authorization
 
@@ -248,7 +248,7 @@ No authorization required
 ## `getProviderAccountProfiles()`
 
 ```php
-getProviderAccountProfiles($provider_account_id): \OpenAPI\Client\Model\ProviderAccountUserProfileResponse
+getProviderAccountProfiles($provider_account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse
 ```
 
 Get User Profile Details
@@ -263,7 +263,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -286,7 +286,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProviderAccountUserProfileResponse**](../Model/ProviderAccountUserProfileResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse**](../Model/ProviderAccountUserProfileResponse.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ No authorization required
 ## `linkProviderAccount()`
 
 ```php
-linkProviderAccount($provider_id, $provider_account_request): \OpenAPI\Client\Model\AddedProviderAccountResponse
+linkProviderAccount($provider_id, $provider_account_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse
 ```
 
 Add Account
@@ -319,13 +319,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $provider_id = 56; // int | providerId
-$provider_account_request = new \OpenAPI\Client\Model\ProviderAccountRequest(); // \OpenAPI\Client\Model\ProviderAccountRequest | loginForm or field entity
+$provider_account_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest | loginForm or field entity
 
 try {
     $result = $apiInstance->linkProviderAccount($provider_id, $provider_account_request);
@@ -340,11 +340,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **provider_id** | **int**| providerId | |
-| **provider_account_request** | [**\OpenAPI\Client\Model\ProviderAccountRequest**](../Model/ProviderAccountRequest.md)| loginForm or field entity | |
+| **provider_account_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest**](../Model/ProviderAccountRequest.md)| loginForm or field entity | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AddedProviderAccountResponse**](../Model/AddedProviderAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse**](../Model/AddedProviderAccountResponse.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ No authorization required
 ## `refreshProviderAccount()`
 
 ```php
-refreshProviderAccount($refresh_request): \OpenAPI\Client\Model\RefreshProviderAccountResponse
+refreshProviderAccount($refresh_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse
 ```
 
 Refresh Provider Account
@@ -377,12 +377,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$refresh_request = new \OpenAPI\Client\Model\ProviderAccountRefreshRequest(); // \OpenAPI\Client\Model\ProviderAccountRefreshRequest | refreshRequest
+$refresh_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest | refreshRequest
 
 try {
     $result = $apiInstance->refreshProviderAccount($refresh_request);
@@ -396,11 +396,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **refresh_request** | [**\OpenAPI\Client\Model\ProviderAccountRefreshRequest**](../Model/ProviderAccountRefreshRequest.md)| refreshRequest | |
+| **refresh_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest**](../Model/ProviderAccountRefreshRequest.md)| refreshRequest | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RefreshProviderAccountResponse**](../Model/RefreshProviderAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse**](../Model/RefreshProviderAccountResponse.md)
 
 ### Authorization
 
@@ -433,13 +433,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProviderAccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProviderAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $provider_account_id = 56; // int | providerAccountId
-$preferences = new \OpenAPI\Client\Model\ProviderAccountPreferencesRequest(); // \OpenAPI\Client\Model\ProviderAccountPreferencesRequest | preferences
+$preferences = new \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest | preferences
 
 try {
     $apiInstance->updatePreferences($provider_account_id, $preferences);
@@ -453,7 +453,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **provider_account_id** | **int**| providerAccountId | |
-| **preferences** | [**\OpenAPI\Client\Model\ProviderAccountPreferencesRequest**](../Model/ProviderAccountPreferencesRequest.md)| preferences | |
+| **preferences** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest**](../Model/ProviderAccountPreferencesRequest.md)| preferences | |
 
 ### Return type
 

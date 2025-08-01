@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentProfile Class Doc Comment
@@ -58,9 +58,9 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identifier' => '\OpenAPI\Client\Model\PaymentIdentifier',
-        'address' => '\OpenAPI\Client\Model\AccountAddress[]',
-        'payment_bank_transfer_code' => '\OpenAPI\Client\Model\PaymentBankTransferCode'
+        'identifier' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentIdentifier',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress[]',
+        'payment_bank_transfer_code' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentBankTransferCode'
     ];
 
     /**
@@ -307,7 +307,7 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets identifier
      *
-     * @return \OpenAPI\Client\Model\PaymentIdentifier|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentIdentifier|null
      */
     public function getIdentifier()
     {
@@ -317,7 +317,7 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets identifier
      *
-     * @param \OpenAPI\Client\Model\PaymentIdentifier|null $identifier identifier
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentIdentifier|null $identifier identifier
      *
      * @return self
      */
@@ -334,7 +334,7 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\AccountAddress[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress[]|null
      */
     public function getAddress()
     {
@@ -344,7 +344,7 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\AccountAddress[]|null $address The address of the lender to which the monthly payments or the loan payoff amount should be paid. <br><b>Additional Details:</b>The address field applies only to the student loan account type.<br><b>Account Type</b>: Aggregated<br><b>Applicable containers</b>: loan<br><b>Endpoints</b>:<br><ul><li>GET accounts</li><li>GET accounts/{accountId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress[]|null $address The address of the lender to which the monthly payments or the loan payoff amount should be paid. <br><b>Additional Details:</b>The address field applies only to the student loan account type.<br><b>Account Type</b>: Aggregated<br><b>Applicable containers</b>: loan<br><b>Endpoints</b>:<br><ul><li>GET accounts</li><li>GET accounts/{accountId}</li></ul>
      *
      * @return self
      */
@@ -361,7 +361,7 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_bank_transfer_code
      *
-     * @return \OpenAPI\Client\Model\PaymentBankTransferCode|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentBankTransferCode|null
      */
     public function getPaymentBankTransferCode()
     {
@@ -371,7 +371,7 @@ class PaymentProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_bank_transfer_code
      *
-     * @param \OpenAPI\Client\Model\PaymentBankTransferCode|null $payment_bank_transfer_code payment_bank_transfer_code
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentBankTransferCode|null $payment_bank_transfer_code payment_bank_transfer_code
      *
      * @return self
      */

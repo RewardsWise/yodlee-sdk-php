@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Security Class Doc Comment
@@ -58,7 +58,7 @@ class Security implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stock_exchange_details' => '\OpenAPI\Client\Model\StockExchangeDetail[]',
+        'stock_exchange_details' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\StockExchangeDetail[]',
         'issue_type_multiplier' => 'float',
         'state_taxable' => 'bool',
         'call_date' => 'string',
@@ -552,7 +552,7 @@ class Security implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets stock_exchange_details
      *
-     * @return \OpenAPI\Client\Model\StockExchangeDetail[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\StockExchangeDetail[]|null
      */
     public function getStockExchangeDetails()
     {
@@ -562,7 +562,7 @@ class Security implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stock_exchange_details
      *
-     * @param \OpenAPI\Client\Model\StockExchangeDetail[]|null $stock_exchange_details Securities exchange provide the securities information at the corresponding exchanges. <br><br><b>Applicable containers</b>: investment, insurance<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\StockExchangeDetail[]|null $stock_exchange_details Securities exchange provide the securities information at the corresponding exchanges. <br><br><b>Applicable containers</b>: investment, insurance<br>
      *
      * @return self
      */

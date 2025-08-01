@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerifiedAccount Class Doc Comment
@@ -61,10 +61,10 @@ class VerifiedAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'full_account_number' => 'string',
         'account_type' => 'string',
         'provider_account_id' => 'int',
-        'holder' => '\OpenAPI\Client\Model\AccountHolder[]',
+        'holder' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolder[]',
         'id' => 'int',
         'account_number' => 'string',
-        'bank_transfer_code' => '\OpenAPI\Client\Model\BankTransferCode[]',
+        'bank_transfer_code' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]',
         'provider_name' => 'string'
     ];
 
@@ -423,7 +423,7 @@ class VerifiedAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets holder
      *
-     * @return \OpenAPI\Client\Model\AccountHolder[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolder[]|null
      */
     public function getHolder()
     {
@@ -433,7 +433,7 @@ class VerifiedAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets holder
      *
-     * @param \OpenAPI\Client\Model\AccountHolder[]|null $holder holder
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolder[]|null $holder holder
      *
      * @return self
      */
@@ -504,7 +504,7 @@ class VerifiedAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets bank_transfer_code
      *
-     * @return \OpenAPI\Client\Model\BankTransferCode[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]|null
      */
     public function getBankTransferCode()
     {
@@ -514,7 +514,7 @@ class VerifiedAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bank_transfer_code
      *
-     * @param \OpenAPI\Client\Model\BankTransferCode[]|null $bank_transfer_code Bank and branch identification information.<br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank, investment, loan<br><b>Endpoints</b>:<br><ul></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]|null $bank_transfer_code Bank and branch identification information.<br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank, investment, loan<br><b>Endpoints</b>:<br><ul></ul>
      *
      * @return self
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UserDocumentsApi Class Doc Comment
@@ -134,10 +134,10 @@ class UserDocumentsApi
      *
      * Delete User Documents
      *
-     * @param  \OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteuserdocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -151,10 +151,10 @@ class UserDocumentsApi
      *
      * Delete User Documents
      *
-     * @param  \OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteuserdocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -191,7 +191,7 @@ class UserDocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class UserDocumentsApi
      *
      * Delete User Documents
      *
-     * @param  \OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteuserdocuments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -229,7 +229,7 @@ class UserDocumentsApi
      *
      * Delete User Documents
      *
-     * @param  \OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteuserdocuments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -266,7 +266,7 @@ class UserDocumentsApi
     /**
      * Create request for operation 'deleteuserdocuments'
      *
-     * @param  \OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\DeleteDocumentsRequest $delete_documents_request deleteDocumentsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteuserdocuments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -359,12 +359,12 @@ class UserDocumentsApi
      *
      * Get User Documents
      *
-     * @param  \OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getuserdocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetDocumentsResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getuserdocuments($get_documents_request = null, string $contentType = self::contentTypes['getuserdocuments'][0])
     {
@@ -377,12 +377,12 @@ class UserDocumentsApi
      *
      * Get User Documents
      *
-     * @param  \OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getuserdocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetDocumentsResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getuserdocumentsWithHttpInfo($get_documents_request = null, string $contentType = self::contentTypes['getuserdocuments'][0])
     {
@@ -414,13 +414,13 @@ class UserDocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\GetDocumentsResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -442,7 +442,7 @@ class UserDocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\GetDocumentsResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse',
                 $request,
                 $response,
             );
@@ -451,7 +451,7 @@ class UserDocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetDocumentsResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -459,7 +459,7 @@ class UserDocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -476,7 +476,7 @@ class UserDocumentsApi
      *
      * Get User Documents
      *
-     * @param  \OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getuserdocuments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -497,7 +497,7 @@ class UserDocumentsApi
      *
      * Get User Documents
      *
-     * @param  \OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getuserdocuments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -505,7 +505,7 @@ class UserDocumentsApi
      */
     public function getuserdocumentsAsyncWithHttpInfo($get_documents_request = null, string $contentType = self::contentTypes['getuserdocuments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetDocumentsResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsResponse';
         $request = $this->getuserdocumentsRequest($get_documents_request, $contentType);
 
         return $this->client
@@ -547,7 +547,7 @@ class UserDocumentsApi
     /**
      * Create request for operation 'getuserdocuments'
      *
-     * @param  \OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\GetDocumentsRequest|null $get_documents_request getDocumentsRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getuserdocuments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

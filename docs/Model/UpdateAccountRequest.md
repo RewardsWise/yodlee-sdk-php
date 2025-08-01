@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account** | [**\OpenAPI\Client\Model\UpdateAccountInfo**](UpdateAccountInfo.md) |  |
+**account** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountInfo**](UpdateAccountInfo.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

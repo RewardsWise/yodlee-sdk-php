@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationHolder Class Doc Comment
@@ -59,7 +59,7 @@ class VerificationHolder implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'ownership' => 'string',
-        'name' => '\OpenAPI\Client\Model\Name'
+        'name' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Name'
     ];
 
     /**
@@ -327,7 +327,7 @@ class VerificationHolder implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\Name|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null
      */
     public function getName()
     {
@@ -337,7 +337,7 @@ class VerificationHolder implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\Name|null $name name
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null $name name
      *
      * @return self
      */

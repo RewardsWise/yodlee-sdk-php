@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from_date** | **string** |  | [optional] [readonly]
-**user_data** | [**\OpenAPI\Client\Model\DataExtractsEventUserData[]**](DataExtractsEventUserData.md) |  | [optional] [readonly]
+**user_data** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventUserData[]**](DataExtractsEventUserData.md) |  | [optional] [readonly]
 **user_count** | **int** |  | [optional] [readonly]
 **to_date** | **string** |  | [optional] [readonly]
 

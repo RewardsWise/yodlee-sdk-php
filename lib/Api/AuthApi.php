@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AuthApi Class Doc Comment
@@ -146,7 +146,7 @@ class AuthApi
      * @param  string $key key (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -163,7 +163,7 @@ class AuthApi
      * @param  string $key key (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -200,7 +200,7 @@ class AuthApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -371,7 +371,7 @@ class AuthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -387,7 +387,7 @@ class AuthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -424,7 +424,7 @@ class AuthApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -579,9 +579,9 @@ class AuthApi
      * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ClientCredentialTokenResponse|\OpenAPI\Client\Model\YodleeError|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function generateAccessToken($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
     {
@@ -598,9 +598,9 @@ class AuthApi
      * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ClientCredentialTokenResponse|\OpenAPI\Client\Model\YodleeError|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function generateAccessTokenWithHttpInfo($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
     {
@@ -632,19 +632,19 @@ class AuthApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ClientCredentialTokenResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -666,7 +666,7 @@ class AuthApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ClientCredentialTokenResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse',
                 $request,
                 $response,
             );
@@ -675,7 +675,7 @@ class AuthApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ClientCredentialTokenResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -683,7 +683,7 @@ class AuthApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -691,7 +691,7 @@ class AuthApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -739,7 +739,7 @@ class AuthApi
      */
     public function generateAccessTokenAsyncWithHttpInfo($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ClientCredentialTokenResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse';
         $request = $this->generateAccessTokenRequest($client_id, $secret, $contentType);
 
         return $this->client
@@ -873,12 +873,12 @@ class AuthApi
      *
      * Generate API Key
      *
-     * @param  \OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiKeyResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function generateApiKey($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
@@ -891,12 +891,12 @@ class AuthApi
      *
      * Generate API Key
      *
-     * @param  \OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiKeyResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function generateApiKeyWithHttpInfo($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
@@ -928,13 +928,13 @@ class AuthApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ApiKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -956,7 +956,7 @@ class AuthApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ApiKeyResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
                 $request,
                 $response,
             );
@@ -965,7 +965,7 @@ class AuthApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -973,7 +973,7 @@ class AuthApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class AuthApi
      *
      * Generate API Key
      *
-     * @param  \OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1011,7 +1011,7 @@ class AuthApi
      *
      * Generate API Key
      *
-     * @param  \OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1019,7 +1019,7 @@ class AuthApi
      */
     public function generateApiKeyAsyncWithHttpInfo($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiKeyResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse';
         $request = $this->generateApiKeyRequest($api_key_request, $contentType);
 
         return $this->client
@@ -1061,7 +1061,7 @@ class AuthApi
     /**
      * Create request for operation 'generateApiKey'
      *
-     * @param  \OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1156,9 +1156,9 @@ class AuthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiKeyResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse
      */
     public function getApiKeys(string $contentType = self::contentTypes['getApiKeys'][0])
     {
@@ -1173,9 +1173,9 @@ class AuthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiKeyResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getApiKeysWithHttpInfo(string $contentType = self::contentTypes['getApiKeys'][0])
     {
@@ -1207,7 +1207,7 @@ class AuthApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ApiKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
                         $request,
                         $response,
                     );
@@ -1229,7 +1229,7 @@ class AuthApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ApiKeyResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
                 $request,
                 $response,
             );
@@ -1238,7 +1238,7 @@ class AuthApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1282,7 +1282,7 @@ class AuthApi
      */
     public function getApiKeysAsyncWithHttpInfo(string $contentType = self::contentTypes['getApiKeys'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiKeyResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse';
         $request = $this->getApiKeysRequest($contentType);
 
         return $this->client

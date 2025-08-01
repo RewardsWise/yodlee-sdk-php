@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * HoldingIdListResponse Class Doc Comment
@@ -58,7 +58,7 @@ class HoldingIdListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'holding' => '\OpenAPI\Client\Model\HoldingId[]'
+        'holding' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingId[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class HoldingIdListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets holding
      *
-     * @return \OpenAPI\Client\Model\HoldingId[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingId[]|null
      */
     public function getHolding()
     {
@@ -303,7 +303,7 @@ class HoldingIdListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets holding
      *
-     * @param \OpenAPI\Client\Model\HoldingId[]|null $holding holding
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingId[]|null $holding holding
      *
      * @return self
      */

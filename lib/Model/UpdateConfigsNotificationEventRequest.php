@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateConfigsNotificationEventRequest Class Doc Comment
@@ -58,7 +58,7 @@ class UpdateConfigsNotificationEventRequest implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event' => '\OpenAPI\Client\Model\UpdateConfigsNotificationEvent'
+        'event' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEvent'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UpdateConfigsNotificationEventRequest implements ModelInterface, ArrayAcce
     /**
      * Gets event
      *
-     * @return \OpenAPI\Client\Model\UpdateConfigsNotificationEvent
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEvent
      */
     public function getEvent()
     {
@@ -306,7 +306,7 @@ class UpdateConfigsNotificationEventRequest implements ModelInterface, ArrayAcce
     /**
      * Sets event
      *
-     * @param \OpenAPI\Client\Model\UpdateConfigsNotificationEvent $event event
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEvent $event event
      *
      * @return self
      */

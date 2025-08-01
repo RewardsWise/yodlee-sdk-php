@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * HistoricalBalance Class Doc Comment
@@ -60,7 +60,7 @@ class HistoricalBalance implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'date' => 'string',
         'is_asset' => 'bool',
-        'balance' => '\OpenAPI\Client\Model\Money',
+        'balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'as_of_date' => 'string',
         'data_source_type' => 'string'
     ];
@@ -401,7 +401,7 @@ class HistoricalBalance implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getBalance()
     {
@@ -411,7 +411,7 @@ class HistoricalBalance implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $balance balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $balance balance
      *
      * @return self
      */

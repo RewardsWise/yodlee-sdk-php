@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Attribute Class Doc Comment
@@ -62,7 +62,7 @@ class Attribute implements ModelInterface, ArrayAccess, \JsonSerializable
         'from_date' => 'string',
         'to_fin_year' => 'string',
         'from_fin_year' => 'string',
-        'container_attributes' => '\OpenAPI\Client\Model\ContainerAttributes',
+        'container_attributes' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ContainerAttributes',
         'to_date' => 'string',
         'name' => 'string'
     ];
@@ -533,7 +533,7 @@ class Attribute implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets container_attributes
      *
-     * @return \OpenAPI\Client\Model\ContainerAttributes|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ContainerAttributes|null
      */
     public function getContainerAttributes()
     {
@@ -543,7 +543,7 @@ class Attribute implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets container_attributes
      *
-     * @param \OpenAPI\Client\Model\ContainerAttributes|null $container_attributes container_attributes
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ContainerAttributes|null $container_attributes container_attributes
      *
      * @return self
      */

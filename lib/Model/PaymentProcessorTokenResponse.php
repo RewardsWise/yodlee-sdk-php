@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentProcessorTokenResponse Class Doc Comment
@@ -58,7 +58,7 @@ class PaymentProcessorTokenResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'token' => '\OpenAPI\Client\Model\AccountToken[]'
+        'token' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountToken[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class PaymentProcessorTokenResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets token
      *
-     * @return \OpenAPI\Client\Model\AccountToken[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountToken[]|null
      */
     public function getToken()
     {
@@ -303,7 +303,7 @@ class PaymentProcessorTokenResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets token
      *
-     * @param \OpenAPI\Client\Model\AccountToken[]|null $token token
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountToken[]|null $token token
      *
      * @return self
      */

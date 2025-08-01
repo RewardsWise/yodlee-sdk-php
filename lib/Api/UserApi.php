@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UserApi Class Doc Comment
@@ -152,9 +152,9 @@ class UserApi
      * @param  string $app_ids appIds (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccessTokens'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserAccessTokensResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse
      */
     public function getAccessTokens($app_ids, string $contentType = self::contentTypes['getAccessTokens'][0])
     {
@@ -170,9 +170,9 @@ class UserApi
      * @param  string $app_ids appIds (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccessTokens'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserAccessTokensResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccessTokensWithHttpInfo($app_ids, string $contentType = self::contentTypes['getAccessTokens'][0])
     {
@@ -204,7 +204,7 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UserAccessTokensResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse',
                         $request,
                         $response,
                     );
@@ -226,7 +226,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UserAccessTokensResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse',
                 $request,
                 $response,
             );
@@ -235,7 +235,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserAccessTokensResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -281,7 +281,7 @@ class UserApi
      */
     public function getAccessTokensAsyncWithHttpInfo($app_ids, string $contentType = self::contentTypes['getAccessTokens'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserAccessTokensResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse';
         $request = $this->getAccessTokensRequest($app_ids, $contentType);
 
         return $this->client
@@ -420,9 +420,9 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserDetailResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse
      */
     public function getUser(string $contentType = self::contentTypes['getUser'][0])
     {
@@ -437,9 +437,9 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserDetailResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo(string $contentType = self::contentTypes['getUser'][0])
     {
@@ -471,7 +471,7 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UserDetailResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse',
                         $request,
                         $response,
                     );
@@ -493,7 +493,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UserDetailResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse',
                 $request,
                 $response,
             );
@@ -502,7 +502,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserDetailResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -546,7 +546,7 @@ class UserApi
      */
     public function getUserAsyncWithHttpInfo(string $contentType = self::contentTypes['getUser'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserDetailResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse';
         $request = $this->getUserRequest($contentType);
 
         return $this->client
@@ -666,12 +666,12 @@ class UserApi
      *
      * Register User
      *
-     * @param  \OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['registerUser'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function registerUser($user_request, string $contentType = self::contentTypes['registerUser'][0])
     {
@@ -684,12 +684,12 @@ class UserApi
      *
      * Register User
      *
-     * @param  \OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['registerUser'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function registerUserWithHttpInfo($user_request, string $contentType = self::contentTypes['registerUser'][0])
     {
@@ -721,13 +721,13 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UserResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -749,7 +749,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UserResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse',
                 $request,
                 $response,
             );
@@ -758,7 +758,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -766,7 +766,7 @@ class UserApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -783,7 +783,7 @@ class UserApi
      *
      * Register User
      *
-     * @param  \OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['registerUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -804,7 +804,7 @@ class UserApi
      *
      * Register User
      *
-     * @param  \OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['registerUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -812,7 +812,7 @@ class UserApi
      */
     public function registerUserAsyncWithHttpInfo($user_request, string $contentType = self::contentTypes['registerUser'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse';
         $request = $this->registerUserRequest($user_request, $contentType);
 
         return $this->client
@@ -854,7 +854,7 @@ class UserApi
     /**
      * Create request for operation 'registerUser'
      *
-     * @param  \OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['registerUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -952,9 +952,9 @@ class UserApi
      * @param  string|null $source source (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['samlLogin'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function samlLogin($issuer, $saml_response, $source = null, string $contentType = self::contentTypes['samlLogin'][0])
     {
@@ -972,9 +972,9 @@ class UserApi
      * @param  string|null $source source (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['samlLogin'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function samlLoginWithHttpInfo($issuer, $saml_response, $source = null, string $contentType = self::contentTypes['samlLogin'][0])
     {
@@ -1006,13 +1006,13 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UserResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1034,7 +1034,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UserResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse',
                 $request,
                 $response,
             );
@@ -1043,7 +1043,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1051,7 +1051,7 @@ class UserApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1101,7 +1101,7 @@ class UserApi
      */
     public function samlLoginAsyncWithHttpInfo($issuer, $saml_response, $source = null, string $contentType = self::contentTypes['samlLogin'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse';
         $request = $this->samlLoginRequest($issuer, $saml_response, $source, $contentType);
 
         return $this->client
@@ -1268,7 +1268,7 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unregister'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1284,7 +1284,7 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unregister'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1464,10 +1464,10 @@ class UserApi
      *
      * Update User Details
      *
-     * @param  \OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1481,10 +1481,10 @@ class UserApi
      *
      * Update User Details
      *
-     * @param  \OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1530,7 +1530,7 @@ class UserApi
      *
      * Update User Details
      *
-     * @param  \OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1551,7 +1551,7 @@ class UserApi
      *
      * Update User Details
      *
-     * @param  \OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1588,7 +1588,7 @@ class UserApi
     /**
      * Create request for operation 'updateUser'
      *
-     * @param  \OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest $user_request userRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1683,7 +1683,7 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userLogout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1699,7 +1699,7 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userLogout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

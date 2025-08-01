@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateAccountRequest Class Doc Comment
@@ -58,7 +58,7 @@ class UpdateAccountRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account' => '\OpenAPI\Client\Model\UpdateAccountInfo'
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountInfo'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UpdateAccountRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\UpdateAccountInfo
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountInfo
      */
     public function getAccount()
     {
@@ -306,7 +306,7 @@ class UpdateAccountRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\UpdateAccountInfo $account account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountInfo $account account
      *
      * @return self
      */

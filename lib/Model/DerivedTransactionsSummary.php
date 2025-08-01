@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedTransactionsSummary Class Doc Comment
@@ -59,10 +59,10 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'category_type' => 'string',
-        'category_summary' => '\OpenAPI\Client\Model\DerivedCategorySummary[]',
-        'credit_total' => '\OpenAPI\Client\Model\Money',
-        'links' => '\OpenAPI\Client\Model\DerivedTransactionsLinks',
-        'debit_total' => '\OpenAPI\Client\Model\Money'
+        'category_summary' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedCategorySummary[]',
+        'credit_total' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'links' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsLinks',
+        'debit_total' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -390,7 +390,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets category_summary
      *
-     * @return \OpenAPI\Client\Model\DerivedCategorySummary[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedCategorySummary[]|null
      */
     public function getCategorySummary()
     {
@@ -400,7 +400,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets category_summary
      *
-     * @param \OpenAPI\Client\Model\DerivedCategorySummary[]|null $category_summary Summary of transaction amouts at category level.<br><br><b>Applicable containers</b>: creditCard, bank, investment<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedCategorySummary[]|null $category_summary Summary of transaction amouts at category level.<br><br><b>Applicable containers</b>: creditCard, bank, investment<br>
      *
      * @return self
      */
@@ -417,7 +417,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets credit_total
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCreditTotal()
     {
@@ -427,7 +427,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets credit_total
      *
-     * @param \OpenAPI\Client\Model\Money|null $credit_total credit_total
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $credit_total credit_total
      *
      * @return self
      */
@@ -444,7 +444,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\DerivedTransactionsLinks|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsLinks|null
      */
     public function getLinks()
     {
@@ -454,7 +454,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\DerivedTransactionsLinks|null $links links
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsLinks|null $links links
      *
      * @return self
      */
@@ -471,7 +471,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets debit_total
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getDebitTotal()
     {
@@ -481,7 +481,7 @@ class DerivedTransactionsSummary implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets debit_total
      *
-     * @param \OpenAPI\Client\Model\Money|null $debit_total debit_total
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $debit_total debit_total
      *
      * @return self
      */

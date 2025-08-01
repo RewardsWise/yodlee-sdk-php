@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderAccountDetail Class Doc Comment
@@ -58,19 +58,19 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\ProviderAccountPreferences',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences',
         'oauth_migration_status' => 'string',
         'is_manual' => 'bool',
         'last_updated' => 'string',
         'consent_id' => 'int',
-        'login_form' => '\OpenAPI\Client\Model\LoginForm[]',
+        'login_form' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\LoginForm[]',
         'created_date' => 'string',
         'aggregation_source' => 'string',
         'provider_id' => 'int',
         'request_id' => 'string',
         'id' => 'int',
         'auth_type' => 'string',
-        'dataset' => '\OpenAPI\Client\Model\AccountDataset[]',
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]',
         'status' => 'string'
     ];
 
@@ -501,7 +501,7 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\ProviderAccountPreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences|null
      */
     public function getPreferences()
     {
@@ -511,7 +511,7 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\ProviderAccountPreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences|null $preferences preferences
      *
      * @return self
      */
@@ -646,7 +646,7 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets login_form
      *
-     * @return \OpenAPI\Client\Model\LoginForm[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\LoginForm[]|null
      */
     public function getLoginForm()
     {
@@ -656,7 +656,7 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets login_form
      *
-     * @param \OpenAPI\Client\Model\LoginForm[]|null $login_form This entity gets returned in the response for only MFA based provider accounts during the add/update account polling process. This indicates that the MFA information is expected from the user to complete the process. This represents the structure of MFA form that is displayed to the user in the provider site.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\LoginForm[]|null $login_form This entity gets returned in the response for only MFA based provider accounts during the add/update account polling process. This indicates that the MFA information is expected from the user to complete the process. This represents the structure of MFA form that is displayed to the user in the provider site.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li></ul>
      *
      * @return self
      */
@@ -855,7 +855,7 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\AccountDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null
      */
     public function getDataset()
     {
@@ -865,7 +865,7 @@ class ProviderAccountDetail implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */

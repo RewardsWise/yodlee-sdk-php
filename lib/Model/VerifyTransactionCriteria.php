@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerifyTransactionCriteria Class Doc Comment
@@ -60,7 +60,7 @@ class VerifyTransactionCriteria implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPITypes = [
         'date' => 'string',
         'amount' => 'float',
-        'verified_transaction' => '\OpenAPI\Client\Model\Transaction[]',
+        'verified_transaction' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Transaction[]',
         'matched' => 'string',
         'keyword' => 'string',
         'date_variance' => 'string',
@@ -443,7 +443,7 @@ class VerifyTransactionCriteria implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets verified_transaction
      *
-     * @return \OpenAPI\Client\Model\Transaction[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Transaction[]|null
      */
     public function getVerifiedTransaction()
     {
@@ -453,7 +453,7 @@ class VerifyTransactionCriteria implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets verified_transaction
      *
-     * @param \OpenAPI\Client\Model\Transaction[]|null $verified_transaction verified_transaction
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Transaction[]|null $verified_transaction verified_transaction
      *
      * @return self
      */

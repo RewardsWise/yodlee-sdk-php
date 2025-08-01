@@ -1,4 +1,4 @@
-# OpenAPI\Client\AuthApi
+# RewardsWise\Yodlee\OpenAPI\Client\AuthApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -121,7 +121,7 @@ No authorization required
 ## `generateAccessToken()`
 
 ```php
-generateAccessToken($client_id, $secret): \OpenAPI\Client\Model\ClientCredentialTokenResponse
+generateAccessToken($client_id, $secret): \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse
 ```
 
 Generate Access Token
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -161,7 +161,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ClientCredentialTokenResponse**](../Model/ClientCredentialTokenResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse**](../Model/ClientCredentialTokenResponse.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ## `generateApiKey()`
 
 ```php
-generateApiKey($api_key_request): \OpenAPI\Client\Model\ApiKeyResponse
+generateApiKey($api_key_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse
 ```
 
 Generate API Key
@@ -194,12 +194,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_key_request = new \OpenAPI\Client\Model\ApiKeyRequest(); // \OpenAPI\Client\Model\ApiKeyRequest | apiKeyRequest
+$api_key_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest | apiKeyRequest
 
 try {
     $result = $apiInstance->generateApiKey($api_key_request);
@@ -213,11 +213,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_key_request** | [**\OpenAPI\Client\Model\ApiKeyRequest**](../Model/ApiKeyRequest.md)| apiKeyRequest | |
+| **api_key_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest**](../Model/ApiKeyRequest.md)| apiKeyRequest | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ No authorization required
 ## `getApiKeys()`
 
 ```php
-getApiKeys(): \OpenAPI\Client\Model\ApiKeyResponse
+getApiKeys(): \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse
 ```
 
 Get API Keys
@@ -250,7 +250,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -270,7 +270,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
 
 ### Authorization
 

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * CoverageAmount Class Doc Comment
@@ -58,11 +58,11 @@ class CoverageAmount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cover' => '\OpenAPI\Client\Model\Money',
+        'cover' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'unit_type' => 'string',
         'type' => 'string',
         'limit_type' => 'string',
-        'met' => '\OpenAPI\Client\Model\Money'
+        'met' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -403,7 +403,7 @@ class CoverageAmount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cover
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCover()
     {
@@ -413,7 +413,7 @@ class CoverageAmount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cover
      *
-     * @param \OpenAPI\Client\Model\Money|null $cover cover
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $cover cover
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class CoverageAmount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets met
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMet()
     {
@@ -551,7 +551,7 @@ class CoverageAmount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets met
      *
-     * @param \OpenAPI\Client\Model\Money|null $met met
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $met met
      *
      * @return self
      */

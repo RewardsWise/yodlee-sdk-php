@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentProcessorApi Class Doc Comment
@@ -140,9 +140,9 @@ class PaymentProcessorApi
      * @param  string $processor_token Token shared by customer to access financial account information. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentAccountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getVerifiedAccount($processor_token, string $contentType = self::contentTypes['getVerifiedAccount'][0])
     {
@@ -158,9 +158,9 @@ class PaymentProcessorApi
      * @param  string $processor_token Token shared by customer to access financial account information. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentAccountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVerifiedAccountWithHttpInfo($processor_token, string $contentType = self::contentTypes['getVerifiedAccount'][0])
     {
@@ -192,13 +192,13 @@ class PaymentProcessorApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaymentAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -220,7 +220,7 @@ class PaymentProcessorApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaymentAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse',
                 $request,
                 $response,
             );
@@ -229,7 +229,7 @@ class PaymentProcessorApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -237,7 +237,7 @@ class PaymentProcessorApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -283,7 +283,7 @@ class PaymentProcessorApi
      */
     public function getVerifiedAccountAsyncWithHttpInfo($processor_token, string $contentType = self::contentTypes['getVerifiedAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountResponse';
         $request = $this->getVerifiedAccountRequest($processor_token, $contentType);
 
         return $this->client
@@ -418,9 +418,9 @@ class PaymentProcessorApi
      * @param  string $processor_token Token shared by customer to access financial account information. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccountBalance'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentAccountBalanceResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getVerifiedAccountBalance($processor_token, string $contentType = self::contentTypes['getVerifiedAccountBalance'][0])
     {
@@ -436,9 +436,9 @@ class PaymentProcessorApi
      * @param  string $processor_token Token shared by customer to access financial account information. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccountBalance'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentAccountBalanceResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVerifiedAccountBalanceWithHttpInfo($processor_token, string $contentType = self::contentTypes['getVerifiedAccountBalance'][0])
     {
@@ -470,13 +470,13 @@ class PaymentProcessorApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaymentAccountBalanceResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -498,7 +498,7 @@ class PaymentProcessorApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaymentAccountBalanceResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse',
                 $request,
                 $response,
             );
@@ -507,7 +507,7 @@ class PaymentProcessorApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentAccountBalanceResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class PaymentProcessorApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -561,7 +561,7 @@ class PaymentProcessorApi
      */
     public function getVerifiedAccountBalanceAsyncWithHttpInfo($processor_token, string $contentType = self::contentTypes['getVerifiedAccountBalance'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentAccountBalanceResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountBalanceResponse';
         $request = $this->getVerifiedAccountBalanceRequest($processor_token, $contentType);
 
         return $this->client
@@ -696,9 +696,9 @@ class PaymentProcessorApi
      * @param  string $processor_token Token shared by customer to access financial account information. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccountHolder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentAccountHolderResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getVerifiedAccountHolder($processor_token, string $contentType = self::contentTypes['getVerifiedAccountHolder'][0])
     {
@@ -714,9 +714,9 @@ class PaymentProcessorApi
      * @param  string $processor_token Token shared by customer to access financial account information. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVerifiedAccountHolder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentAccountHolderResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVerifiedAccountHolderWithHttpInfo($processor_token, string $contentType = self::contentTypes['getVerifiedAccountHolder'][0])
     {
@@ -748,13 +748,13 @@ class PaymentProcessorApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaymentAccountHolderResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -776,7 +776,7 @@ class PaymentProcessorApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaymentAccountHolderResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse',
                 $request,
                 $response,
             );
@@ -785,7 +785,7 @@ class PaymentProcessorApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentAccountHolderResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -793,7 +793,7 @@ class PaymentProcessorApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class PaymentProcessorApi
      */
     public function getVerifiedAccountHolderAsyncWithHttpInfo($processor_token, string $contentType = self::contentTypes['getVerifiedAccountHolder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentAccountHolderResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolderResponse';
         $request = $this->getVerifiedAccountHolderRequest($processor_token, $contentType);
 
         return $this->client

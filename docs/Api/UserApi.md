@@ -1,4 +1,4 @@
-# OpenAPI\Client\UserApi
+# RewardsWise\Yodlee\OpenAPI\Client\UserApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAccessTokens()`
 
 ```php
-getAccessTokens($app_ids): \OpenAPI\Client\Model\UserAccessTokensResponse
+getAccessTokens($app_ids): \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse
 ```
 
 Get Access Tokens
@@ -31,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAccessTokensResponse**](../Model/UserAccessTokensResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAccessTokensResponse**](../Model/UserAccessTokensResponse.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 ## `getUser()`
 
 ```php
-getUser(): \OpenAPI\Client\Model\UserDetailResponse
+getUser(): \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse
 ```
 
 Get User Details
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserDetailResponse**](../Model/UserDetailResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDetailResponse**](../Model/UserDetailResponse.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 ## `registerUser()`
 
 ```php
-registerUser($user_request): \OpenAPI\Client\Model\UserResponse
+registerUser($user_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse
 ```
 
 Register User
@@ -140,12 +140,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$user_request = new \OpenAPI\Client\Model\UserRequest(); // \OpenAPI\Client\Model\UserRequest | userRequest
+$user_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest | userRequest
 
 try {
     $result = $apiInstance->registerUser($user_request);
@@ -159,11 +159,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_request** | [**\OpenAPI\Client\Model\UserRequest**](../Model/UserRequest.md)| userRequest | |
+| **user_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequest**](../Model/UserRequest.md)| userRequest | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserResponse**](../Model/UserResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse**](../Model/UserResponse.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `samlLogin()`
 
 ```php
-samlLogin($issuer, $saml_response, $source): \OpenAPI\Client\Model\UserResponse
+samlLogin($issuer, $saml_response, $source): \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse
 ```
 
 Saml Login
@@ -196,7 +196,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -223,7 +223,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserResponse**](../Model/UserResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponse**](../Model/UserResponse.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -308,12 +308,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$user_request = new \OpenAPI\Client\Model\UpdateUserRequest(); // \OpenAPI\Client\Model\UpdateUserRequest | userRequest
+$user_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest | userRequest
 
 try {
     $apiInstance->updateUser($user_request);
@@ -326,7 +326,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_request** | [**\OpenAPI\Client\Model\UpdateUserRequest**](../Model/UpdateUserRequest.md)| userRequest | |
+| **user_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateUserRequest**](../Model/UpdateUserRequest.md)| userRequest | |
 
 ### Return type
 
@@ -363,7 +363,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

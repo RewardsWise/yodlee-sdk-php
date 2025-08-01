@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationAccount Class Doc Comment
@@ -62,7 +62,7 @@ class VerificationAccount implements ModelInterface, ArrayAccess, \JsonSerializa
         'account_type' => 'string',
         'account_number' => 'string',
         'user_classification' => 'string',
-        'bank_transfer_code' => '\OpenAPI\Client\Model\VerificationBankTransferCode'
+        'bank_transfer_code' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationBankTransferCode'
     ];
 
     /**
@@ -521,7 +521,7 @@ class VerificationAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets bank_transfer_code
      *
-     * @return \OpenAPI\Client\Model\VerificationBankTransferCode
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationBankTransferCode
      */
     public function getBankTransferCode()
     {
@@ -531,7 +531,7 @@ class VerificationAccount implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets bank_transfer_code
      *
-     * @param \OpenAPI\Client\Model\VerificationBankTransferCode $bank_transfer_code bank_transfer_code
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationBankTransferCode $bank_transfer_code bank_transfer_code
      *
      * @return self
      */

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * User Class Doc Comment
@@ -58,10 +58,10 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\UserResponsePreferences',
-        'session' => '\OpenAPI\Client\Model\UserSession',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponsePreferences',
+        'session' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserSession',
         'login_name' => 'string',
-        'name' => '\OpenAPI\Client\Model\Name',
+        'name' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Name',
         'id' => 'int',
         'role_type' => 'string'
     ];
@@ -350,7 +350,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\UserResponsePreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponsePreferences|null
      */
     public function getPreferences()
     {
@@ -360,7 +360,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\UserResponsePreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserResponsePreferences|null $preferences preferences
      *
      * @return self
      */
@@ -377,7 +377,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets session
      *
-     * @return \OpenAPI\Client\Model\UserSession|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserSession|null
      */
     public function getSession()
     {
@@ -387,7 +387,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets session
      *
-     * @param \OpenAPI\Client\Model\UserSession|null $session session
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserSession|null $session session
      *
      * @return self
      */
@@ -431,7 +431,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\Name|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null
      */
     public function getName()
     {
@@ -441,7 +441,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\Name|null $name name
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null $name name
      *
      * @return self
      */

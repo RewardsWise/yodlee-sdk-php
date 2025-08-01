@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ConfigsNotificationResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ConfigsNotificationResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event' => '\OpenAPI\Client\Model\ConfigsNotificationEvent[]'
+        'event' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationEvent[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ConfigsNotificationResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets event
      *
-     * @return \OpenAPI\Client\Model\ConfigsNotificationEvent[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationEvent[]|null
      */
     public function getEvent()
     {
@@ -303,7 +303,7 @@ class ConfigsNotificationResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets event
      *
-     * @param \OpenAPI\Client\Model\ConfigsNotificationEvent[]|null $event event
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationEvent[]|null $event event
      *
      * @return self
      */

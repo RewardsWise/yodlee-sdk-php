@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentAccountBalance Class Doc Comment
@@ -62,9 +62,9 @@ class PaymentAccountBalance implements ModelInterface, ArrayAccess, \JsonSeriali
         'last_updated' => 'string',
         'account_name' => 'string',
         'account_type' => 'string',
-        'current_balance' => '\OpenAPI\Client\Model\Money',
+        'current_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'id' => 'int',
-        'available_balance' => '\OpenAPI\Client\Model\Money'
+        'available_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -483,7 +483,7 @@ class PaymentAccountBalance implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets current_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCurrentBalance()
     {
@@ -493,7 +493,7 @@ class PaymentAccountBalance implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets current_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $current_balance current_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $current_balance current_balance
      *
      * @return self
      */
@@ -537,7 +537,7 @@ class PaymentAccountBalance implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets available_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableBalance()
     {
@@ -547,7 +547,7 @@ class PaymentAccountBalance implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets available_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_balance available_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_balance available_balance
      *
      * @return self
      */

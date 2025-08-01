@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preferences** | [**\OpenAPI\Client\Model\UserRequestPreferences**](UserRequestPreferences.md) |  | [optional]
-**address** | [**\OpenAPI\Client\Model\UserAddress**](UserAddress.md) |  | [optional]
+**preferences** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequestPreferences**](UserRequestPreferences.md) |  | [optional]
+**address** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress**](UserAddress.md) |  | [optional]
 **phone_number** | **string** |  | [optional]
 **login_name** | **string** |  |
-**name** | [**\OpenAPI\Client\Model\Name**](Name.md) |  | [optional]
+**name** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\Name**](Name.md) |  | [optional]
 **email** | **string** |  | [optional]
 **segment_name** | **string** |  | [optional]
 

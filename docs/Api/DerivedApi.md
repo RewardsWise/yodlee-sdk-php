@@ -1,4 +1,4 @@
-# OpenAPI\Client\DerivedApi
+# RewardsWise\Yodlee\OpenAPI\Client\DerivedApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getHoldingSummary()`
 
 ```php
-getHoldingSummary($account_ids, $classification_type, $include): \OpenAPI\Client\Model\DerivedHoldingSummaryResponse
+getHoldingSummary($account_ids, $classification_type, $include): \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse
 ```
 
 Get Holding Summary
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DerivedApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DerivedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DerivedHoldingSummaryResponse**](../Model/DerivedHoldingSummaryResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse**](../Model/DerivedHoldingSummaryResponse.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 ## `getNetworth()`
 
 ```php
-getNetworth($account_ids, $container, $from_date, $include, $interval, $skip, $to_date, $top): \OpenAPI\Client\Model\DerivedNetworthResponse
+getNetworth($account_ids, $container, $from_date, $include, $interval, $skip, $to_date, $top): \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse
 ```
 
 Get Networth Summary
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DerivedApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DerivedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -124,7 +124,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DerivedNetworthResponse**](../Model/DerivedNetworthResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse**](../Model/DerivedNetworthResponse.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ No authorization required
 ## `getTransactionSummary()`
 
 ```php
-getTransactionSummary($group_by, $account_id, $category_id, $category_type, $from_date, $include, $include_user_category, $interval, $to_date): \OpenAPI\Client\Model\DerivedTransactionSummaryResponse
+getTransactionSummary($group_by, $account_id, $category_id, $category_type, $from_date, $include, $include_user_category, $interval, $to_date): \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse
 ```
 
 Get Transaction Summary
@@ -157,7 +157,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DerivedApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DerivedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -196,7 +196,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DerivedTransactionSummaryResponse**](../Model/DerivedTransactionSummaryResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse**](../Model/DerivedTransactionSummaryResponse.md)
 
 ### Authorization
 

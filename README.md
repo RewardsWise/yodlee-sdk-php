@@ -49,12 +49,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountTokenApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$token_request = new \OpenAPI\Client\Model\PaymentProcessorTokenRequest(); // \OpenAPI\Client\Model\PaymentProcessorTokenRequest | account information
+$token_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest | account information
 
 try {
     $result = $apiInstance->generatePaymentProcessorToken($token_request);

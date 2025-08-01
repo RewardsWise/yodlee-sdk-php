@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerifiedAccountResponse Class Doc Comment
@@ -61,7 +61,7 @@ class VerifiedAccountResponse implements ModelInterface, ArrayAccess, \JsonSeria
         'request_id' => 'string',
         'request_date' => 'string',
         'state' => 'string',
-        'verified_account' => '\OpenAPI\Client\Model\VerifiedAccounts[]',
+        'verified_account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccounts[]',
         'failed_reason' => 'string'
     ];
 
@@ -500,7 +500,7 @@ class VerifiedAccountResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets verified_account
      *
-     * @return \OpenAPI\Client\Model\VerifiedAccounts[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccounts[]|null
      */
     public function getVerifiedAccount()
     {
@@ -510,7 +510,7 @@ class VerifiedAccountResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets verified_account
      *
-     * @param \OpenAPI\Client\Model\VerifiedAccounts[]|null $verified_account verified_account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccounts[]|null $verified_account verified_account
      *
      * @return self
      */

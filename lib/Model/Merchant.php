@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Merchant Class Doc Comment
@@ -59,11 +59,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'website' => 'string',
-        'address' => '\OpenAPI\Client\Model\AccountAddress',
-        'logo_urls' => '\OpenAPI\Client\Model\LogoURLs[]',
-        'contact' => '\OpenAPI\Client\Model\Contact',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress',
+        'logo_urls' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\LogoURLs[]',
+        'contact' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Contact',
         'category_label' => 'string[]',
-        'coordinates' => '\OpenAPI\Client\Model\Coordinates',
+        'coordinates' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Coordinates',
         'name' => 'string',
         'id' => 'string',
         'source' => 'string',
@@ -409,7 +409,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\AccountAddress|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress|null
      */
     public function getAddress()
     {
@@ -419,7 +419,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\AccountAddress|null $address address
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountAddress|null $address address
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets logo_urls
      *
-     * @return \OpenAPI\Client\Model\LogoURLs[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\LogoURLs[]|null
      */
     public function getLogoUrls()
     {
@@ -446,7 +446,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets logo_urls
      *
-     * @param \OpenAPI\Client\Model\LogoURLs[]|null $logo_urls The logoURL of the merchant.<br><br><b>Applicable containers</b>: bank,creditCard,investment,loan<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\LogoURLs[]|null $logo_urls The logoURL of the merchant.<br><br><b>Applicable containers</b>: bank,creditCard,investment,loan<br>
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contact
      *
-     * @return \OpenAPI\Client\Model\Contact|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Contact|null
      */
     public function getContact()
     {
@@ -473,7 +473,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact
      *
-     * @param \OpenAPI\Client\Model\Contact|null $contact contact
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Contact|null $contact contact
      *
      * @return self
      */
@@ -517,7 +517,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets coordinates
      *
-     * @return \OpenAPI\Client\Model\Coordinates|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Coordinates|null
      */
     public function getCoordinates()
     {
@@ -527,7 +527,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets coordinates
      *
-     * @param \OpenAPI\Client\Model\Coordinates|null $coordinates coordinates
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Coordinates|null $coordinates coordinates
      *
      * @return self
      */

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * HoldingAssetClassificationListResponse Class Doc Comment
@@ -58,7 +58,7 @@ class HoldingAssetClassificationListResponse implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asset_classification_list' => '\OpenAPI\Client\Model\AssetClassificationList[]'
+        'asset_classification_list' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AssetClassificationList[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class HoldingAssetClassificationListResponse implements ModelInterface, ArrayAcc
     /**
      * Gets asset_classification_list
      *
-     * @return \OpenAPI\Client\Model\AssetClassificationList[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AssetClassificationList[]|null
      */
     public function getAssetClassificationList()
     {
@@ -303,7 +303,7 @@ class HoldingAssetClassificationListResponse implements ModelInterface, ArrayAcc
     /**
      * Sets asset_classification_list
      *
-     * @param \OpenAPI\Client\Model\AssetClassificationList[]|null $asset_classification_list asset_classification_list
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AssetClassificationList[]|null $asset_classification_list asset_classification_list
      *
      * @return self
      */

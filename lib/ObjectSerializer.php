@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client;
+namespace RewardsWise\Yodlee\OpenAPI\Client;
 
 use GuzzleHttp\Psr7\Utils;
-use OpenAPI\Client\Model\ModelInterface;
+use RewardsWise\Yodlee\OpenAPI\Client\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
@@ -504,7 +504,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\OpenAPI\Client\Model\\' . $data->{$discriminator};
+                $subclass = '\RewardsWise\Yodlee\OpenAPI\Client\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

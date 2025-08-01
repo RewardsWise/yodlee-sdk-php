@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProvidersApi Class Doc Comment
@@ -148,9 +148,9 @@ class ProvidersApi
      * @param  int|null $top top (Max 500) - This is not applicable along with &#39;name&#39; parameter. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllProviders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProviderResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getAllProviders($capability = null, $datasetfilter = null, $full_account_number_fields = null, $institution_id = null, $name = null, $priority = null, $provider_id = null, $skip = null, $top = null, string $contentType = self::contentTypes['getAllProviders'][0])
     {
@@ -174,9 +174,9 @@ class ProvidersApi
      * @param  int|null $top top (Max 500) - This is not applicable along with &#39;name&#39; parameter. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllProviders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProviderResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllProvidersWithHttpInfo($capability = null, $datasetfilter = null, $full_account_number_fields = null, $institution_id = null, $name = null, $priority = null, $provider_id = null, $skip = null, $top = null, string $contentType = self::contentTypes['getAllProviders'][0])
     {
@@ -208,13 +208,13 @@ class ProvidersApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ProviderResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -236,7 +236,7 @@ class ProvidersApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ProviderResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse',
                 $request,
                 $response,
             );
@@ -245,7 +245,7 @@ class ProvidersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProviderResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -253,7 +253,7 @@ class ProvidersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -315,7 +315,7 @@ class ProvidersApi
      */
     public function getAllProvidersAsyncWithHttpInfo($capability = null, $datasetfilter = null, $full_account_number_fields = null, $institution_id = null, $name = null, $priority = null, $provider_id = null, $skip = null, $top = null, string $contentType = self::contentTypes['getAllProviders'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProviderResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse';
         $request = $this->getAllProvidersRequest($capability, $datasetfilter, $full_account_number_fields, $institution_id, $name, $priority, $provider_id, $skip, $top, $contentType);
 
         return $this->client
@@ -537,9 +537,9 @@ class ProvidersApi
      * @param  int $provider_id providerId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProvider'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProviderDetailResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getProvider($provider_id, string $contentType = self::contentTypes['getProvider'][0])
     {
@@ -555,9 +555,9 @@ class ProvidersApi
      * @param  int $provider_id providerId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProvider'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProviderDetailResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProviderWithHttpInfo($provider_id, string $contentType = self::contentTypes['getProvider'][0])
     {
@@ -589,13 +589,13 @@ class ProvidersApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ProviderDetailResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -617,7 +617,7 @@ class ProvidersApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ProviderDetailResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse',
                 $request,
                 $response,
             );
@@ -626,7 +626,7 @@ class ProvidersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProviderDetailResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -634,7 +634,7 @@ class ProvidersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -680,7 +680,7 @@ class ProvidersApi
      */
     public function getProviderAsyncWithHttpInfo($provider_id, string $contentType = self::contentTypes['getProvider'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProviderDetailResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse';
         $request = $this->getProviderRequest($provider_id, $contentType);
 
         return $this->client
@@ -823,9 +823,9 @@ class ProvidersApi
      * @param  string|null $priority Search priority (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProvidersCount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProvidersCountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getProvidersCount($capability = null, $datasetfilter = null, $full_account_number_fields = null, $name = null, $priority = null, string $contentType = self::contentTypes['getProvidersCount'][0])
     {
@@ -845,9 +845,9 @@ class ProvidersApi
      * @param  string|null $priority Search priority (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProvidersCount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProvidersCountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProvidersCountWithHttpInfo($capability = null, $datasetfilter = null, $full_account_number_fields = null, $name = null, $priority = null, string $contentType = self::contentTypes['getProvidersCount'][0])
     {
@@ -879,13 +879,13 @@ class ProvidersApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ProvidersCountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -907,7 +907,7 @@ class ProvidersApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ProvidersCountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse',
                 $request,
                 $response,
             );
@@ -916,7 +916,7 @@ class ProvidersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProvidersCountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -924,7 +924,7 @@ class ProvidersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -978,7 +978,7 @@ class ProvidersApi
      */
     public function getProvidersCountAsyncWithHttpInfo($capability = null, $datasetfilter = null, $full_account_number_fields = null, $name = null, $priority = null, string $contentType = self::contentTypes['getProvidersCount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProvidersCountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse';
         $request = $this->getProvidersCountRequest($capability, $datasetfilter, $full_account_number_fields, $name, $priority, $contentType);
 
         return $this->client

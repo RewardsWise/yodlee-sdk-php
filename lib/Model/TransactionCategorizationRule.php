@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionCategorizationRule Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionCategorizationRule implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rule_clauses' => '\OpenAPI\Client\Model\RuleClause[]',
+        'rule_clauses' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\RuleClause[]',
         'user_defined_rule_id' => 'int',
         'category_level_id' => 'int',
         'transaction_categorisation_id' => 'int',
@@ -328,7 +328,7 @@ class TransactionCategorizationRule implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets rule_clauses
      *
-     * @return \OpenAPI\Client\Model\RuleClause[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RuleClause[]|null
      */
     public function getRuleClauses()
     {
@@ -338,7 +338,7 @@ class TransactionCategorizationRule implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets rule_clauses
      *
-     * @param \OpenAPI\Client\Model\RuleClause[]|null $rule_clauses Details of rules. <br><br><b>Applicable containers</b>: creditCard, investment, insurance, loan<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\RuleClause[]|null $rule_clauses Details of rules. <br><br><b>Applicable containers</b>: creditCard, investment, insurance, loan<br>
      *
      * @return self
      */

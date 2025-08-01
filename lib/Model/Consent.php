@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Consent Class Doc Comment
@@ -61,28 +61,28 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
         'data_access_frequency' => 'string',
         'expiration_date_time' => 'string',
         'otsp_adr' => 'string',
-        'business_user_detail' => '\OpenAPI\Client\Model\BusinessUserDetail',
-        'client_trusted_advisor' => '\OpenAPI\Client\Model\ClientTrustedAdvisor[]',
+        'business_user_detail' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetail',
+        'client_trusted_advisor' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]',
         'provider_consent_id' => 'string',
         'revoke_date' => 'string',
         'title' => 'string',
         'application_display_name' => 'string',
         'consent_id' => 'int',
-        'cdr_insights_disclosure' => '\OpenAPI\Client\Model\CDRInsightsDisclosure',
+        'cdr_insights_disclosure' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure',
         'provider_id' => 'int',
         'consent_status' => 'string',
-        'scope' => '\OpenAPI\Client\Model\Scope[]',
-        'user_data_treatment' => '\OpenAPI\Client\Model\UserDataTreatment',
-        'links' => '\OpenAPI\Client\Model\Links[]',
+        'scope' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Scope[]',
+        'user_data_treatment' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDataTreatment',
+        'links' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Links[]',
         'expiration_date' => 'string',
         'otsp_adr_name' => 'string',
-        'preferences' => '\OpenAPI\Client\Model\Preferences[]',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Preferences[]',
         'client_adr' => 'string',
-        'renewal' => '\OpenAPI\Client\Model\Renewal',
+        'renewal' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Renewal',
         'revoke_date_time' => 'string',
         'title_body' => 'string',
         'start_date_time' => 'string',
-        'third_party_adr' => '\OpenAPI\Client\Model\ThirdPartyADR[]',
+        'third_party_adr' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ThirdPartyADR[]',
         'renewed_date_time' => 'string',
         'provider_account_id' => 'int',
         'start_date' => 'string'
@@ -683,7 +683,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets business_user_detail
      *
-     * @return \OpenAPI\Client\Model\BusinessUserDetail|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetail|null
      */
     public function getBusinessUserDetail()
     {
@@ -693,7 +693,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets business_user_detail
      *
-     * @param \OpenAPI\Client\Model\BusinessUserDetail|null $business_user_detail business_user_detail
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetail|null $business_user_detail business_user_detail
      *
      * @return self
      */
@@ -710,7 +710,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client_trusted_advisor
      *
-     * @return \OpenAPI\Client\Model\ClientTrustedAdvisor[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]|null
      */
     public function getClientTrustedAdvisor()
     {
@@ -720,7 +720,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client_trusted_advisor
      *
-     * @param \OpenAPI\Client\Model\ClientTrustedAdvisor[]|null $client_trusted_advisor describes information of client trusted advisor
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]|null $client_trusted_advisor describes information of client trusted advisor
      *
      * @return self
      */
@@ -872,7 +872,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cdr_insights_disclosure
      *
-     * @return \OpenAPI\Client\Model\CDRInsightsDisclosure|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure|null
      */
     public function getCdrInsightsDisclosure()
     {
@@ -882,7 +882,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cdr_insights_disclosure
      *
-     * @param \OpenAPI\Client\Model\CDRInsightsDisclosure|null $cdr_insights_disclosure cdr_insights_disclosure
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure|null $cdr_insights_disclosure cdr_insights_disclosure
      *
      * @return self
      */
@@ -963,7 +963,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets scope
      *
-     * @return \OpenAPI\Client\Model\Scope[]
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Scope[]
      */
     public function getScope()
     {
@@ -973,7 +973,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets scope
      *
-     * @param \OpenAPI\Client\Model\Scope[] $scope Scope describes about the consent permissions and their purpose.
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Scope[] $scope Scope describes about the consent permissions and their purpose.
      *
      * @return self
      */
@@ -990,7 +990,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user_data_treatment
      *
-     * @return \OpenAPI\Client\Model\UserDataTreatment|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDataTreatment|null
      */
     public function getUserDataTreatment()
     {
@@ -1000,7 +1000,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user_data_treatment
      *
-     * @param \OpenAPI\Client\Model\UserDataTreatment|null $user_data_treatment user_data_treatment
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDataTreatment|null $user_data_treatment user_data_treatment
      *
      * @return self
      */
@@ -1017,7 +1017,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\Links[]
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Links[]
      */
     public function getLinks()
     {
@@ -1027,7 +1027,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\Links[] $links GET consent preferences API details
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Links[] $links GET consent preferences API details
      *
      * @return self
      */
@@ -1098,7 +1098,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\Preferences[]
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Preferences[]
      */
     public function getPreferences()
     {
@@ -1108,7 +1108,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\Preferences[] $preferences Preferences describes options about the additional usage of data or purge data
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Preferences[] $preferences Preferences describes options about the additional usage of data or purge data
      *
      * @return self
      */
@@ -1152,7 +1152,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets renewal
      *
-     * @return \OpenAPI\Client\Model\Renewal|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Renewal|null
      */
     public function getRenewal()
     {
@@ -1162,7 +1162,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets renewal
      *
-     * @param \OpenAPI\Client\Model\Renewal|null $renewal renewal
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Renewal|null $renewal renewal
      *
      * @return self
      */
@@ -1260,7 +1260,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets third_party_adr
      *
-     * @return \OpenAPI\Client\Model\ThirdPartyADR[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ThirdPartyADR[]|null
      */
     public function getThirdPartyAdr()
     {
@@ -1270,7 +1270,7 @@ class Consent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets third_party_adr
      *
-     * @param \OpenAPI\Client\Model\ThirdPartyADR[]|null $third_party_adr ThirdPartyADR describes details of additional parties which are accredited data recipients under organization
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ThirdPartyADR[]|null $third_party_adr ThirdPartyADR describes details of additional parties which are accredited data recipients under organization
      *
      * @return self
      */

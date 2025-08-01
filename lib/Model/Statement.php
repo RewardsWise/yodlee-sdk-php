@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Statement Class Doc Comment
@@ -62,21 +62,21 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
         'cash_apr' => 'float',
         'billing_period_start' => 'string',
         'due_date' => 'string',
-        'interest_amount' => '\OpenAPI\Client\Model\Money',
+        'interest_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'statement_date' => 'string',
-        'cash_advance' => '\OpenAPI\Client\Model\Money',
+        'cash_advance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'billing_period_end' => 'string',
-        'principal_amount' => '\OpenAPI\Client\Model\Money',
-        'loan_balance' => '\OpenAPI\Client\Model\Money',
-        'amount_due' => '\OpenAPI\Client\Model\Money',
+        'principal_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'loan_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'amount_due' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_id' => 'int',
         'last_updated' => 'string',
         'is_latest' => 'bool',
-        'minimum_payment' => '\OpenAPI\Client\Model\Money',
+        'minimum_payment' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'last_payment_date' => 'string',
-        'last_payment_amount' => '\OpenAPI\Client\Model\Money',
+        'last_payment_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'id' => 'int',
-        'new_charges' => '\OpenAPI\Client\Model\Money'
+        'new_charges' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -527,7 +527,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets interest_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getInterestAmount()
     {
@@ -537,7 +537,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets interest_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $interest_amount interest_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $interest_amount interest_amount
      *
      * @return self
      */
@@ -581,7 +581,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cash_advance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCashAdvance()
     {
@@ -591,7 +591,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cash_advance
      *
-     * @param \OpenAPI\Client\Model\Money|null $cash_advance cash_advance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $cash_advance cash_advance
      *
      * @return self
      */
@@ -635,7 +635,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets principal_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPrincipalAmount()
     {
@@ -645,7 +645,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets principal_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $principal_amount principal_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $principal_amount principal_amount
      *
      * @return self
      */
@@ -662,7 +662,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets loan_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLoanBalance()
     {
@@ -672,7 +672,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets loan_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $loan_balance loan_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $loan_balance loan_balance
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount_due
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAmountDue()
     {
@@ -699,7 +699,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_due
      *
-     * @param \OpenAPI\Client\Model\Money|null $amount_due amount_due
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $amount_due amount_due
      *
      * @return self
      */
@@ -797,7 +797,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets minimum_payment
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getMinimumPayment()
     {
@@ -807,7 +807,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets minimum_payment
      *
-     * @param \OpenAPI\Client\Model\Money|null $minimum_payment minimum_payment
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $minimum_payment minimum_payment
      *
      * @return self
      */
@@ -851,7 +851,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets last_payment_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLastPaymentAmount()
     {
@@ -861,7 +861,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_payment_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $last_payment_amount last_payment_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $last_payment_amount last_payment_amount
      *
      * @return self
      */
@@ -905,7 +905,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets new_charges
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getNewCharges()
     {
@@ -915,7 +915,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets new_charges
      *
-     * @param \OpenAPI\Client\Model\Money|null $new_charges new_charges
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $new_charges new_charges
      *
      * @return self
      */

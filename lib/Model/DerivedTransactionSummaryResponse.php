@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedTransactionSummaryResponse Class Doc Comment
@@ -58,8 +58,8 @@ class DerivedTransactionSummaryResponse implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\OpenAPI\Client\Model\DerivedTransactionsLinks',
-        'transaction_summary' => '\OpenAPI\Client\Model\DerivedTransactionsSummary[]'
+        'links' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsLinks',
+        'transaction_summary' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsSummary[]'
     ];
 
     /**
@@ -300,7 +300,7 @@ class DerivedTransactionSummaryResponse implements ModelInterface, ArrayAccess, 
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\DerivedTransactionsLinks|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsLinks|null
      */
     public function getLinks()
     {
@@ -310,7 +310,7 @@ class DerivedTransactionSummaryResponse implements ModelInterface, ArrayAccess, 
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\DerivedTransactionsLinks|null $links links
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsLinks|null $links links
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class DerivedTransactionSummaryResponse implements ModelInterface, ArrayAccess, 
     /**
      * Gets transaction_summary
      *
-     * @return \OpenAPI\Client\Model\DerivedTransactionsSummary[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsSummary[]|null
      */
     public function getTransactionSummary()
     {
@@ -337,7 +337,7 @@ class DerivedTransactionSummaryResponse implements ModelInterface, ArrayAccess, 
     /**
      * Sets transaction_summary
      *
-     * @param \OpenAPI\Client\Model\DerivedTransactionsSummary[]|null $transaction_summary transaction_summary
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionsSummary[]|null $transaction_summary transaction_summary
      *
      * @return self
      */

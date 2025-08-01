@@ -1,4 +1,4 @@
-# OpenAPI\Client\VerifyAccountApi
+# RewardsWise\Yodlee\OpenAPI\Client\VerifyAccountApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `initiateAccountVerification()`
 
 ```php
-initiateAccountVerification($provider_account_id, $verification_param): \OpenAPI\Client\Model\VerifyAccountResponse
+initiateAccountVerification($provider_account_id, $verification_param): \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse
 ```
 
 Verify Accounts Using Transactions
@@ -25,13 +25,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerifyAccountApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerifyAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $provider_account_id = 'provider_account_id_example'; // string | providerAccountId
-$verification_param = new \OpenAPI\Client\Model\VerifyAccountRequest(); // \OpenAPI\Client\Model\VerifyAccountRequest | verificationParam
+$verification_param = new \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest | verificationParam
 
 try {
     $result = $apiInstance->initiateAccountVerification($provider_account_id, $verification_param);
@@ -46,11 +46,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **provider_account_id** | **string**| providerAccountId | |
-| **verification_param** | [**\OpenAPI\Client\Model\VerifyAccountRequest**](../Model/VerifyAccountRequest.md)| verificationParam | |
+| **verification_param** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountRequest**](../Model/VerifyAccountRequest.md)| verificationParam | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VerifyAccountResponse**](../Model/VerifyAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyAccountResponse**](../Model/VerifyAccountResponse.md)
 
 ### Authorization
 

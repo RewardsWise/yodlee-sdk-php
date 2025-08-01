@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionCategoryResponse Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionCategoryResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transaction_category' => '\OpenAPI\Client\Model\TransactionCategory[]'
+        'transaction_category' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategory[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class TransactionCategoryResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets transaction_category
      *
-     * @return \OpenAPI\Client\Model\TransactionCategory[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategory[]|null
      */
     public function getTransactionCategory()
     {
@@ -303,7 +303,7 @@ class TransactionCategoryResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets transaction_category
      *
-     * @param \OpenAPI\Client\Model\TransactionCategory[]|null $transaction_category transaction_category
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategory[]|null $transaction_category transaction_category
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ConsentsApi
+# RewardsWise\Yodlee\OpenAPI\Client\ConsentsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createConsent()`
 
 ```php
-createConsent($consent_request): \OpenAPI\Client\Model\CreatedConsentResponse
+createConsent($consent_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse
 ```
 
 Post Consent
@@ -32,12 +32,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$consent_request = new \OpenAPI\Client\Model\CreateConsentRequest(); // \OpenAPI\Client\Model\CreateConsentRequest | Unique identifier for the provider site(mandatory), the name of the application,  <br/>the flag responsible to include html content in the response, <br/>when passed as true and the name of the dataset attribute supported by the provider.
+$consent_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest | Unique identifier for the provider site(mandatory), the name of the application,  <br/>the flag responsible to include html content in the response, <br/>when passed as true and the name of the dataset attribute supported by the provider.
 
 try {
     $result = $apiInstance->createConsent($consent_request);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **consent_request** | [**\OpenAPI\Client\Model\CreateConsentRequest**](../Model/CreateConsentRequest.md)| Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. | |
+| **consent_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest**](../Model/CreateConsentRequest.md)| Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreatedConsentResponse**](../Model/CreatedConsentResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse**](../Model/CreatedConsentResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `getConsentDetails()`
 
 ```php
-getConsentDetails($consent_id): \OpenAPI\Client\Model\UpdatedConsentResponse
+getConsentDetails($consent_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse
 ```
 
 Get Authorization Details
@@ -88,7 +88,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UpdatedConsentResponse**](../Model/UpdatedConsentResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse**](../Model/UpdatedConsentResponse.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `getConsentHistory()`
 
 ```php
-getConsentHistory($consent_id, $from_date, $skip, $to_date, $top): \OpenAPI\Client\Model\ConsentHistoryResponse
+getConsentHistory($consent_id, $from_date, $skip, $to_date, $top): \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse
 ```
 
 Get Consent History
@@ -144,7 +144,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConsentHistoryResponse**](../Model/ConsentHistoryResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse**](../Model/ConsentHistoryResponse.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
 ## `getConsentHistoryCount()`
 
 ```php
-getConsentHistoryCount($consent_id, $from_date, $to_date): \OpenAPI\Client\Model\ConsentHistoryCountResponse
+getConsentHistoryCount($consent_id, $from_date, $to_date): \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse
 ```
 
 Get Consent History Count
@@ -208,7 +208,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -235,7 +235,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConsentHistoryCountResponse**](../Model/ConsentHistoryCountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse**](../Model/ConsentHistoryCountResponse.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ No authorization required
 ## `getConsentPreferences()`
 
 ```php
-getConsentPreferences($consent_id): \OpenAPI\Client\Model\ConsentPreferencesResponse
+getConsentPreferences($consent_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse
 ```
 
 Get Consents Preferences
@@ -268,7 +268,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -291,7 +291,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConsentPreferencesResponse**](../Model/ConsentPreferencesResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse**](../Model/ConsentPreferencesResponse.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ No authorization required
 ## `getConsents()`
 
 ```php
-getConsents($consent_ids, $include, $provider_account_ids): \OpenAPI\Client\Model\ConsentResponse
+getConsents($consent_ids, $include, $provider_account_ids): \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse
 ```
 
 Get Consents
@@ -324,7 +324,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -351,7 +351,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConsentResponse**](../Model/ConsentResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse**](../Model/ConsentResponse.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 ## `renewConsent()`
 
 ```php
-renewConsent($consent_id, $renew_consent_request): \OpenAPI\Client\Model\RenewConsentResponse
+renewConsent($consent_id, $renew_consent_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse
 ```
 
 Renew Consent
@@ -384,13 +384,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $consent_id = 56; // int | Consent Id to be renewed.
-$renew_consent_request = new \OpenAPI\Client\Model\RenewConsentRequest(); // \OpenAPI\Client\Model\RenewConsentRequest | renewal entity from consent details service.
+$renew_consent_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest | renewal entity from consent details service.
 
 try {
     $result = $apiInstance->renewConsent($consent_id, $renew_consent_request);
@@ -405,11 +405,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **consent_id** | **int**| Consent Id to be renewed. | |
-| **renew_consent_request** | [**\OpenAPI\Client\Model\RenewConsentRequest**](../Model/RenewConsentRequest.md)| renewal entity from consent details service. | [optional] |
+| **renew_consent_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest**](../Model/RenewConsentRequest.md)| renewal entity from consent details service. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RenewConsentResponse**](../Model/RenewConsentResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse**](../Model/RenewConsentResponse.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ No authorization required
 ## `updateConsent()`
 
 ```php
-updateConsent($consent_id, $consent_request): \OpenAPI\Client\Model\UpdatedConsentResponse
+updateConsent($consent_id, $consent_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse
 ```
 
 Put Consent
@@ -442,13 +442,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConsentsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConsentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $consent_id = 56; // int | Consent Id generated through POST Consent.
-$consent_request = new \OpenAPI\Client\Model\UpdateConsentRequest(); // \OpenAPI\Client\Model\UpdateConsentRequest | Applicable Open Banking data cluster values.
+$consent_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest | Applicable Open Banking data cluster values.
 
 try {
     $result = $apiInstance->updateConsent($consent_id, $consent_request);
@@ -463,11 +463,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **consent_id** | **int**| Consent Id generated through POST Consent. | |
-| **consent_request** | [**\OpenAPI\Client\Model\UpdateConsentRequest**](../Model/UpdateConsentRequest.md)| Applicable Open Banking data cluster values. | |
+| **consent_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest**](../Model/UpdateConsentRequest.md)| Applicable Open Banking data cluster values. | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UpdatedConsentResponse**](../Model/UpdatedConsentResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse**](../Model/UpdatedConsentResponse.md)
 
 ### Authorization
 

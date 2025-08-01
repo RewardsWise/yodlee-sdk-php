@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedNetworth Class Doc Comment
@@ -59,10 +59,10 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'date' => 'string',
-        'liability' => '\OpenAPI\Client\Model\Money',
-        'historical_balances' => '\OpenAPI\Client\Model\DerivedNetworthHistoricalBalance[]',
-        'networth' => '\OpenAPI\Client\Model\Money',
-        'asset' => '\OpenAPI\Client\Model\Money'
+        'liability' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'historical_balances' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthHistoricalBalance[]',
+        'networth' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'asset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -348,7 +348,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets liability
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getLiability()
     {
@@ -358,7 +358,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liability
      *
-     * @param \OpenAPI\Client\Model\Money|null $liability liability
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $liability liability
      *
      * @return self
      */
@@ -375,7 +375,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets historical_balances
      *
-     * @return \OpenAPI\Client\Model\DerivedNetworthHistoricalBalance[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthHistoricalBalance[]|null
      */
     public function getHistoricalBalances()
     {
@@ -385,7 +385,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets historical_balances
      *
-     * @param \OpenAPI\Client\Model\DerivedNetworthHistoricalBalance[]|null $historical_balances Balances of the accounts over the period of time.<br><br><b>Applicable containers</b>: bank, creditcard, investment, insurance, realEstate, loan<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthHistoricalBalance[]|null $historical_balances Balances of the accounts over the period of time.<br><br><b>Applicable containers</b>: bank, creditcard, investment, insurance, realEstate, loan<br>
      *
      * @return self
      */
@@ -402,7 +402,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets networth
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getNetworth()
     {
@@ -412,7 +412,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets networth
      *
-     * @param \OpenAPI\Client\Model\Money|null $networth networth
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $networth networth
      *
      * @return self
      */
@@ -429,7 +429,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets asset
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAsset()
     {
@@ -439,7 +439,7 @@ class DerivedNetworth implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets asset
      *
-     * @param \OpenAPI\Client\Model\Money|null $asset asset
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $asset asset
      *
      * @return self
      */

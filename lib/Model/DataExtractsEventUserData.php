@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsEventUserData Class Doc Comment
@@ -58,8 +58,8 @@ class DataExtractsEventUserData implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\OpenAPI\Client\Model\DataExtractsEventLinks[]',
-        'user' => '\OpenAPI\Client\Model\DataExtractsUser'
+        'links' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventLinks[]',
+        'user' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUser'
     ];
 
     /**
@@ -300,7 +300,7 @@ class DataExtractsEventUserData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\DataExtractsEventLinks[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventLinks[]|null
      */
     public function getLinks()
     {
@@ -310,7 +310,7 @@ class DataExtractsEventUserData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\DataExtractsEventLinks[]|null $links links
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventLinks[]|null $links links
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class DataExtractsEventUserData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets user
      *
-     * @return \OpenAPI\Client\Model\DataExtractsUser|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUser|null
      */
     public function getUser()
     {
@@ -337,7 +337,7 @@ class DataExtractsEventUserData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets user
      *
-     * @param \OpenAPI\Client\Model\DataExtractsUser|null $user user
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUser|null $user user
      *
      * @return self
      */

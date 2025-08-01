@@ -1,4 +1,4 @@
-# OpenAPI\Client\HoldingsApi
+# RewardsWise\Yodlee\OpenAPI\Client\HoldingsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `addHolding()`
 
 ```php
-addHolding($add_holding_request): \OpenAPI\Client\Model\HoldingIdListResponse
+addHolding($add_holding_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse
 ```
 
 Add Holding
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\HoldingsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\HoldingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$add_holding_request = new \OpenAPI\Client\Model\HoldingRequest(); // \OpenAPI\Client\Model\HoldingRequest | addHoldingRequest
+$add_holding_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest | addHoldingRequest
 
 try {
     $result = $apiInstance->addHolding($add_holding_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **add_holding_request** | [**\OpenAPI\Client\Model\HoldingRequest**](../Model/HoldingRequest.md)| addHoldingRequest | |
+| **add_holding_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest**](../Model/HoldingRequest.md)| addHoldingRequest | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HoldingIdListResponse**](../Model/HoldingIdListResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse**](../Model/HoldingIdListResponse.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `getAssetClassificationList()`
 
 ```php
-getAssetClassificationList(): \OpenAPI\Client\Model\HoldingAssetClassificationListResponse
+getAssetClassificationList(): \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse
 ```
 
 Get Asset Classification List
@@ -85,7 +85,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\HoldingsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\HoldingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HoldingAssetClassificationListResponse**](../Model/HoldingAssetClassificationListResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse**](../Model/HoldingAssetClassificationListResponse.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `getHoldingTypeList()`
 
 ```php
-getHoldingTypeList(): \OpenAPI\Client\Model\HoldingTypeListResponse
+getHoldingTypeList(): \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse
 ```
 
 Get Holding Type List
@@ -138,7 +138,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\HoldingsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\HoldingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HoldingTypeListResponse**](../Model/HoldingTypeListResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse**](../Model/HoldingTypeListResponse.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ No authorization required
 ## `getHoldings()`
 
 ```php
-getHoldings($account_id, $asset_classification_classification_type, $classification_value, $include, $provider_account_id): \OpenAPI\Client\Model\HoldingResponse
+getHoldings($account_id, $asset_classification_classification_type, $classification_value, $include, $provider_account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse
 ```
 
 Get Holdings
@@ -191,7 +191,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\HoldingsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\HoldingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -222,7 +222,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HoldingResponse**](../Model/HoldingResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse**](../Model/HoldingResponse.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ No authorization required
 ## `getSecurities()`
 
 ```php
-getSecurities($holding_id): \OpenAPI\Client\Model\HoldingSecuritiesResponse
+getSecurities($holding_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse
 ```
 
 Get Security Details
@@ -255,7 +255,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\HoldingsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\HoldingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -278,7 +278,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HoldingSecuritiesResponse**](../Model/HoldingSecuritiesResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse**](../Model/HoldingSecuritiesResponse.md)
 
 ### Authorization
 

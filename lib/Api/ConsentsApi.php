@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ConsentsApi Class Doc Comment
@@ -152,12 +152,12 @@ class ConsentsApi
      *
      * Post Consent
      *
-     * @param  \OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConsent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreatedConsentResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function createConsent($consent_request, string $contentType = self::contentTypes['createConsent'][0])
     {
@@ -170,12 +170,12 @@ class ConsentsApi
      *
      * Post Consent
      *
-     * @param  \OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConsent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreatedConsentResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createConsentWithHttpInfo($consent_request, string $contentType = self::contentTypes['createConsent'][0])
     {
@@ -207,13 +207,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CreatedConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -235,7 +235,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CreatedConsentResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse',
                 $request,
                 $response,
             );
@@ -244,7 +244,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreatedConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -269,7 +269,7 @@ class ConsentsApi
      *
      * Post Consent
      *
-     * @param  \OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -290,7 +290,7 @@ class ConsentsApi
      *
      * Post Consent
      *
-     * @param  \OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -298,7 +298,7 @@ class ConsentsApi
      */
     public function createConsentAsyncWithHttpInfo($consent_request, string $contentType = self::contentTypes['createConsent'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreatedConsentResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedConsentResponse';
         $request = $this->createConsentRequest($consent_request, $contentType);
 
         return $this->client
@@ -340,7 +340,7 @@ class ConsentsApi
     /**
      * Create request for operation 'createConsent'
      *
-     * @param  \OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConsentRequest $consent_request Unique identifier for the provider site(mandatory), the name of the application,  &lt;br/&gt;the flag responsible to include html content in the response, &lt;br/&gt;when passed as true and the name of the dataset attribute supported by the provider. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -436,9 +436,9 @@ class ConsentsApi
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentDetails'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UpdatedConsentResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getConsentDetails($consent_id, string $contentType = self::contentTypes['getConsentDetails'][0])
     {
@@ -454,9 +454,9 @@ class ConsentsApi
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentDetails'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UpdatedConsentResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsentDetailsWithHttpInfo($consent_id, string $contentType = self::contentTypes['getConsentDetails'][0])
     {
@@ -488,13 +488,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UpdatedConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -516,7 +516,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UpdatedConsentResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse',
                 $request,
                 $response,
             );
@@ -525,7 +525,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UpdatedConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -533,7 +533,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -579,7 +579,7 @@ class ConsentsApi
      */
     public function getConsentDetailsAsyncWithHttpInfo($consent_id, string $contentType = self::contentTypes['getConsentDetails'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UpdatedConsentResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse';
         $request = $this->getConsentDetailsRequest($consent_id, $contentType);
 
         return $this->client
@@ -722,9 +722,9 @@ class ConsentsApi
      * @param  int|null $top top (Max 500) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentHistory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConsentHistoryResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getConsentHistory($consent_id, $from_date = null, $skip = null, $to_date = null, $top = null, string $contentType = self::contentTypes['getConsentHistory'][0])
     {
@@ -744,9 +744,9 @@ class ConsentsApi
      * @param  int|null $top top (Max 500) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentHistory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConsentHistoryResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsentHistoryWithHttpInfo($consent_id, $from_date = null, $skip = null, $to_date = null, $top = null, string $contentType = self::contentTypes['getConsentHistory'][0])
     {
@@ -778,13 +778,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConsentHistoryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -806,7 +806,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ConsentHistoryResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse',
                 $request,
                 $response,
             );
@@ -815,7 +815,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConsentHistoryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -877,7 +877,7 @@ class ConsentsApi
      */
     public function getConsentHistoryAsyncWithHttpInfo($consent_id, $from_date = null, $skip = null, $to_date = null, $top = null, string $contentType = self::contentTypes['getConsentHistory'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ConsentHistoryResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryResponse';
         $request = $this->getConsentHistoryRequest($consent_id, $from_date, $skip, $to_date, $top, $contentType);
 
         return $this->client
@@ -1063,9 +1063,9 @@ class ConsentsApi
      * @param  string|null $to_date Consent History end date (YYYY-MM-DD) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentHistoryCount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConsentHistoryCountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getConsentHistoryCount($consent_id, $from_date = null, $to_date = null, string $contentType = self::contentTypes['getConsentHistoryCount'][0])
     {
@@ -1083,9 +1083,9 @@ class ConsentsApi
      * @param  string|null $to_date Consent History end date (YYYY-MM-DD) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentHistoryCount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConsentHistoryCountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsentHistoryCountWithHttpInfo($consent_id, $from_date = null, $to_date = null, string $contentType = self::contentTypes['getConsentHistoryCount'][0])
     {
@@ -1117,13 +1117,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConsentHistoryCountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1145,7 +1145,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ConsentHistoryCountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse',
                 $request,
                 $response,
             );
@@ -1154,7 +1154,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConsentHistoryCountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1162,7 +1162,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1212,7 +1212,7 @@ class ConsentsApi
      */
     public function getConsentHistoryCountAsyncWithHttpInfo($consent_id, $from_date = null, $to_date = null, string $contentType = self::contentTypes['getConsentHistoryCount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ConsentHistoryCountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistoryCountResponse';
         $request = $this->getConsentHistoryCountRequest($consent_id, $from_date, $to_date, $contentType);
 
         return $this->client
@@ -1374,9 +1374,9 @@ class ConsentsApi
      * @param  string $consent_id consentId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentPreferences'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConsentPreferencesResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getConsentPreferences($consent_id, string $contentType = self::contentTypes['getConsentPreferences'][0])
     {
@@ -1392,9 +1392,9 @@ class ConsentsApi
      * @param  string $consent_id consentId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsentPreferences'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConsentPreferencesResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsentPreferencesWithHttpInfo($consent_id, string $contentType = self::contentTypes['getConsentPreferences'][0])
     {
@@ -1426,13 +1426,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConsentPreferencesResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1454,7 +1454,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ConsentPreferencesResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse',
                 $request,
                 $response,
             );
@@ -1463,7 +1463,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConsentPreferencesResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1471,7 +1471,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1517,7 +1517,7 @@ class ConsentsApi
      */
     public function getConsentPreferencesAsyncWithHttpInfo($consent_id, string $contentType = self::contentTypes['getConsentPreferences'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ConsentPreferencesResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentPreferencesResponse';
         $request = $this->getConsentPreferencesRequest($consent_id, $contentType);
 
         return $this->client
@@ -1659,9 +1659,9 @@ class ConsentsApi
      * @param  string|null $provider_account_ids Unique identifier for the provider account resource. This is created during account addition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConsentResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse
      */
     public function getConsents($consent_ids = null, $include = null, $provider_account_ids = null, string $contentType = self::contentTypes['getConsents'][0])
     {
@@ -1679,9 +1679,9 @@ class ConsentsApi
      * @param  string|null $provider_account_ids Unique identifier for the provider account resource. This is created during account addition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getConsents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConsentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsentsWithHttpInfo($consent_ids = null, $include = null, $provider_account_ids = null, string $contentType = self::contentTypes['getConsents'][0])
     {
@@ -1713,7 +1713,7 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse',
                         $request,
                         $response,
                     );
@@ -1735,7 +1735,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ConsentResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse',
                 $request,
                 $response,
             );
@@ -1744,7 +1744,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1794,7 +1794,7 @@ class ConsentsApi
      */
     public function getConsentsAsyncWithHttpInfo($consent_ids = null, $include = null, $provider_account_ids = null, string $contentType = self::contentTypes['getConsents'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ConsentResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentResponse';
         $request = $this->getConsentsRequest($consent_ids, $include, $provider_account_ids, $contentType);
 
         return $this->client
@@ -1948,12 +1948,12 @@ class ConsentsApi
      * Renew Consent
      *
      * @param  int $consent_id Consent Id to be renewed. (required)
-     * @param  \OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewConsent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RenewConsentResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function renewConsent($consent_id, $renew_consent_request = null, string $contentType = self::contentTypes['renewConsent'][0])
     {
@@ -1967,12 +1967,12 @@ class ConsentsApi
      * Renew Consent
      *
      * @param  int $consent_id Consent Id to be renewed. (required)
-     * @param  \OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewConsent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RenewConsentResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function renewConsentWithHttpInfo($consent_id, $renew_consent_request = null, string $contentType = self::contentTypes['renewConsent'][0])
     {
@@ -2004,13 +2004,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\RenewConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -2032,7 +2032,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\RenewConsentResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse',
                 $request,
                 $response,
             );
@@ -2041,7 +2041,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RenewConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2049,7 +2049,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2067,7 +2067,7 @@ class ConsentsApi
      * Renew Consent
      *
      * @param  int $consent_id Consent Id to be renewed. (required)
-     * @param  \OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2089,7 +2089,7 @@ class ConsentsApi
      * Renew Consent
      *
      * @param  int $consent_id Consent Id to be renewed. (required)
-     * @param  \OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2097,7 +2097,7 @@ class ConsentsApi
      */
     public function renewConsentAsyncWithHttpInfo($consent_id, $renew_consent_request = null, string $contentType = self::contentTypes['renewConsent'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\RenewConsentResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentResponse';
         $request = $this->renewConsentRequest($consent_id, $renew_consent_request, $contentType);
 
         return $this->client
@@ -2140,7 +2140,7 @@ class ConsentsApi
      * Create request for operation 'renewConsent'
      *
      * @param  int $consent_id Consent Id to be renewed. (required)
-     * @param  \OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentRequest|null $renew_consent_request renewal entity from consent details service. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2243,12 +2243,12 @@ class ConsentsApi
      * Put Consent
      *
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
-     * @param  \OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateConsent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UpdatedConsentResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function updateConsent($consent_id, $consent_request, string $contentType = self::contentTypes['updateConsent'][0])
     {
@@ -2262,12 +2262,12 @@ class ConsentsApi
      * Put Consent
      *
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
-     * @param  \OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateConsent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UpdatedConsentResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateConsentWithHttpInfo($consent_id, $consent_request, string $contentType = self::contentTypes['updateConsent'][0])
     {
@@ -2299,13 +2299,13 @@ class ConsentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UpdatedConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -2327,7 +2327,7 @@ class ConsentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UpdatedConsentResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse',
                 $request,
                 $response,
             );
@@ -2336,7 +2336,7 @@ class ConsentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UpdatedConsentResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2344,7 +2344,7 @@ class ConsentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2362,7 +2362,7 @@ class ConsentsApi
      * Put Consent
      *
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
-     * @param  \OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2384,7 +2384,7 @@ class ConsentsApi
      * Put Consent
      *
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
-     * @param  \OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2392,7 +2392,7 @@ class ConsentsApi
      */
     public function updateConsentAsyncWithHttpInfo($consent_id, $consent_request, string $contentType = self::contentTypes['updateConsent'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UpdatedConsentResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedConsentResponse';
         $request = $this->updateConsentRequest($consent_id, $consent_request, $contentType);
 
         return $this->client
@@ -2435,7 +2435,7 @@ class ConsentsApi
      * Create request for operation 'updateConsent'
      *
      * @param  int $consent_id Consent Id generated through POST Consent. (required)
-     * @param  \OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsentRequest $consent_request Applicable Open Banking data cluster values. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateConsent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

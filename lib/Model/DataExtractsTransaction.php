@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsTransaction Class Doc Comment
@@ -69,7 +69,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
         'intermediary' => 'string[]',
         'frequency' => 'string',
         'last_updated' => 'string',
-        'price' => '\OpenAPI\Client\Model\Money',
+        'price' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'source_merchant_category_code' => 'string',
         'id' => 'int',
         'check_number' => 'string',
@@ -78,7 +78,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
         'valoren' => 'string',
         'is_manual' => 'bool',
         'source_biller_name' => 'string',
-        'merchant' => '\OpenAPI\Client\Model\Merchant',
+        'merchant' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Merchant',
         'sedol' => 'string',
         'category_type' => 'string',
         'account_id' => 'int',
@@ -87,29 +87,29 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
         'holding_description' => 'string',
         'status' => 'string',
         'detail_category_id' => 'int',
-        'description' => '\OpenAPI\Client\Model\Description',
+        'description' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Description',
         'settle_date' => 'string',
         'post_date_time' => 'string',
         'base_type' => 'string',
         'category_source' => 'string',
-        'principal' => '\OpenAPI\Client\Model\Money',
+        'principal' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'source_biller_code' => 'string',
         'is_deleted' => 'bool',
-        'interest' => '\OpenAPI\Client\Model\Money',
-        'commission' => '\OpenAPI\Client\Model\Money',
+        'interest' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'commission' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'merchant_type' => 'string',
-        'amount' => '\OpenAPI\Client\Model\Money',
+        'amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'is_physical' => 'bool',
         'quantity' => 'float',
         'is_recurring' => 'string',
         'transaction_date' => 'string',
         'created_date' => 'string',
         'container' => 'string',
-        'business_category' => '\OpenAPI\Client\Model\BusinessCategory',
+        'business_category' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessCategory',
         'post_date' => 'string',
         'parent_category_id' => 'int',
         'category' => 'string',
-        'running_balance' => '\OpenAPI\Client\Model\Money',
+        'running_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'category_id' => 'int',
         'isin' => 'string'
     ];
@@ -1231,7 +1231,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPrice()
     {
@@ -1241,7 +1241,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\Money|null $price price
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $price price
      *
      * @return self
      */
@@ -1474,7 +1474,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets merchant
      *
-     * @return \OpenAPI\Client\Model\Merchant|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Merchant|null
      */
     public function getMerchant()
     {
@@ -1484,7 +1484,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets merchant
      *
-     * @param \OpenAPI\Client\Model\Merchant|null $merchant merchant
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Merchant|null $merchant merchant
      *
      * @return self
      */
@@ -1757,7 +1757,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets description
      *
-     * @return \OpenAPI\Client\Model\Description|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Description|null
      */
     public function getDescription()
     {
@@ -1767,7 +1767,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets description
      *
-     * @param \OpenAPI\Client\Model\Description|null $description description
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Description|null $description description
      *
      * @return self
      */
@@ -1912,7 +1912,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets principal
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPrincipal()
     {
@@ -1922,7 +1922,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets principal
      *
-     * @param \OpenAPI\Client\Model\Money|null $principal principal
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $principal principal
      *
      * @return self
      */
@@ -1993,7 +1993,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets interest
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getInterest()
     {
@@ -2003,7 +2003,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets interest
      *
-     * @param \OpenAPI\Client\Model\Money|null $interest interest
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $interest interest
      *
      * @return self
      */
@@ -2020,7 +2020,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets commission
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCommission()
     {
@@ -2030,7 +2030,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets commission
      *
-     * @param \OpenAPI\Client\Model\Money|null $commission commission
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $commission commission
      *
      * @return self
      */
@@ -2074,7 +2074,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAmount()
     {
@@ -2084,7 +2084,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $amount amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $amount amount
      *
      * @return self
      */
@@ -2273,7 +2273,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets business_category
      *
-     * @return \OpenAPI\Client\Model\BusinessCategory|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessCategory|null
      */
     public function getBusinessCategory()
     {
@@ -2283,7 +2283,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets business_category
      *
-     * @param \OpenAPI\Client\Model\BusinessCategory|null $business_category business_category
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessCategory|null $business_category business_category
      *
      * @return self
      */
@@ -2381,7 +2381,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets running_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getRunningBalance()
     {
@@ -2391,7 +2391,7 @@ class DataExtractsTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets running_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $running_balance running_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $running_balance running_balance
      *
      * @return self
      */

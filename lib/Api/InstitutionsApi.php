@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * InstitutionsApi Class Doc Comment
@@ -139,9 +139,9 @@ class InstitutionsApi
      * @param  int|null $top top (Max 500) - This is not applicable along with &#39;name&#39; parameter. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInstitutions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InstitutionResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getInstitutions($datasetfilter = null, $name = null, $priority = null, $provider_id = null, $skip = null, $top = null, string $contentType = self::contentTypes['getInstitutions'][0])
     {
@@ -162,9 +162,9 @@ class InstitutionsApi
      * @param  int|null $top top (Max 500) - This is not applicable along with &#39;name&#39; parameter. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInstitutions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InstitutionResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInstitutionsWithHttpInfo($datasetfilter = null, $name = null, $priority = null, $provider_id = null, $skip = null, $top = null, string $contentType = self::contentTypes['getInstitutions'][0])
     {
@@ -196,13 +196,13 @@ class InstitutionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InstitutionResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -224,7 +224,7 @@ class InstitutionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\InstitutionResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse',
                 $request,
                 $response,
             );
@@ -233,7 +233,7 @@ class InstitutionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InstitutionResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -241,7 +241,7 @@ class InstitutionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -297,7 +297,7 @@ class InstitutionsApi
      */
     public function getInstitutionsAsyncWithHttpInfo($datasetfilter = null, $name = null, $priority = null, $provider_id = null, $skip = null, $top = null, string $contentType = self::contentTypes['getInstitutions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InstitutionResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse';
         $request = $this->getInstitutionsRequest($datasetfilter, $name, $priority, $provider_id, $skip, $top, $contentType);
 
         return $this->client

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ApiKeyResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ApiKeyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'api_key' => '\OpenAPI\Client\Model\ApiKeyOutput[]'
+        'api_key' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyOutput[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ApiKeyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets api_key
      *
-     * @return \OpenAPI\Client\Model\ApiKeyOutput[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyOutput[]|null
      */
     public function getApiKey()
     {
@@ -303,7 +303,7 @@ class ApiKeyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets api_key
      *
-     * @param \OpenAPI\Client\Model\ApiKeyOutput[]|null $api_key ApiKey customer details.<br><br><b>Endpoints</b>:<ul><li>GET /auth/apiKey</li><li>POST /auth/apiKey</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyOutput[]|null $api_key ApiKey customer details.<br><br><b>Endpoints</b>:<ul><li>GET /auth/apiKey</li><li>POST /auth/apiKey</li></ul>
      *
      * @return self
      */

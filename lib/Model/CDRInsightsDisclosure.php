@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * CDRInsightsDisclosure Class Doc Comment
@@ -60,7 +60,7 @@ class CDRInsightsDisclosure implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'purpose' => 'string',
         'non_ap_name' => 'string',
-        'cdr_insights' => '\OpenAPI\Client\Model\CDRInsights[]'
+        'cdr_insights' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsights[]'
     ];
 
     /**
@@ -361,7 +361,7 @@ class CDRInsightsDisclosure implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets cdr_insights
      *
-     * @return \OpenAPI\Client\Model\CDRInsights[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsights[]|null
      */
     public function getCdrInsights()
     {
@@ -371,7 +371,7 @@ class CDRInsightsDisclosure implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets cdr_insights
      *
-     * @param \OpenAPI\Client\Model\CDRInsights[]|null $cdr_insights cdr_insights
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsights[]|null $cdr_insights cdr_insights
      *
      * @return self
      */

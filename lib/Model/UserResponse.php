@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UserResponse Class Doc Comment
@@ -58,7 +58,7 @@ class UserResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user' => '\OpenAPI\Client\Model\User'
+        'user' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\User'
     ];
 
     /**
@@ -293,7 +293,7 @@ class UserResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return \OpenAPI\Client\Model\User|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\User|null
      */
     public function getUser()
     {
@@ -303,7 +303,7 @@ class UserResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param \OpenAPI\Client\Model\User|null $user user
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\User|null $user user
      *
      * @return self
      */

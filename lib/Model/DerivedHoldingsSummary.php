@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedHoldingsSummary Class Doc Comment
@@ -58,11 +58,11 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'holding' => '\OpenAPI\Client\Model\DerivedHolding[]',
+        'holding' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHolding[]',
         'classification_type' => 'string',
         'classification_value' => 'string',
-        'value' => '\OpenAPI\Client\Model\Money',
-        'account' => '\OpenAPI\Client\Model\DerivedHoldingsAccount[]'
+        'value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsAccount[]'
     ];
 
     /**
@@ -321,7 +321,7 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets holding
      *
-     * @return \OpenAPI\Client\Model\DerivedHolding[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHolding[]|null
      */
     public function getHolding()
     {
@@ -331,7 +331,7 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets holding
      *
-     * @param \OpenAPI\Client\Model\DerivedHolding[]|null $holding Securities that belong to the asset classification type and contributed to the summary value.<br><b>Required Feature Enablement</b>: Asset classification feature.<br><br><b>Applicable containers</b>: investment, insurance<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHolding[]|null $holding Securities that belong to the asset classification type and contributed to the summary value.<br><b>Required Feature Enablement</b>: Asset classification feature.<br><br><b>Applicable containers</b>: investment, insurance<br>
      *
      * @return self
      */
@@ -402,7 +402,7 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getValue()
     {
@@ -412,7 +412,7 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets value
      *
-     * @param \OpenAPI\Client\Model\Money|null $value value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $value value
      *
      * @return self
      */
@@ -429,7 +429,7 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\DerivedHoldingsAccount[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsAccount[]|null
      */
     public function getAccount()
     {
@@ -439,7 +439,7 @@ class DerivedHoldingsSummary implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\DerivedHoldingsAccount[]|null $account Accounts that contribute to the classification. <br><b>Required Feature Enablement</b>: Asset classification feature.<br><br><b>Applicable containers</b>: investment, insurance<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingsAccount[]|null $account Accounts that contribute to the classification. <br><b>Required Feature Enablement</b>: Asset classification feature.<br><br><b>Applicable containers</b>: investment, insurance<br>
      *
      * @return self
      */

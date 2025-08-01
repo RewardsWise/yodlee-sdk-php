@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerifiedAccounts Class Doc Comment
@@ -61,22 +61,22 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => 'string',
         'verification_status' => 'string',
         'account_type' => 'string',
-        'current_balance' => '\OpenAPI\Client\Model\Money',
+        'current_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'displayed_name' => 'string',
-        'holder' => '\OpenAPI\Client\Model\AccountHolder[]',
+        'holder' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolder[]',
         'account_number' => 'string',
         'classification' => 'string',
-        'available_balance' => '\OpenAPI\Client\Model\Money',
-        'full_account_number_list' => '\OpenAPI\Client\Model\FullAccountNumberList',
+        'available_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'full_account_number_list' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\FullAccountNumberList',
         'account_id' => 'int',
         'account_age_classification' => 'string',
-        'balance' => '\OpenAPI\Client\Model\Money',
+        'balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'provider_id' => 'string',
         'provider_account_id' => 'int',
         'container' => 'string',
         'is_selected' => 'bool',
-        'cash' => '\OpenAPI\Client\Model\Money',
-        'bank_transfer_code' => '\OpenAPI\Client\Model\BankTransferCode[]',
+        'cash' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'bank_transfer_code' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]',
         'provider_name' => 'string',
         'failed_reason' => 'string'
     ];
@@ -658,7 +658,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets current_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCurrentBalance()
     {
@@ -668,7 +668,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets current_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $current_balance current_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $current_balance current_balance
      *
      * @return self
      */
@@ -712,7 +712,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets holder
      *
-     * @return \OpenAPI\Client\Model\AccountHolder[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolder[]|null
      */
     public function getHolder()
     {
@@ -722,7 +722,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets holder
      *
-     * @param \OpenAPI\Client\Model\AccountHolder[]|null $holder Holder details of the account.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank<br><b>Endpoints</b>:<ul><li>GET /verification/verifiedAccounts</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolder[]|null $holder Holder details of the account.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank<br><b>Endpoints</b>:<ul><li>GET /verification/verifiedAccounts</li></ul>
      *
      * @return self
      */
@@ -803,7 +803,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets available_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableBalance()
     {
@@ -813,7 +813,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets available_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_balance available_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_balance available_balance
      *
      * @return self
      */
@@ -830,7 +830,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets full_account_number_list
      *
-     * @return \OpenAPI\Client\Model\FullAccountNumberList|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\FullAccountNumberList|null
      */
     public function getFullAccountNumberList()
     {
@@ -840,7 +840,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets full_account_number_list
      *
-     * @param \OpenAPI\Client\Model\FullAccountNumberList|null $full_account_number_list full_account_number_list
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\FullAccountNumberList|null $full_account_number_list full_account_number_list
      *
      * @return self
      */
@@ -921,7 +921,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getBalance()
     {
@@ -931,7 +931,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $balance balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $balance balance
      *
      * @return self
      */
@@ -1066,7 +1066,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cash
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCash()
     {
@@ -1076,7 +1076,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cash
      *
-     * @param \OpenAPI\Client\Model\Money|null $cash cash
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $cash cash
      *
      * @return self
      */
@@ -1093,7 +1093,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets bank_transfer_code
      *
-     * @return \OpenAPI\Client\Model\BankTransferCode[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]|null
      */
     public function getBankTransferCode()
     {
@@ -1103,7 +1103,7 @@ class VerifiedAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bank_transfer_code
      *
-     * @param \OpenAPI\Client\Model\BankTransferCode[]|null $bank_transfer_code Bank and branch identification information.<br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank, investment<br><b>Endpoints</b>:<br><ul><li>GET /verification/verifiedAccounts</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BankTransferCode[]|null $bank_transfer_code Bank and branch identification information.<br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: bank, investment<br><b>Endpoints</b>:<br><ul><li>GET /verification/verifiedAccounts</li></ul>
      *
      * @return self
      */

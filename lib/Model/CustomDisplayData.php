@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * CustomDisplayData Class Doc Comment
@@ -58,11 +58,11 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'consent_confirmation' => '\OpenAPI\Client\Model\ConsentConfirmation',
-        'delete_preference' => '\OpenAPI\Client\Model\DeletePreference',
-        'third_party' => '\OpenAPI\Client\Model\ThirdParty',
-        'client_trusted_advisor_txt' => '\OpenAPI\Client\Model\ClientTrustedAdvisorTxt',
-        'user_data_treatment' => '\OpenAPI\Client\Model\UserDataTreatment'
+        'consent_confirmation' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentConfirmation',
+        'delete_preference' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DeletePreference',
+        'third_party' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ThirdParty',
+        'client_trusted_advisor_txt' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisorTxt',
+        'user_data_treatment' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserDataTreatment'
     ];
 
     /**
@@ -336,7 +336,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets consent_confirmation
      *
-     * @return \OpenAPI\Client\Model\ConsentConfirmation
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentConfirmation
      */
     public function getConsentConfirmation()
     {
@@ -346,7 +346,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets consent_confirmation
      *
-     * @param \OpenAPI\Client\Model\ConsentConfirmation $consent_confirmation consent_confirmation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentConfirmation $consent_confirmation consent_confirmation
      *
      * @return self
      */
@@ -363,7 +363,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets delete_preference
      *
-     * @return \OpenAPI\Client\Model\DeletePreference
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DeletePreference
      */
     public function getDeletePreference()
     {
@@ -373,7 +373,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets delete_preference
      *
-     * @param \OpenAPI\Client\Model\DeletePreference $delete_preference delete_preference
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DeletePreference $delete_preference delete_preference
      *
      * @return self
      */
@@ -390,7 +390,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets third_party
      *
-     * @return \OpenAPI\Client\Model\ThirdParty
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ThirdParty
      */
     public function getThirdParty()
     {
@@ -400,7 +400,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets third_party
      *
-     * @param \OpenAPI\Client\Model\ThirdParty $third_party third_party
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ThirdParty $third_party third_party
      *
      * @return self
      */
@@ -417,7 +417,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets client_trusted_advisor_txt
      *
-     * @return \OpenAPI\Client\Model\ClientTrustedAdvisorTxt
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisorTxt
      */
     public function getClientTrustedAdvisorTxt()
     {
@@ -427,7 +427,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets client_trusted_advisor_txt
      *
-     * @param \OpenAPI\Client\Model\ClientTrustedAdvisorTxt $client_trusted_advisor_txt client_trusted_advisor_txt
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisorTxt $client_trusted_advisor_txt client_trusted_advisor_txt
      *
      * @return self
      */
@@ -444,7 +444,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets user_data_treatment
      *
-     * @return \OpenAPI\Client\Model\UserDataTreatment
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDataTreatment
      */
     public function getUserDataTreatment()
     {
@@ -454,7 +454,7 @@ class CustomDisplayData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets user_data_treatment
      *
-     * @param \OpenAPI\Client\Model\UserDataTreatment $user_data_treatment user_data_treatment
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserDataTreatment $user_data_treatment user_data_treatment
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\StatementsApi
+# RewardsWise\Yodlee\OpenAPI\Client\StatementsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getStatements()`
 
 ```php
-getStatements($account_id, $container, $from_date, $is_latest, $status): \OpenAPI\Client\Model\StatementResponse
+getStatements($account_id, $container, $from_date, $is_latest, $status): \RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse
 ```
 
 Get Statements
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StatementsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\StatementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StatementResponse**](../Model/StatementResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse**](../Model/StatementResponse.md)
 
 ### Authorization
 

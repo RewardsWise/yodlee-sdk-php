@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionsApi Class Doc Comment
@@ -174,7 +174,7 @@ class TransactionsApi
      * @param  string|null $rule_param rules(JSON format) to categorize the transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrRunTransactionCategorizationRules'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -192,7 +192,7 @@ class TransactionsApi
      * @param  string|null $rule_param rules(JSON format) to categorize the transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrRunTransactionCategorizationRules'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -229,7 +229,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -406,10 +406,10 @@ class TransactionsApi
      *
      * Create Category
      *
-     * @param  \OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTransactionCategory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -423,10 +423,10 @@ class TransactionsApi
      *
      * Create Category
      *
-     * @param  \OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTransactionCategory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -463,7 +463,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -480,7 +480,7 @@ class TransactionsApi
      *
      * Create Category
      *
-     * @param  \OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTransactionCategory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -501,7 +501,7 @@ class TransactionsApi
      *
      * Create Category
      *
-     * @param  \OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTransactionCategory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -538,7 +538,7 @@ class TransactionsApi
     /**
      * Create request for operation 'createTransactionCategory'
      *
-     * @param  \OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryRequest $transaction_category_request User Transaction Category in JSON format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTransactionCategory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -634,7 +634,7 @@ class TransactionsApi
      * @param  int $rule_id ruleId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTransactionCategorizationRule'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -651,7 +651,7 @@ class TransactionsApi
      * @param  int $rule_id ruleId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTransactionCategorizationRule'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -688,7 +688,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -860,7 +860,7 @@ class TransactionsApi
      * @param  int $category_id categoryId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTransactionCategory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -877,7 +877,7 @@ class TransactionsApi
      * @param  int $category_id categoryId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTransactionCategory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -914,7 +914,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1085,9 +1085,9 @@ class TransactionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionCategories'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionCategoryResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse
      */
     public function getTransactionCategories(string $contentType = self::contentTypes['getTransactionCategories'][0])
     {
@@ -1102,9 +1102,9 @@ class TransactionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionCategories'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionCategoryResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionCategoriesWithHttpInfo(string $contentType = self::contentTypes['getTransactionCategories'][0])
     {
@@ -1136,7 +1136,7 @@ class TransactionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TransactionCategoryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse',
                         $request,
                         $response,
                     );
@@ -1158,7 +1158,7 @@ class TransactionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TransactionCategoryResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse',
                 $request,
                 $response,
             );
@@ -1167,7 +1167,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionCategoryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1211,7 +1211,7 @@ class TransactionsApi
      */
     public function getTransactionCategoriesAsyncWithHttpInfo(string $contentType = self::contentTypes['getTransactionCategories'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionCategoryResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategoryResponse';
         $request = $this->getTransactionCategoriesRequest($contentType);
 
         return $this->client
@@ -1333,9 +1333,9 @@ class TransactionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionCategorizationRules'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionCategorizationRuleResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse
      */
     public function getTransactionCategorizationRules(string $contentType = self::contentTypes['getTransactionCategorizationRules'][0])
     {
@@ -1350,9 +1350,9 @@ class TransactionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionCategorizationRules'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionCategorizationRuleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionCategorizationRulesWithHttpInfo(string $contentType = self::contentTypes['getTransactionCategorizationRules'][0])
     {
@@ -1384,7 +1384,7 @@ class TransactionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TransactionCategorizationRuleResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse',
                         $request,
                         $response,
                     );
@@ -1406,7 +1406,7 @@ class TransactionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TransactionCategorizationRuleResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse',
                 $request,
                 $response,
             );
@@ -1415,7 +1415,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionCategorizationRuleResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1459,7 +1459,7 @@ class TransactionsApi
      */
     public function getTransactionCategorizationRulesAsyncWithHttpInfo(string $contentType = self::contentTypes['getTransactionCategorizationRules'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionCategorizationRuleResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleResponse';
         $request = $this->getTransactionCategorizationRulesRequest($contentType);
 
         return $this->client
@@ -1581,9 +1581,9 @@ class TransactionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionCategorizationRulesDeprecated'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionCategorizationRule[]
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]
      * @deprecated
      */
     public function getTransactionCategorizationRulesDeprecated(string $contentType = self::contentTypes['getTransactionCategorizationRulesDeprecated'][0])
@@ -1599,9 +1599,9 @@ class TransactionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionCategorizationRulesDeprecated'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionCategorizationRule[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[], HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function getTransactionCategorizationRulesDeprecatedWithHttpInfo(string $contentType = self::contentTypes['getTransactionCategorizationRulesDeprecated'][0])
@@ -1634,7 +1634,7 @@ class TransactionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TransactionCategorizationRule[]',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]',
                         $request,
                         $response,
                     );
@@ -1656,7 +1656,7 @@ class TransactionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TransactionCategorizationRule[]',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]',
                 $request,
                 $response,
             );
@@ -1665,7 +1665,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionCategorizationRule[]',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1711,7 +1711,7 @@ class TransactionsApi
      */
     public function getTransactionCategorizationRulesDeprecatedAsyncWithHttpInfo(string $contentType = self::contentTypes['getTransactionCategorizationRulesDeprecated'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionCategorizationRule[]';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRule[]';
         $request = $this->getTransactionCategorizationRulesDeprecatedRequest($contentType);
 
         return $this->client
@@ -1848,9 +1848,9 @@ class TransactionsApi
      * @param  string|null $type Transaction Type(SELL,SWEEP, etc.) for bank/creditCard/investment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getTransactions($account_id = null, $base_type = null, $category_id = null, $category_type = null, $container = null, $convert_to_currency = null, $detail_category_id = null, $from_date = null, $high_level_category_id = null, $keyword = null, $skip = null, $to_date = null, $top = null, $type = null, string $contentType = self::contentTypes['getTransactions'][0])
     {
@@ -1879,9 +1879,9 @@ class TransactionsApi
      * @param  string|null $type Transaction Type(SELL,SWEEP, etc.) for bank/creditCard/investment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionsWithHttpInfo($account_id = null, $base_type = null, $category_id = null, $category_type = null, $container = null, $convert_to_currency = null, $detail_category_id = null, $from_date = null, $high_level_category_id = null, $keyword = null, $skip = null, $to_date = null, $top = null, $type = null, string $contentType = self::contentTypes['getTransactions'][0])
     {
@@ -1913,13 +1913,13 @@ class TransactionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TransactionResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1941,7 +1941,7 @@ class TransactionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TransactionResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse',
                 $request,
                 $response,
             );
@@ -1950,7 +1950,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1958,7 +1958,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2030,7 +2030,7 @@ class TransactionsApi
      */
     public function getTransactionsAsyncWithHttpInfo($account_id = null, $base_type = null, $category_id = null, $category_type = null, $container = null, $convert_to_currency = null, $detail_category_id = null, $from_date = null, $high_level_category_id = null, $keyword = null, $skip = null, $to_date = null, $top = null, $type = null, string $contentType = self::contentTypes['getTransactions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionResponse';
         $request = $this->getTransactionsRequest($account_id, $base_type, $category_id, $category_type, $container, $convert_to_currency, $detail_category_id, $from_date, $high_level_category_id, $keyword, $skip, $to_date, $top, $type, $contentType);
 
         return $this->client
@@ -2317,9 +2317,9 @@ class TransactionsApi
      * @param  string|null $type Transaction Type(SELL,SWEEP, etc.) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionsCount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionCountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getTransactionsCount($account_id = null, $base_type = null, $category_id = null, $category_type = null, $container = null, $detail_category_id = null, $from_date = null, $high_level_category_id = null, $keyword = null, $to_date = null, $type = null, string $contentType = self::contentTypes['getTransactionsCount'][0])
     {
@@ -2345,9 +2345,9 @@ class TransactionsApi
      * @param  string|null $type Transaction Type(SELL,SWEEP, etc.) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionsCount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionCountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionsCountWithHttpInfo($account_id = null, $base_type = null, $category_id = null, $category_type = null, $container = null, $detail_category_id = null, $from_date = null, $high_level_category_id = null, $keyword = null, $to_date = null, $type = null, string $contentType = self::contentTypes['getTransactionsCount'][0])
     {
@@ -2379,13 +2379,13 @@ class TransactionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TransactionCountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -2407,7 +2407,7 @@ class TransactionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TransactionCountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse',
                 $request,
                 $response,
             );
@@ -2416,7 +2416,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionCountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2424,7 +2424,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2490,7 +2490,7 @@ class TransactionsApi
      */
     public function getTransactionsCountAsyncWithHttpInfo($account_id = null, $base_type = null, $category_id = null, $category_type = null, $container = null, $detail_category_id = null, $from_date = null, $high_level_category_id = null, $keyword = null, $to_date = null, $type = null, string $contentType = self::contentTypes['getTransactionsCount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionCountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCountResponse';
         $request = $this->getTransactionsCountRequest($account_id, $base_type, $category_id, $category_type, $container, $detail_category_id, $from_date, $high_level_category_id, $keyword, $to_date, $type, $contentType);
 
         return $this->client
@@ -2735,7 +2735,7 @@ class TransactionsApi
      * @param  int $rule_id Unique id of the categorization rule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['runTransactionCategorizationRule'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2753,7 +2753,7 @@ class TransactionsApi
      * @param  int $rule_id Unique id of the categorization rule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['runTransactionCategorizationRule'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2790,7 +2790,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2978,10 +2978,10 @@ class TransactionsApi
      *
      * Update Transaction for Transaction Source ID
      *
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2995,10 +2995,10 @@ class TransactionsApi
      *
      * Update Transaction for Transaction Source ID
      *
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3035,7 +3035,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3052,7 +3052,7 @@ class TransactionsApi
      *
      * Update Transaction for Transaction Source ID
      *
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3073,7 +3073,7 @@ class TransactionsApi
      *
      * Update Transaction for Transaction Source ID
      *
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3110,7 +3110,7 @@ class TransactionsApi
     /**
      * Create request for operation 'updateTransaction'
      *
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3204,10 +3204,10 @@ class TransactionsApi
      * Update Transaction
      *
      * @param  int $transaction_id transactionId (required)
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3222,10 +3222,10 @@ class TransactionsApi
      * Update Transaction
      *
      * @param  int $transaction_id transactionId (required)
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3262,7 +3262,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3280,7 +3280,7 @@ class TransactionsApi
      * Update Transaction
      *
      * @param  int $transaction_id transactionId (required)
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3302,7 +3302,7 @@ class TransactionsApi
      * Update Transaction
      *
      * @param  int $transaction_id transactionId (required)
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3340,7 +3340,7 @@ class TransactionsApi
      * Create request for operation 'updateTransaction1'
      *
      * @param  int $transaction_id transactionId (required)
-     * @param  \OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionRequest $transaction_request transactionRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransaction1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3449,10 +3449,10 @@ class TransactionsApi
      * Update Transaction Categorization Rule
      *
      * @param  int $rule_id ruleId (required)
-     * @param  \OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategorizationRule'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3467,10 +3467,10 @@ class TransactionsApi
      * Update Transaction Categorization Rule
      *
      * @param  int $rule_id ruleId (required)
-     * @param  \OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategorizationRule'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3507,7 +3507,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3525,7 +3525,7 @@ class TransactionsApi
      * Update Transaction Categorization Rule
      *
      * @param  int $rule_id ruleId (required)
-     * @param  \OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategorizationRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3547,7 +3547,7 @@ class TransactionsApi
      * Update Transaction Categorization Rule
      *
      * @param  int $rule_id ruleId (required)
-     * @param  \OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategorizationRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3585,7 +3585,7 @@ class TransactionsApi
      * Create request for operation 'updateTransactionCategorizationRule'
      *
      * @param  int $rule_id ruleId (required)
-     * @param  \OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionCategorizationRuleRequest $transaction_categories_rule_request transactionCategoriesRuleRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategorizationRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3693,10 +3693,10 @@ class TransactionsApi
      *
      * Update Category
      *
-     * @param  \OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3710,10 +3710,10 @@ class TransactionsApi
      *
      * Update Category
      *
-     * @param  \OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategory'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3750,7 +3750,7 @@ class TransactionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3767,7 +3767,7 @@ class TransactionsApi
      *
      * Update Category
      *
-     * @param  \OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3788,7 +3788,7 @@ class TransactionsApi
      *
      * Update Category
      *
-     * @param  \OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3825,7 +3825,7 @@ class TransactionsApi
     /**
      * Create request for operation 'updateTransactionCategory'
      *
-     * @param  \OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCategoryRequest $update_category_request updateCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTransactionCategory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

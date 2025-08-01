@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ConfigsApi Class Doc Comment
@@ -144,10 +144,10 @@ class ConfigsApi
      * Subscribe For Notification Event
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionNotificationEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -162,10 +162,10 @@ class ConfigsApi
      * Subscribe For Notification Event
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionNotificationEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -202,7 +202,7 @@ class ConfigsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -220,7 +220,7 @@ class ConfigsApi
      * Subscribe For Notification Event
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionNotificationEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -242,7 +242,7 @@ class ConfigsApi
      * Subscribe For Notification Event
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionNotificationEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -280,7 +280,7 @@ class ConfigsApi
      * Create request for operation 'createSubscriptionNotificationEvent'
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionNotificationEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -391,7 +391,7 @@ class ConfigsApi
      * @param  string $event_name Name of the webhook subscription event (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedNotificationEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -408,7 +408,7 @@ class ConfigsApi
      * @param  string $event_name Name of the webhook subscription event (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedNotificationEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -445,7 +445,7 @@ class ConfigsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -616,9 +616,9 @@ class ConfigsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicEncryptionKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConfigsPublicKeyResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse
      */
     public function getPublicEncryptionKey(string $contentType = self::contentTypes['getPublicEncryptionKey'][0])
     {
@@ -633,9 +633,9 @@ class ConfigsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicEncryptionKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConfigsPublicKeyResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPublicEncryptionKeyWithHttpInfo(string $contentType = self::contentTypes['getPublicEncryptionKey'][0])
     {
@@ -667,7 +667,7 @@ class ConfigsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConfigsPublicKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse',
                         $request,
                         $response,
                     );
@@ -689,7 +689,7 @@ class ConfigsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ConfigsPublicKeyResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse',
                 $request,
                 $response,
             );
@@ -698,7 +698,7 @@ class ConfigsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConfigsPublicKeyResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class ConfigsApi
      */
     public function getPublicEncryptionKeyAsyncWithHttpInfo(string $contentType = self::contentTypes['getPublicEncryptionKey'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ConfigsPublicKeyResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse';
         $request = $this->getPublicEncryptionKeyRequest($contentType);
 
         return $this->client
@@ -865,9 +865,9 @@ class ConfigsApi
      * @param  string|null $event_name Name of the webhook subscription event (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedNotificationEvents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConfigsNotificationResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse
      */
     public function getSubscribedNotificationEvents($event_name = null, string $contentType = self::contentTypes['getSubscribedNotificationEvents'][0])
     {
@@ -883,9 +883,9 @@ class ConfigsApi
      * @param  string|null $event_name Name of the webhook subscription event (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedNotificationEvents'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConfigsNotificationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscribedNotificationEventsWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedNotificationEvents'][0])
     {
@@ -917,7 +917,7 @@ class ConfigsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConfigsNotificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse',
                         $request,
                         $response,
                     );
@@ -939,7 +939,7 @@ class ConfigsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ConfigsNotificationResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse',
                 $request,
                 $response,
             );
@@ -948,7 +948,7 @@ class ConfigsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConfigsNotificationResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -994,7 +994,7 @@ class ConfigsApi
      */
     public function getSubscribedNotificationEventsAsyncWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedNotificationEvents'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ConfigsNotificationResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse';
         $request = $this->getSubscribedNotificationEventsRequest($event_name, $contentType);
 
         return $this->client
@@ -1126,10 +1126,10 @@ class ConfigsApi
      * Update Notification Subscription
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedNotificationEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1144,10 +1144,10 @@ class ConfigsApi
      * Update Notification Subscription
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedNotificationEvent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1184,7 +1184,7 @@ class ConfigsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1202,7 +1202,7 @@ class ConfigsApi
      * Update Notification Subscription
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedNotificationEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1224,7 +1224,7 @@ class ConfigsApi
      * Update Notification Subscription
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedNotificationEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1262,7 +1262,7 @@ class ConfigsApi
      * Create request for operation 'updateSubscribedNotificationEvent'
      *
      * @param  string $event_name Name of the webhook subscription event (required)
-     * @param  \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest $event_request eventRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedNotificationEvent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

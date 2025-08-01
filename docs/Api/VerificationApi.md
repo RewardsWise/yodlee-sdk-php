@@ -1,4 +1,4 @@
-# OpenAPI\Client\VerificationApi
+# RewardsWise\Yodlee\OpenAPI\Client\VerificationApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getClassificationSummary()`
 
 ```php
-getClassificationSummary($account_id): \OpenAPI\Client\Model\ClassificationSummaryResponse
+getClassificationSummary($account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse
 ```
 
 Get Classification Summary
@@ -30,7 +30,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerificationApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ClassificationSummaryResponse**](../Model/ClassificationSummaryResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryResponse**](../Model/ClassificationSummaryResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `getHolderProfile()`
 
 ```php
-getHolderProfile($provider_account_id, $account_id): \OpenAPI\Client\Model\HolderProfileResponse
+getHolderProfile($provider_account_id, $account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse
 ```
 
 Get Holder Profile
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerificationApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HolderProfileResponse**](../Model/HolderProfileResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\HolderProfileResponse**](../Model/HolderProfileResponse.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `getVerificationStatus()`
 
 ```php
-getVerificationStatus($account_id, $provider_account_id, $verification_type): \OpenAPI\Client\Model\VerificationStatusResponse
+getVerificationStatus($account_id, $provider_account_id, $verification_type): \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse
 ```
 
 Get Verification Status
@@ -144,7 +144,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerificationApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -171,7 +171,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VerificationStatusResponse**](../Model/VerificationStatusResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatusResponse**](../Model/VerificationStatusResponse.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ No authorization required
 ## `getVerifiedAccounts()`
 
 ```php
-getVerifiedAccounts($provider_account_id, $account_id, $is_selected, $verification_status): \OpenAPI\Client\Model\VerifiedAccountResponse
+getVerifiedAccounts($provider_account_id, $account_id, $is_selected, $verification_status): \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse
 ```
 
 Get Verified Accounts
@@ -204,7 +204,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerificationApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -233,7 +233,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VerifiedAccountResponse**](../Model/VerifiedAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccountResponse**](../Model/VerifiedAccountResponse.md)
 
 ### Authorization
 
@@ -251,7 +251,7 @@ No authorization required
 ## `initiateMatchingOrChallengeDepositeVerification()`
 
 ```php
-initiateMatchingOrChallengeDepositeVerification($verification_param): \OpenAPI\Client\Model\VerificationResponse
+initiateMatchingOrChallengeDepositeVerification($verification_param): \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse
 ```
 
 Initiaite Challenge Deposit
@@ -266,12 +266,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerificationApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$verification_param = new \OpenAPI\Client\Model\VerificationRequest(); // \OpenAPI\Client\Model\VerificationRequest | verification information
+$verification_param = new \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest | verification information
 
 try {
     $result = $apiInstance->initiateMatchingOrChallengeDepositeVerification($verification_param);
@@ -285,11 +285,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **verification_param** | [**\OpenAPI\Client\Model\VerificationRequest**](../Model/VerificationRequest.md)| verification information | |
+| **verification_param** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationRequest**](../Model/VerificationRequest.md)| verification information | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VerificationResponse**](../Model/VerificationResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse**](../Model/VerificationResponse.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ No authorization required
 ## `verifyChallengeDeposit()`
 
 ```php
-verifyChallengeDeposit($verification_param): \OpenAPI\Client\Model\VerificationResponse
+verifyChallengeDeposit($verification_param): \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse
 ```
 
 Verify Challenge Deposit
@@ -322,12 +322,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VerificationApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\VerificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$verification_param = new \OpenAPI\Client\Model\UpdateVerificationRequest(); // \OpenAPI\Client\Model\UpdateVerificationRequest | verification information
+$verification_param = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest | verification information
 
 try {
     $result = $apiInstance->verifyChallengeDeposit($verification_param);
@@ -341,11 +341,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **verification_param** | [**\OpenAPI\Client\Model\UpdateVerificationRequest**](../Model/UpdateVerificationRequest.md)| verification information | |
+| **verification_param** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateVerificationRequest**](../Model/UpdateVerificationRequest.md)| verification information | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VerificationResponse**](../Model/VerificationResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationResponse**](../Model/VerificationResponse.md)
 
 ### Authorization
 

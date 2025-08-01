@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerifyAccount Class Doc Comment
@@ -58,8 +58,8 @@ class VerifyAccount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transaction_criteria' => '\OpenAPI\Client\Model\VerifyTransactionCriteria[]',
-        'account' => '\OpenAPI\Client\Model\VerifiedAccount[]'
+        'transaction_criteria' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyTransactionCriteria[]',
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccount[]'
     ];
 
     /**
@@ -300,7 +300,7 @@ class VerifyAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets transaction_criteria
      *
-     * @return \OpenAPI\Client\Model\VerifyTransactionCriteria[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyTransactionCriteria[]|null
      */
     public function getTransactionCriteria()
     {
@@ -310,7 +310,7 @@ class VerifyAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction_criteria
      *
-     * @param \OpenAPI\Client\Model\VerifyTransactionCriteria[]|null $transaction_criteria transaction_criteria
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifyTransactionCriteria[]|null $transaction_criteria transaction_criteria
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class VerifyAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\VerifiedAccount[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccount[]|null
      */
     public function getAccount()
     {
@@ -337,7 +337,7 @@ class VerifyAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\VerifiedAccount[]|null $account account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerifiedAccount[]|null $account account
      *
      * @return self
      */

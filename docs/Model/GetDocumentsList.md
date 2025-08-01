@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**associated_accounts** | [**\OpenAPI\Client\Model\SuccessAssociations[]**](SuccessAssociations.md) |  | [optional]
+**associated_accounts** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\SuccessAssociations[]**](SuccessAssociations.md) |  | [optional]
 **upload_id** | **int** |  | [optional]
 **download_url** | **string** | The URL from where the document can be download. | [optional] [readonly]
 **name** | **string** | The name of the file uploaded. | [optional] [readonly]

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationStatusResponse Class Doc Comment
@@ -58,7 +58,7 @@ class VerificationStatusResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'verification' => '\OpenAPI\Client\Model\VerificationStatus[]'
+        'verification' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatus[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class VerificationStatusResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets verification
      *
-     * @return \OpenAPI\Client\Model\VerificationStatus[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatus[]|null
      */
     public function getVerification()
     {
@@ -303,7 +303,7 @@ class VerificationStatusResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets verification
      *
-     * @param \OpenAPI\Client\Model\VerificationStatus[]|null $verification verification
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationStatus[]|null $verification verification
      *
      * @return self
      */

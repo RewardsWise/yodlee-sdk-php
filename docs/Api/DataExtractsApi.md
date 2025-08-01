@@ -1,4 +1,4 @@
-# OpenAPI\Client\DataExtractsApi
+# RewardsWise\Yodlee\OpenAPI\Client\DataExtractsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getDataExtractsEvents()`
 
 ```php
-getDataExtractsEvents($event_name, $from_date, $to_date): \OpenAPI\Client\Model\DataExtractsEventResponse
+getDataExtractsEvents($event_name, $from_date, $to_date): \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse
 ```
 
 Get Events
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DataExtractsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DataExtractsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DataExtractsEventResponse**](../Model/DataExtractsEventResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsEventResponse**](../Model/DataExtractsEventResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `getDataExtractsUserData()`
 
 ```php
-getDataExtractsUserData($from_date, $login_name, $to_date): \OpenAPI\Client\Model\DataExtractsUserDataResponse
+getDataExtractsUserData($from_date, $login_name, $to_date): \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse
 ```
 
 Get userData
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DataExtractsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\DataExtractsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -113,7 +113,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DataExtractsUserDataResponse**](../Model/DataExtractsUserDataResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserDataResponse**](../Model/DataExtractsUserDataResponse.md)
 
 ### Authorization
 

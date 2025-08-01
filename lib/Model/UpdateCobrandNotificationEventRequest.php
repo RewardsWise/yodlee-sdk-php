@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateCobrandNotificationEventRequest Class Doc Comment
@@ -58,7 +58,7 @@ class UpdateCobrandNotificationEventRequest implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event' => '\OpenAPI\Client\Model\UpdateCobrandNotificationEvent'
+        'event' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEvent'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UpdateCobrandNotificationEventRequest implements ModelInterface, ArrayAcce
     /**
      * Gets event
      *
-     * @return \OpenAPI\Client\Model\UpdateCobrandNotificationEvent
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEvent
      */
     public function getEvent()
     {
@@ -306,7 +306,7 @@ class UpdateCobrandNotificationEventRequest implements ModelInterface, ArrayAcce
     /**
      * Sets event
      *
-     * @param \OpenAPI\Client\Model\UpdateCobrandNotificationEvent $event event
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEvent $event event
      *
      * @return self
      */

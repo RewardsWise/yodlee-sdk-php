@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateVerification Class Doc Comment
@@ -64,8 +64,8 @@ class UpdateVerification implements ModelInterface, ArrayAccess, \JsonSerializab
         'provider_account_id' => 'int',
         'additional_message' => 'string',
         'verification_type' => 'string',
-        'account' => '\OpenAPI\Client\Model\VerificationAccount',
-        'transaction' => '\OpenAPI\Client\Model\VerificationTransaction[]',
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationAccount',
+        'transaction' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationTransaction[]',
         'transaction_reference_text' => 'bool',
         'verification_date' => 'string',
         'verification_id' => 'int'
@@ -698,7 +698,7 @@ class UpdateVerification implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\VerificationAccount|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationAccount|null
      */
     public function getAccount()
     {
@@ -708,7 +708,7 @@ class UpdateVerification implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\VerificationAccount|null $account account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationAccount|null $account account
      *
      * @return self
      */
@@ -725,7 +725,7 @@ class UpdateVerification implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets transaction
      *
-     * @return \OpenAPI\Client\Model\VerificationTransaction[]
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationTransaction[]
      */
     public function getTransaction()
     {
@@ -735,7 +735,7 @@ class UpdateVerification implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets transaction
      *
-     * @param \OpenAPI\Client\Model\VerificationTransaction[] $transaction transaction
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationTransaction[] $transaction transaction
      *
      * @return self
      */

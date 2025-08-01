@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateUserRegistration Class Doc Comment
@@ -58,11 +58,11 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\UserRequestPreferences',
-        'address' => '\OpenAPI\Client\Model\UserAddress',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequestPreferences',
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress',
         'phone_number' => 'string',
         'login_name' => 'string',
-        'name' => '\OpenAPI\Client\Model\Name',
+        'name' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Name',
         'email' => 'string',
         'segment_name' => 'string'
     ];
@@ -335,7 +335,7 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\UserRequestPreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequestPreferences|null
      */
     public function getPreferences()
     {
@@ -345,7 +345,7 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\UserRequestPreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserRequestPreferences|null $preferences preferences
      *
      * @return self
      */
@@ -362,7 +362,7 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\UserAddress|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress|null
      */
     public function getAddress()
     {
@@ -372,7 +372,7 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\UserAddress|null $address address
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UserAddress|null $address address
      *
      * @return self
      */
@@ -443,7 +443,7 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\Name|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null
      */
     public function getName()
     {
@@ -453,7 +453,7 @@ class UpdateUserRegistration implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\Name|null $name name
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null $name name
      *
      * @return self
      */

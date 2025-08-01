@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * HoldingRequestInfo Class Doc Comment
@@ -63,30 +63,30 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
         'cusip_number' => 'string',
         'vested_quantity' => 'float',
         'description' => 'string',
-        'unvested_value' => '\OpenAPI\Client\Model\Money',
-        'vested_value' => '\OpenAPI\Client\Model\Money',
+        'unvested_value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'vested_value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'option_type' => 'string',
         'holding_type' => 'string',
         'maturity_date' => 'string',
-        'price' => '\OpenAPI\Client\Model\Money',
+        'price' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'term' => 'string',
         'contract_quantity' => 'float',
         'is_short' => 'bool',
-        'value' => '\OpenAPI\Client\Model\Money',
+        'value' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'expiration_date' => 'string',
         'interest_rate' => 'float',
         'quantity' => 'float',
         'grant_date' => 'string',
         'sedol' => 'string',
         'vested_shares_exercisable' => 'float',
-        'spread' => '\OpenAPI\Client\Model\Money',
+        'spread' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_id' => 'int',
         'coupon_rate' => 'float',
         'unvested_quantity' => 'float',
-        'cost_basis' => '\OpenAPI\Client\Model\Money',
+        'cost_basis' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'vesting_date' => 'string',
         'isin' => 'string',
-        'strike_price' => '\OpenAPI\Client\Model\Money'
+        'strike_price' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -734,7 +734,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets unvested_value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getUnvestedValue()
     {
@@ -744,7 +744,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets unvested_value
      *
-     * @param \OpenAPI\Client\Model\Money|null $unvested_value unvested_value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $unvested_value unvested_value
      *
      * @return self
      */
@@ -761,7 +761,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets vested_value
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getVestedValue()
     {
@@ -771,7 +771,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets vested_value
      *
-     * @param \OpenAPI\Client\Model\Money|null $vested_value vested_value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $vested_value vested_value
      *
      * @return self
      */
@@ -889,7 +889,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPrice()
     {
@@ -899,7 +899,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\Money|null $price price
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $price price
      *
      * @return self
      */
@@ -997,7 +997,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets value
      *
-     * @return \OpenAPI\Client\Model\Money
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money
      */
     public function getValue()
     {
@@ -1007,7 +1007,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets value
      *
-     * @param \OpenAPI\Client\Model\Money $value value
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money $value value
      *
      * @return self
      */
@@ -1186,7 +1186,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets spread
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getSpread()
     {
@@ -1196,7 +1196,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets spread
      *
-     * @param \OpenAPI\Client\Model\Money|null $spread spread
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $spread spread
      *
      * @return self
      */
@@ -1294,7 +1294,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets cost_basis
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCostBasis()
     {
@@ -1304,7 +1304,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets cost_basis
      *
-     * @param \OpenAPI\Client\Model\Money|null $cost_basis cost_basis
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $cost_basis cost_basis
      *
      * @return self
      */
@@ -1375,7 +1375,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets strike_price
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getStrikePrice()
     {
@@ -1385,7 +1385,7 @@ class HoldingRequestInfo implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets strike_price
      *
-     * @param \OpenAPI\Client\Model\Money|null $strike_price strike_price
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $strike_price strike_price
      *
      * @return self
      */

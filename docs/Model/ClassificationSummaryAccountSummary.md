@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **account_name** | **string** | The account name as it appears at the site | [optional] [readonly]
 **account_type** | **string** | The type of account that is aggregated such as savings, checking, etc. The account type is derived based on the attributes of the account. | [optional] [readonly]
 **account_open_date** | **string** | The date on which the user opened the account at the provider site | [optional] [readonly]
-**transaction_summary** | [**\OpenAPI\Client\Model\ClassificationSummaryTransactionSummary**](ClassificationSummaryTransactionSummary.md) |  | [optional]
-**available_balance** | [**\OpenAPI\Client\Model\Money**](Money.md) |  | [optional]
+**transaction_summary** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransactionSummary**](ClassificationSummaryTransactionSummary.md) |  | [optional]
+**available_balance** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\Money**](Money.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stock_exchange_details** | [**\OpenAPI\Client\Model\StockExchangeDetail[]**](StockExchangeDetail.md) | Securities exchange provide the securities information at the corresponding exchanges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Applicable containers&lt;/b&gt;: investment, insurance&lt;br&gt; | [optional] [readonly]
+**stock_exchange_details** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\StockExchangeDetail[]**](StockExchangeDetail.md) | Securities exchange provide the securities information at the corresponding exchanges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Applicable containers&lt;/b&gt;: investment, insurance&lt;br&gt; | [optional] [readonly]
 **issue_type_multiplier** | **float** | Price units corresponding to the security style. This is used to derive actual price of the security from market value.&lt;br&gt;&lt;br&gt;&lt;b&gt;Applicable containers&lt;/b&gt;: investment, insurance&lt;br&gt; | [optional] [readonly]
 **state_taxable** | **bool** | Flag indicating state taxable.&lt;br&gt;&lt;br&gt;&lt;b&gt;Applicable containers&lt;/b&gt;: investment, insurance&lt;br&gt; | [optional] [readonly]
 **call_date** | **string** | Next call date of the security.&lt;br&gt;&lt;br&gt;&lt;b&gt;Applicable containers&lt;/b&gt;: investment, insurance&lt;br&gt; | [optional] [readonly]

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateConsentRequest Class Doc Comment
@@ -58,10 +58,10 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preferences' => '\OpenAPI\Client\Model\RenewConsentPreferences',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentPreferences',
         'scope_id' => 'string[]',
-        'cdr_insights_disclosure' => '\OpenAPI\Client\Model\CDRInsightsDisclosure',
-        'client_trusted_advisor' => '\OpenAPI\Client\Model\ClientTrustedAdvisor[]'
+        'cdr_insights_disclosure' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure',
+        'client_trusted_advisor' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]'
     ];
 
     /**
@@ -333,7 +333,7 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\RenewConsentPreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentPreferences|null
      */
     public function getPreferences()
     {
@@ -343,7 +343,7 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\RenewConsentPreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\RenewConsentPreferences|null $preferences preferences
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets cdr_insights_disclosure
      *
-     * @return \OpenAPI\Client\Model\CDRInsightsDisclosure|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure|null
      */
     public function getCdrInsightsDisclosure()
     {
@@ -406,7 +406,7 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets cdr_insights_disclosure
      *
-     * @param \OpenAPI\Client\Model\CDRInsightsDisclosure|null $cdr_insights_disclosure cdr_insights_disclosure
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CDRInsightsDisclosure|null $cdr_insights_disclosure cdr_insights_disclosure
      *
      * @return self
      */
@@ -423,7 +423,7 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets client_trusted_advisor
      *
-     * @return \OpenAPI\Client\Model\ClientTrustedAdvisor[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]|null
      */
     public function getClientTrustedAdvisor()
     {
@@ -433,7 +433,7 @@ class UpdateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets client_trusted_advisor
      *
-     * @param \OpenAPI\Client\Model\ClientTrustedAdvisor[]|null $client_trusted_advisor describes information of client trusted advisor
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientTrustedAdvisor[]|null $client_trusted_advisor describes information of client trusted advisor
      *
      * @return self
      */

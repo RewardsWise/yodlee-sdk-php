@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * CreateConsentRequest Class Doc Comment
@@ -59,8 +59,8 @@ class CreateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'provider_id' => 'int',
-        'business_user_detail' => '\OpenAPI\Client\Model\BusinessUserDetailForCreateConsent',
-        'dataset' => '\OpenAPI\Client\Model\ProvidersDataset[]',
+        'business_user_detail' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetailForCreateConsent',
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]',
         'application_name' => 'string'
     ];
 
@@ -341,7 +341,7 @@ class CreateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets business_user_detail
      *
-     * @return \OpenAPI\Client\Model\BusinessUserDetailForCreateConsent|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetailForCreateConsent|null
      */
     public function getBusinessUserDetail()
     {
@@ -351,7 +351,7 @@ class CreateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets business_user_detail
      *
-     * @param \OpenAPI\Client\Model\BusinessUserDetailForCreateConsent|null $business_user_detail business_user_detail
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessUserDetailForCreateConsent|null $business_user_detail business_user_detail
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class CreateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\ProvidersDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]|null
      */
     public function getDataset()
     {
@@ -378,7 +378,7 @@ class CreateConsentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\ProvidersDataset[]|null $dataset The name of the dataset attribute supported by the provider.If no dataset value is provided, the datasets that are configured for the customer will be considered.The configured dataset can be overridden by providing the dataset as an input.<br><br><b>Endpoints</b>:<ul><li>POST Consent</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]|null $dataset The name of the dataset attribute supported by the provider.If no dataset value is provided, the datasets that are configured for the customer will be considered.The configured dataset can be overridden by providing the dataset as an input.<br><br><b>Endpoints</b>:<ul><li>POST Consent</li></ul>
      *
      * @return self
      */

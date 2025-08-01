@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ConsentHistoryResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ConsentHistoryResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'consent_history' => '\OpenAPI\Client\Model\ConsentHistory[]'
+        'consent_history' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistory[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ConsentHistoryResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets consent_history
      *
-     * @return \OpenAPI\Client\Model\ConsentHistory[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistory[]|null
      */
     public function getConsentHistory()
     {
@@ -303,7 +303,7 @@ class ConsentHistoryResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets consent_history
      *
-     * @param \OpenAPI\Client\Model\ConsentHistory[]|null $consent_history consent_history
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ConsentHistory[]|null $consent_history consent_history
      *
      * @return self
      */

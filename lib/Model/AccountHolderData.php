@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AccountHolderData Class Doc Comment
@@ -58,10 +58,10 @@ class AccountHolderData implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identifier' => '\OpenAPI\Client\Model\Identifier[]',
+        'identifier' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]',
         'gender' => 'string',
         'ownership' => 'string',
-        'name' => '\OpenAPI\Client\Model\Name'
+        'name' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Name'
     ];
 
     /**
@@ -358,7 +358,7 @@ class AccountHolderData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets identifier
      *
-     * @return \OpenAPI\Client\Model\Identifier[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]|null
      */
     public function getIdentifier()
     {
@@ -368,7 +368,7 @@ class AccountHolderData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets identifier
      *
-     * @param \OpenAPI\Client\Model\Identifier[]|null $identifier Identifiers of the account holder.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Identifier[]|null $identifier Identifiers of the account holder.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
      *
      * @return self
      */
@@ -449,7 +449,7 @@ class AccountHolderData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\Name|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null
      */
     public function getName()
     {
@@ -459,7 +459,7 @@ class AccountHolderData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\Name|null $name name
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Name|null $name name
      *
      * @return self
      */

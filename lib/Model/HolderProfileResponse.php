@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * HolderProfileResponse Class Doc Comment
@@ -58,7 +58,7 @@ class HolderProfileResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'holder_profile' => '\OpenAPI\Client\Model\VerificationHolderProfile[]'
+        'holder_profile' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationHolderProfile[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class HolderProfileResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets holder_profile
      *
-     * @return \OpenAPI\Client\Model\VerificationHolderProfile[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationHolderProfile[]|null
      */
     public function getHolderProfile()
     {
@@ -303,7 +303,7 @@ class HolderProfileResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets holder_profile
      *
-     * @param \OpenAPI\Client\Model\VerificationHolderProfile[]|null $holder_profile The holder profile entity encapsulates all the user's details, such as the corresponding accounts and the userâ€™s profile data under it
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\VerificationHolderProfile[]|null $holder_profile The holder profile entity encapsulates all the user's details, such as the corresponding accounts and the userâ€™s profile data under it
      *
      * @return self
      */

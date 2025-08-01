@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * RefreshProviderAccountResponse Class Doc Comment
@@ -58,7 +58,7 @@ class RefreshProviderAccountResponse implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status_link' => '\OpenAPI\Client\Model\StatusLink[]'
+        'status_link' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\StatusLink[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class RefreshProviderAccountResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets status_link
      *
-     * @return \OpenAPI\Client\Model\StatusLink[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\StatusLink[]|null
      */
     public function getStatusLink()
     {
@@ -303,7 +303,7 @@ class RefreshProviderAccountResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets status_link
      *
-     * @param \OpenAPI\Client\Model\StatusLink[]|null $status_link status_link
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\StatusLink[]|null $status_link status_link
      *
      * @return self
      */

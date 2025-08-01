@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DocumentDownloadResponse Class Doc Comment
@@ -58,7 +58,7 @@ class DocumentDownloadResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'document' => '\OpenAPI\Client\Model\DocumentDownload[]'
+        'document' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentDownload[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class DocumentDownloadResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets document
      *
-     * @return \OpenAPI\Client\Model\DocumentDownload[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentDownload[]|null
      */
     public function getDocument()
     {
@@ -303,7 +303,7 @@ class DocumentDownloadResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets document
      *
-     * @param \OpenAPI\Client\Model\DocumentDownload[]|null $document document
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DocumentDownload[]|null $document document
      *
      * @return self
      */

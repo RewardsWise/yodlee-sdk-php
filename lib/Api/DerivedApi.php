@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedApi Class Doc Comment
@@ -142,9 +142,9 @@ class DerivedApi
      * @param  string|null $include details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHoldingSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DerivedHoldingSummaryResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getHoldingSummary($account_ids = null, $classification_type = null, $include = null, string $contentType = self::contentTypes['getHoldingSummary'][0])
     {
@@ -162,9 +162,9 @@ class DerivedApi
      * @param  string|null $include details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHoldingSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DerivedHoldingSummaryResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHoldingSummaryWithHttpInfo($account_ids = null, $classification_type = null, $include = null, string $contentType = self::contentTypes['getHoldingSummary'][0])
     {
@@ -196,13 +196,13 @@ class DerivedApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DerivedHoldingSummaryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -224,7 +224,7 @@ class DerivedApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DerivedHoldingSummaryResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse',
                 $request,
                 $response,
             );
@@ -233,7 +233,7 @@ class DerivedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DerivedHoldingSummaryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -241,7 +241,7 @@ class DerivedApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class DerivedApi
      */
     public function getHoldingSummaryAsyncWithHttpInfo($account_ids = null, $classification_type = null, $include = null, string $contentType = self::contentTypes['getHoldingSummary'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DerivedHoldingSummaryResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedHoldingSummaryResponse';
         $request = $this->getHoldingSummaryRequest($account_ids, $classification_type, $include, $contentType);
 
         return $this->client
@@ -454,9 +454,9 @@ class DerivedApi
      * @param  int|null $top top (Max 500) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNetworth'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DerivedNetworthResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getNetworth($account_ids = null, $container = null, $from_date = null, $include = null, $interval = null, $skip = null, $to_date = null, $top = null, string $contentType = self::contentTypes['getNetworth'][0])
     {
@@ -479,9 +479,9 @@ class DerivedApi
      * @param  int|null $top top (Max 500) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNetworth'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DerivedNetworthResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNetworthWithHttpInfo($account_ids = null, $container = null, $from_date = null, $include = null, $interval = null, $skip = null, $to_date = null, $top = null, string $contentType = self::contentTypes['getNetworth'][0])
     {
@@ -513,13 +513,13 @@ class DerivedApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DerivedNetworthResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -541,7 +541,7 @@ class DerivedApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DerivedNetworthResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse',
                 $request,
                 $response,
             );
@@ -550,7 +550,7 @@ class DerivedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DerivedNetworthResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -558,7 +558,7 @@ class DerivedApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -618,7 +618,7 @@ class DerivedApi
      */
     public function getNetworthAsyncWithHttpInfo($account_ids = null, $container = null, $from_date = null, $include = null, $interval = null, $skip = null, $to_date = null, $top = null, string $contentType = self::contentTypes['getNetworth'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DerivedNetworthResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedNetworthResponse';
         $request = $this->getNetworthRequest($account_ids, $container, $from_date, $include, $interval, $skip, $to_date, $top, $contentType);
 
         return $this->client
@@ -837,9 +837,9 @@ class DerivedApi
      * @param  string|null $to_date YYYY-MM-DD format (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DerivedTransactionSummaryResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getTransactionSummary($group_by, $account_id = null, $category_id = null, $category_type = null, $from_date = null, $include = null, $include_user_category = null, $interval = null, $to_date = null, string $contentType = self::contentTypes['getTransactionSummary'][0])
     {
@@ -863,9 +863,9 @@ class DerivedApi
      * @param  string|null $to_date YYYY-MM-DD format (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransactionSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DerivedTransactionSummaryResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionSummaryWithHttpInfo($group_by, $account_id = null, $category_id = null, $category_type = null, $from_date = null, $include = null, $include_user_category = null, $interval = null, $to_date = null, string $contentType = self::contentTypes['getTransactionSummary'][0])
     {
@@ -897,13 +897,13 @@ class DerivedApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DerivedTransactionSummaryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -925,7 +925,7 @@ class DerivedApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DerivedTransactionSummaryResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse',
                 $request,
                 $response,
             );
@@ -934,7 +934,7 @@ class DerivedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DerivedTransactionSummaryResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -942,7 +942,7 @@ class DerivedApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1004,7 +1004,7 @@ class DerivedApi
      */
     public function getTransactionSummaryAsyncWithHttpInfo($group_by, $account_id = null, $category_id = null, $category_type = null, $from_date = null, $include = null, $include_user_category = null, $interval = null, $to_date = null, string $contentType = self::contentTypes['getTransactionSummary'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DerivedTransactionSummaryResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\DerivedTransactionSummaryResponse';
         $request = $this->getTransactionSummaryRequest($group_by, $account_id, $category_id, $category_type, $from_date, $include, $include_user_category, $interval, $to_date, $contentType);
 
         return $this->client

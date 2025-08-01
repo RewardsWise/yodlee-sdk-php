@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentAccount Class Doc Comment
@@ -62,11 +62,11 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_updated' => 'string',
         'account_name' => 'string',
         'account_type' => 'string',
-        'current_balance' => '\OpenAPI\Client\Model\Money',
+        'current_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'id' => 'int',
-        'bank_transfer_code' => '\OpenAPI\Client\Model\PaymentBankTransferCodeData[]',
-        'available_balance' => '\OpenAPI\Client\Model\Money',
-        'full_account_number_list' => '\OpenAPI\Client\Model\FullAccountNumbers'
+        'bank_transfer_code' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentBankTransferCodeData[]',
+        'available_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'full_account_number_list' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\FullAccountNumbers'
     ];
 
     /**
@@ -497,7 +497,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets current_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCurrentBalance()
     {
@@ -507,7 +507,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets current_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $current_balance current_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $current_balance current_balance
      *
      * @return self
      */
@@ -551,7 +551,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets bank_transfer_code
      *
-     * @return \OpenAPI\Client\Model\PaymentBankTransferCodeData[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentBankTransferCodeData[]|null
      */
     public function getBankTransferCode()
     {
@@ -561,7 +561,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bank_transfer_code
      *
-     * @param \OpenAPI\Client\Model\PaymentBankTransferCodeData[]|null $bank_transfer_code Bank and branch identification information.<br><br><b>Endpoints</b>:<ul><li>GET /partner/paymentProcessor/account</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentBankTransferCodeData[]|null $bank_transfer_code Bank and branch identification information.<br><br><b>Endpoints</b>:<ul><li>GET /partner/paymentProcessor/account</li></ul>
      *
      * @return self
      */
@@ -578,7 +578,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets available_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableBalance()
     {
@@ -588,7 +588,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets available_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_balance available_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_balance available_balance
      *
      * @return self
      */
@@ -605,7 +605,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets full_account_number_list
      *
-     * @return \OpenAPI\Client\Model\FullAccountNumbers|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\FullAccountNumbers|null
      */
     public function getFullAccountNumberList()
     {
@@ -615,7 +615,7 @@ class PaymentAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets full_account_number_list
      *
-     * @param \OpenAPI\Client\Model\FullAccountNumbers|null $full_account_number_list full_account_number_list
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\FullAccountNumbers|null $full_account_number_list full_account_number_list
      *
      * @return self
      */

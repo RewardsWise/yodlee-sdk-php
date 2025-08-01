@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * LoanPayoffDetails Class Doc Comment
@@ -59,8 +59,8 @@ class LoanPayoffDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'pay_by_date' => 'string',
-        'payoff_amount' => '\OpenAPI\Client\Model\Money',
-        'outstanding_balance' => '\OpenAPI\Client\Model\Money'
+        'payoff_amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'outstanding_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -334,7 +334,7 @@ class LoanPayoffDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets payoff_amount
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getPayoffAmount()
     {
@@ -344,7 +344,7 @@ class LoanPayoffDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets payoff_amount
      *
-     * @param \OpenAPI\Client\Model\Money|null $payoff_amount payoff_amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $payoff_amount payoff_amount
      *
      * @return self
      */
@@ -361,7 +361,7 @@ class LoanPayoffDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets outstanding_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getOutstandingBalance()
     {
@@ -371,7 +371,7 @@ class LoanPayoffDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets outstanding_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $outstanding_balance outstanding_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $outstanding_balance outstanding_balance
      *
      * @return self
      */

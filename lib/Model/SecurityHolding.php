@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * SecurityHolding Class Doc Comment
@@ -58,7 +58,7 @@ class SecurityHolding implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'security' => '\OpenAPI\Client\Model\Security',
+        'security' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Security',
         'id' => 'string'
     ];
 
@@ -300,7 +300,7 @@ class SecurityHolding implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets security
      *
-     * @return \OpenAPI\Client\Model\Security|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Security|null
      */
     public function getSecurity()
     {
@@ -310,7 +310,7 @@ class SecurityHolding implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets security
      *
-     * @param \OpenAPI\Client\Model\Security|null $security security
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Security|null $security security
      *
      * @return self
      */

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdatedConsentResponse Class Doc Comment
@@ -58,7 +58,7 @@ class UpdatedConsentResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'consent' => '\OpenAPI\Client\Model\UpdateConsent[]'
+        'consent' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsent[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class UpdatedConsentResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets consent
      *
-     * @return \OpenAPI\Client\Model\UpdateConsent[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsent[]|null
      */
     public function getConsent()
     {
@@ -303,7 +303,7 @@ class UpdatedConsentResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets consent
      *
-     * @param \OpenAPI\Client\Model\UpdateConsent[]|null $consent consent
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConsent[]|null $consent consent
      *
      * @return self
      */

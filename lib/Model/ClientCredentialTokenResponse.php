@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ClientCredentialTokenResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ClientCredentialTokenResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'token' => '\OpenAPI\Client\Model\ClientCredentialToken'
+        'token' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialToken'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ClientCredentialTokenResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets token
      *
-     * @return \OpenAPI\Client\Model\ClientCredentialToken|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialToken|null
      */
     public function getToken()
     {
@@ -303,7 +303,7 @@ class ClientCredentialTokenResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets token
      *
-     * @param \OpenAPI\Client\Model\ClientCredentialToken|null $token token
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialToken|null $token token
      *
      * @return self
      */

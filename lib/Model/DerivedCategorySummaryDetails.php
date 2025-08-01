@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DerivedCategorySummaryDetails Class Doc Comment
@@ -59,8 +59,8 @@ class DerivedCategorySummaryDetails implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'date' => 'string',
-        'credit_total' => '\OpenAPI\Client\Model\Money',
-        'debit_total' => '\OpenAPI\Client\Model\Money'
+        'credit_total' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
+        'debit_total' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -334,7 +334,7 @@ class DerivedCategorySummaryDetails implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets credit_total
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCreditTotal()
     {
@@ -344,7 +344,7 @@ class DerivedCategorySummaryDetails implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets credit_total
      *
-     * @param \OpenAPI\Client\Model\Money|null $credit_total credit_total
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $credit_total credit_total
      *
      * @return self
      */
@@ -361,7 +361,7 @@ class DerivedCategorySummaryDetails implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets debit_total
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getDebitTotal()
     {
@@ -371,7 +371,7 @@ class DerivedCategorySummaryDetails implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets debit_total
      *
-     * @param \OpenAPI\Client\Model\Money|null $debit_total debit_total
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $debit_total debit_total
      *
      * @return self
      */

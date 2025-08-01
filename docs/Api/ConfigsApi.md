@@ -1,4 +1,4 @@
-# OpenAPI\Client\ConfigsApi
+# RewardsWise\Yodlee\OpenAPI\Client\ConfigsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -29,13 +29,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConfigsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConfigsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $event_name = 'event_name_example'; // string | Name of the webhook subscription event
-$event_request = new \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest(); // \OpenAPI\Client\Model\CreateConfigsNotificationEventRequest | eventRequest
+$event_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest | eventRequest
 
 try {
     $apiInstance->createSubscriptionNotificationEvent($event_name, $event_request);
@@ -49,7 +49,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **event_name** | **string**| Name of the webhook subscription event | |
-| **event_request** | [**\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest**](../Model/CreateConfigsNotificationEventRequest.md)| eventRequest | |
+| **event_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\CreateConfigsNotificationEventRequest**](../Model/CreateConfigsNotificationEventRequest.md)| eventRequest | |
 
 ### Return type
 
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConfigsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConfigsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -126,7 +126,7 @@ No authorization required
 ## `getPublicEncryptionKey()`
 
 ```php
-getPublicEncryptionKey(): \OpenAPI\Client\Model\ConfigsPublicKeyResponse
+getPublicEncryptionKey(): \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse
 ```
 
 Get Public Key
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConfigsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConfigsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -161,7 +161,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConfigsPublicKeyResponse**](../Model/ConfigsPublicKeyResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsPublicKeyResponse**](../Model/ConfigsPublicKeyResponse.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ## `getSubscribedNotificationEvents()`
 
 ```php
-getSubscribedNotificationEvents($event_name): \OpenAPI\Client\Model\ConfigsNotificationResponse
+getSubscribedNotificationEvents($event_name): \RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse
 ```
 
 Get Subscribed Notification Events
@@ -194,7 +194,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConfigsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConfigsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -217,7 +217,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConfigsNotificationResponse**](../Model/ConfigsNotificationResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ConfigsNotificationResponse**](../Model/ConfigsNotificationResponse.md)
 
 ### Authorization
 
@@ -250,13 +250,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ConfigsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ConfigsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $event_name = 'event_name_example'; // string | Name of the webhook subscription event
-$event_request = new \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest(); // \OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest | eventRequest
+$event_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest | eventRequest
 
 try {
     $apiInstance->updateSubscribedNotificationEvent($event_name, $event_request);
@@ -270,7 +270,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **event_name** | **string**| Name of the webhook subscription event | |
-| **event_request** | [**\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest**](../Model/UpdateConfigsNotificationEventRequest.md)| eventRequest | |
+| **event_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateConfigsNotificationEventRequest**](../Model/UpdateConfigsNotificationEventRequest.md)| eventRequest | |
 
 ### Return type
 

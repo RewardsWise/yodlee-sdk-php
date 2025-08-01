@@ -1,4 +1,4 @@
-# OpenAPI\Client\ProvidersApi
+# RewardsWise\Yodlee\OpenAPI\Client\ProvidersApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAllProviders()`
 
 ```php
-getAllProviders($capability, $datasetfilter, $full_account_number_fields, $institution_id, $name, $priority, $provider_id, $skip, $top): \OpenAPI\Client\Model\ProviderResponse
+getAllProviders($capability, $datasetfilter, $full_account_number_fields, $institution_id, $name, $priority, $provider_id, $skip, $top): \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse
 ```
 
 Get Providers
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProvidersApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProviderResponse**](../Model/ProviderResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderResponse**](../Model/ProviderResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ No authorization required
 ## `getProvider()`
 
 ```php
-getProvider($provider_id): \OpenAPI\Client\Model\ProviderDetailResponse
+getProvider($provider_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse
 ```
 
 Get Provider Details
@@ -99,7 +99,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProvidersApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -122,7 +122,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProviderDetailResponse**](../Model/ProviderDetailResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderDetailResponse**](../Model/ProviderDetailResponse.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ No authorization required
 ## `getProvidersCount()`
 
 ```php
-getProvidersCount($capability, $datasetfilter, $full_account_number_fields, $name, $priority): \OpenAPI\Client\Model\ProvidersCountResponse
+getProvidersCount($capability, $datasetfilter, $full_account_number_fields, $name, $priority): \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse
 ```
 
 Get Providers Count
@@ -155,7 +155,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProvidersApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\ProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProvidersCountResponse**](../Model/ProvidersCountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersCountResponse**](../Model/ProvidersCountResponse.md)
 
 ### Authorization
 

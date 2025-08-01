@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **mortgage_payments** | **bool** | Indicates whether the account has any mortgage payments based on an implicit logic | [optional] [readonly]
 **salary_credits** | **bool** | Indicates whether the account has salary credits based on an implicit logic | [optional] [readonly]
 **is_active_account** | **bool** | Indicates whether the account is an active account based on an implicit logic | [optional] [readonly]
-**latest_transactions** | [**\OpenAPI\Client\Model\ClassificationSummaryTransaction[]**](ClassificationSummaryTransaction.md) | An array that lists the details about the latest 3 transactions that occurred in the user&#39;s account | [optional] [readonly]
+**latest_transactions** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\ClassificationSummaryTransaction[]**](ClassificationSummaryTransaction.md) | An array that lists the details about the latest 3 transactions that occurred in the user&#39;s account | [optional] [readonly]
 **income_credits** | **bool** | Indicates whether the account has any income credits based on an implicit logic | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

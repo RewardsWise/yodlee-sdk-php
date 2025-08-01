@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * HoldingsApi Class Doc Comment
@@ -143,12 +143,12 @@ class HoldingsApi
      *
      * Add Holding
      *
-     * @param  \OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHolding'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HoldingIdListResponse|\OpenAPI\Client\Model\HoldingIdListResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function addHolding($add_holding_request, string $contentType = self::contentTypes['addHolding'][0])
     {
@@ -161,12 +161,12 @@ class HoldingsApi
      *
      * Add Holding
      *
-     * @param  \OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHolding'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HoldingIdListResponse|\OpenAPI\Client\Model\HoldingIdListResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function addHoldingWithHttpInfo($add_holding_request, string $contentType = self::contentTypes['addHolding'][0])
     {
@@ -198,19 +198,19 @@ class HoldingsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HoldingIdListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse',
                         $request,
                         $response,
                     );
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HoldingIdListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -232,7 +232,7 @@ class HoldingsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\HoldingIdListResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse',
                 $request,
                 $response,
             );
@@ -241,7 +241,7 @@ class HoldingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HoldingIdListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -249,7 +249,7 @@ class HoldingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HoldingIdListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -257,7 +257,7 @@ class HoldingsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -274,7 +274,7 @@ class HoldingsApi
      *
      * Add Holding
      *
-     * @param  \OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHolding'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -295,7 +295,7 @@ class HoldingsApi
      *
      * Add Holding
      *
-     * @param  \OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHolding'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -303,7 +303,7 @@ class HoldingsApi
      */
     public function addHoldingAsyncWithHttpInfo($add_holding_request, string $contentType = self::contentTypes['addHolding'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\HoldingIdListResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingIdListResponse';
         $request = $this->addHoldingRequest($add_holding_request, $contentType);
 
         return $this->client
@@ -345,7 +345,7 @@ class HoldingsApi
     /**
      * Create request for operation 'addHolding'
      *
-     * @param  \OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingRequest $add_holding_request addHoldingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHolding'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -440,9 +440,9 @@ class HoldingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssetClassificationList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HoldingAssetClassificationListResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse
      */
     public function getAssetClassificationList(string $contentType = self::contentTypes['getAssetClassificationList'][0])
     {
@@ -457,9 +457,9 @@ class HoldingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssetClassificationList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HoldingAssetClassificationListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetClassificationListWithHttpInfo(string $contentType = self::contentTypes['getAssetClassificationList'][0])
     {
@@ -491,7 +491,7 @@ class HoldingsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HoldingAssetClassificationListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse',
                         $request,
                         $response,
                     );
@@ -513,7 +513,7 @@ class HoldingsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\HoldingAssetClassificationListResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse',
                 $request,
                 $response,
             );
@@ -522,7 +522,7 @@ class HoldingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HoldingAssetClassificationListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -566,7 +566,7 @@ class HoldingsApi
      */
     public function getAssetClassificationListAsyncWithHttpInfo(string $contentType = self::contentTypes['getAssetClassificationList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\HoldingAssetClassificationListResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingAssetClassificationListResponse';
         $request = $this->getAssetClassificationListRequest($contentType);
 
         return $this->client
@@ -688,9 +688,9 @@ class HoldingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHoldingTypeList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HoldingTypeListResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse
      */
     public function getHoldingTypeList(string $contentType = self::contentTypes['getHoldingTypeList'][0])
     {
@@ -705,9 +705,9 @@ class HoldingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHoldingTypeList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HoldingTypeListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHoldingTypeListWithHttpInfo(string $contentType = self::contentTypes['getHoldingTypeList'][0])
     {
@@ -739,7 +739,7 @@ class HoldingsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HoldingTypeListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse',
                         $request,
                         $response,
                     );
@@ -761,7 +761,7 @@ class HoldingsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\HoldingTypeListResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse',
                 $request,
                 $response,
             );
@@ -770,7 +770,7 @@ class HoldingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HoldingTypeListResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -814,7 +814,7 @@ class HoldingsApi
      */
     public function getHoldingTypeListAsyncWithHttpInfo(string $contentType = self::contentTypes['getHoldingTypeList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\HoldingTypeListResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingTypeListResponse';
         $request = $this->getHoldingTypeListRequest($contentType);
 
         return $this->client
@@ -941,9 +941,9 @@ class HoldingsApi
      * @param  string|null $provider_account_id providerAccountId (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHoldings'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HoldingResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getHoldings($account_id = null, $asset_classification_classification_type = null, $classification_value = null, $include = null, $provider_account_id = null, string $contentType = self::contentTypes['getHoldings'][0])
     {
@@ -963,9 +963,9 @@ class HoldingsApi
      * @param  string|null $provider_account_id providerAccountId (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHoldings'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HoldingResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHoldingsWithHttpInfo($account_id = null, $asset_classification_classification_type = null, $classification_value = null, $include = null, $provider_account_id = null, string $contentType = self::contentTypes['getHoldings'][0])
     {
@@ -997,13 +997,13 @@ class HoldingsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HoldingResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1025,7 +1025,7 @@ class HoldingsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\HoldingResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse',
                 $request,
                 $response,
             );
@@ -1034,7 +1034,7 @@ class HoldingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HoldingResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class HoldingsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1096,7 +1096,7 @@ class HoldingsApi
      */
     public function getHoldingsAsyncWithHttpInfo($account_id = null, $asset_classification_classification_type = null, $classification_value = null, $include = null, $provider_account_id = null, string $contentType = self::contentTypes['getHoldings'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\HoldingResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingResponse';
         $request = $this->getHoldingsRequest($account_id, $asset_classification_classification_type, $classification_value, $include, $provider_account_id, $contentType);
 
         return $this->client
@@ -1274,9 +1274,9 @@ class HoldingsApi
      * @param  string|null $holding_id Comma separated holdingId (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSecurities'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HoldingSecuritiesResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getSecurities($holding_id = null, string $contentType = self::contentTypes['getSecurities'][0])
     {
@@ -1292,9 +1292,9 @@ class HoldingsApi
      * @param  string|null $holding_id Comma separated holdingId (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSecurities'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HoldingSecuritiesResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSecuritiesWithHttpInfo($holding_id = null, string $contentType = self::contentTypes['getSecurities'][0])
     {
@@ -1326,13 +1326,13 @@ class HoldingsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HoldingSecuritiesResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1354,7 +1354,7 @@ class HoldingsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\HoldingSecuritiesResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse',
                 $request,
                 $response,
             );
@@ -1363,7 +1363,7 @@ class HoldingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HoldingSecuritiesResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1371,7 +1371,7 @@ class HoldingsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1417,7 +1417,7 @@ class HoldingsApi
      */
     public function getSecuritiesAsyncWithHttpInfo($holding_id = null, string $contentType = self::contentTypes['getSecurities'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\HoldingSecuritiesResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\HoldingSecuritiesResponse';
         $request = $this->getSecuritiesRequest($holding_id, $contentType);
 
         return $this->client

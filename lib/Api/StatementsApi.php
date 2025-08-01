@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * StatementsApi Class Doc Comment
@@ -138,9 +138,9 @@ class StatementsApi
      * @param  string|null $status ACTIVE,TO_BE_CLOSED,CLOSED (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStatements'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StatementResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getStatements($account_id = null, $container = null, $from_date = null, $is_latest = null, $status = null, string $contentType = self::contentTypes['getStatements'][0])
     {
@@ -160,9 +160,9 @@ class StatementsApi
      * @param  string|null $status ACTIVE,TO_BE_CLOSED,CLOSED (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStatements'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StatementResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStatementsWithHttpInfo($account_id = null, $container = null, $from_date = null, $is_latest = null, $status = null, string $contentType = self::contentTypes['getStatements'][0])
     {
@@ -194,13 +194,13 @@ class StatementsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\StatementResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -222,7 +222,7 @@ class StatementsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\StatementResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse',
                 $request,
                 $response,
             );
@@ -231,7 +231,7 @@ class StatementsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StatementResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class StatementsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class StatementsApi
      */
     public function getStatementsAsyncWithHttpInfo($account_id = null, $container = null, $from_date = null, $is_latest = null, $status = null, string $contentType = self::contentTypes['getStatements'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StatementResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\StatementResponse';
         $request = $this->getStatementsRequest($account_id, $container, $from_date, $is_latest, $status, $contentType);
 
         return $this->client

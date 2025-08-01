@@ -1,4 +1,4 @@
-# OpenAPI\Client\InstitutionsApi
+# RewardsWise\Yodlee\OpenAPI\Client\InstitutionsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getInstitutions()`
 
 ```php
-getInstitutions($datasetfilter, $name, $priority, $provider_id, $skip, $top): \OpenAPI\Client\Model\InstitutionResponse
+getInstitutions($datasetfilter, $name, $priority, $provider_id, $skip, $top): \RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse
 ```
 
 Get institutions
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InstitutionsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\InstitutionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InstitutionResponse**](../Model/InstitutionResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\InstitutionResponse**](../Model/InstitutionResponse.md)
 
 ### Authorization
 

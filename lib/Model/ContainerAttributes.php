@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ContainerAttributes Class Doc Comment
@@ -58,11 +58,11 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'bank' => '\OpenAPI\Client\Model\TransactionDays',
-        'loan' => '\OpenAPI\Client\Model\TransactionDays',
-        'creditcard' => '\OpenAPI\Client\Model\TransactionDays',
-        'investment' => '\OpenAPI\Client\Model\TransactionDays',
-        'insurance' => '\OpenAPI\Client\Model\TransactionDays'
+        'bank' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays',
+        'loan' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays',
+        'creditcard' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays',
+        'investment' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays',
+        'insurance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays'
     ];
 
     /**
@@ -321,7 +321,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets bank
      *
-     * @return \OpenAPI\Client\Model\TransactionDays|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null
      */
     public function getBank()
     {
@@ -331,7 +331,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets bank
      *
-     * @param \OpenAPI\Client\Model\TransactionDays|null $bank bank
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null $bank bank
      *
      * @return self
      */
@@ -348,7 +348,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets loan
      *
-     * @return \OpenAPI\Client\Model\TransactionDays|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null
      */
     public function getLoan()
     {
@@ -358,7 +358,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets loan
      *
-     * @param \OpenAPI\Client\Model\TransactionDays|null $loan loan
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null $loan loan
      *
      * @return self
      */
@@ -375,7 +375,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets creditcard
      *
-     * @return \OpenAPI\Client\Model\TransactionDays|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null
      */
     public function getCreditcard()
     {
@@ -385,7 +385,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets creditcard
      *
-     * @param \OpenAPI\Client\Model\TransactionDays|null $creditcard creditcard
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null $creditcard creditcard
      *
      * @return self
      */
@@ -402,7 +402,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets investment
      *
-     * @return \OpenAPI\Client\Model\TransactionDays|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null
      */
     public function getInvestment()
     {
@@ -412,7 +412,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets investment
      *
-     * @param \OpenAPI\Client\Model\TransactionDays|null $investment investment
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null $investment investment
      *
      * @return self
      */
@@ -429,7 +429,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets insurance
      *
-     * @return \OpenAPI\Client\Model\TransactionDays|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null
      */
     public function getInsurance()
     {
@@ -439,7 +439,7 @@ class ContainerAttributes implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets insurance
      *
-     * @param \OpenAPI\Client\Model\TransactionDays|null $insurance insurance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\TransactionDays|null $insurance insurance
      *
      * @return self
      */

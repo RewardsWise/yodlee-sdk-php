@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionCategory Class Doc Comment
@@ -61,8 +61,8 @@ class TransactionCategory implements ModelInterface, ArrayAccess, \JsonSerializa
         'high_level_category_name' => 'string',
         'default_high_level_category_name' => 'string',
         'high_level_category_id' => 'int',
-        'business_category' => '\OpenAPI\Client\Model\BusinessCategory',
-        'detail_category' => '\OpenAPI\Client\Model\DetailCategory[]',
+        'business_category' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessCategory',
+        'detail_category' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DetailCategory[]',
         'id' => 'int',
         'source' => 'string',
         'category' => 'string',
@@ -524,7 +524,7 @@ class TransactionCategory implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets business_category
      *
-     * @return \OpenAPI\Client\Model\BusinessCategory|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessCategory|null
      */
     public function getBusinessCategory()
     {
@@ -534,7 +534,7 @@ class TransactionCategory implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets business_category
      *
-     * @param \OpenAPI\Client\Model\BusinessCategory|null $business_category business_category
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\BusinessCategory|null $business_category business_category
      *
      * @return self
      */
@@ -551,7 +551,7 @@ class TransactionCategory implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets detail_category
      *
-     * @return \OpenAPI\Client\Model\DetailCategory[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DetailCategory[]|null
      */
     public function getDetailCategory()
     {
@@ -561,7 +561,7 @@ class TransactionCategory implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets detail_category
      *
-     * @param \OpenAPI\Client\Model\DetailCategory[]|null $detail_category Entity that provides detail category attributes<br><br><b>Applicable containers</b>: creditCard, investment, insurance, loan<br>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DetailCategory[]|null $detail_category Entity that provides detail category attributes<br><br><b>Applicable containers</b>: creditCard, investment, insurance, loan<br>
      *
      * @return self
      */

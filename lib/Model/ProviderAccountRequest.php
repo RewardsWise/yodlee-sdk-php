@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderAccountRequest Class Doc Comment
@@ -60,11 +60,11 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'config_name' => 'string',
         'consent_id' => 'int',
-        'preferences' => '\OpenAPI\Client\Model\ProviderAccountPreferences',
+        'preferences' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences',
         'aggregation_source' => 'string',
-        'field' => '\OpenAPI\Client\Model\Field[]',
+        'field' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Field[]',
         'dataset_name' => 'string[]',
-        'dataset' => '\OpenAPI\Client\Model\ProvidersDataset[]'
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]'
     ];
 
     /**
@@ -435,7 +435,7 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets preferences
      *
-     * @return \OpenAPI\Client\Model\ProviderAccountPreferences|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences|null
      */
     public function getPreferences()
     {
@@ -445,7 +445,7 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets preferences
      *
-     * @param \OpenAPI\Client\Model\ProviderAccountPreferences|null $preferences preferences
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferences|null $preferences preferences
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets field
      *
-     * @return \OpenAPI\Client\Model\Field[]
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Field[]
      */
     public function getField()
     {
@@ -509,7 +509,7 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets field
      *
-     * @param \OpenAPI\Client\Model\Field[] $field field
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Field[] $field field
      *
      * @return self
      */
@@ -562,7 +562,7 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\ProvidersDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]|null
      */
     public function getDataset()
     {
@@ -572,7 +572,7 @@ class ProviderAccountRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\ProvidersDataset[]|null $dataset dataset
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ProvidersDataset[]|null $dataset dataset
      *
      * @return self
      */

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UserAccessToken Class Doc Comment
@@ -58,7 +58,7 @@ class UserAccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'access_tokens' => '\OpenAPI\Client\Model\AccessTokens[]'
+        'access_tokens' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccessTokens[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class UserAccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets access_tokens
      *
-     * @return \OpenAPI\Client\Model\AccessTokens[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccessTokens[]|null
      */
     public function getAccessTokens()
     {
@@ -303,7 +303,7 @@ class UserAccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets access_tokens
      *
-     * @param \OpenAPI\Client\Model\AccessTokens[]|null $access_tokens access_tokens
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccessTokens[]|null $access_tokens access_tokens
      *
      * @return self
      */

@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderResponse Class Doc Comment
@@ -58,7 +58,7 @@ class ProviderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'provider' => '\OpenAPI\Client\Model\Providers[]'
+        'provider' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Providers[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ProviderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets provider
      *
-     * @return \OpenAPI\Client\Model\Providers[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Providers[]|null
      */
     public function getProvider()
     {
@@ -303,7 +303,7 @@ class ProviderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets provider
      *
-     * @param \OpenAPI\Client\Model\Providers[]|null $provider provider
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Providers[]|null $provider provider
      *
      * @return self
      */

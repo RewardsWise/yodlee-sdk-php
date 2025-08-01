@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * TransactionRequest Class Doc Comment
@@ -58,7 +58,7 @@ class TransactionRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transaction' => '\OpenAPI\Client\Model\UpdateTransaction'
+        'transaction' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateTransaction'
     ];
 
     /**
@@ -296,7 +296,7 @@ class TransactionRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets transaction
      *
-     * @return \OpenAPI\Client\Model\UpdateTransaction
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateTransaction
      */
     public function getTransaction()
     {
@@ -306,7 +306,7 @@ class TransactionRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets transaction
      *
-     * @param \OpenAPI\Client\Model\UpdateTransaction $transaction transaction
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateTransaction $transaction transaction
      *
      * @return self
      */

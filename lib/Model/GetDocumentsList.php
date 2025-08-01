@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * GetDocumentsList Class Doc Comment
@@ -58,7 +58,7 @@ class GetDocumentsList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'associated_accounts' => '\OpenAPI\Client\Model\SuccessAssociations[]',
+        'associated_accounts' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\SuccessAssociations[]',
         'upload_id' => 'int',
         'download_url' => 'string',
         'name' => 'string',
@@ -335,7 +335,7 @@ class GetDocumentsList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets associated_accounts
      *
-     * @return \OpenAPI\Client\Model\SuccessAssociations[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\SuccessAssociations[]|null
      */
     public function getAssociatedAccounts()
     {
@@ -345,7 +345,7 @@ class GetDocumentsList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets associated_accounts
      *
-     * @param \OpenAPI\Client\Model\SuccessAssociations[]|null $associated_accounts associated_accounts
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\SuccessAssociations[]|null $associated_accounts associated_accounts
      *
      * @return self
      */

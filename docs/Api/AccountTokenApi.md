@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountTokenApi
+# RewardsWise\Yodlee\OpenAPI\Client\AccountTokenApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `generatePaymentProcessorToken()`
 
 ```php
-generatePaymentProcessorToken($token_request): \OpenAPI\Client\Model\PaymentProcessorTokenResponse
+generatePaymentProcessorToken($token_request): \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse
 ```
 
 Create Account Token
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountTokenApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$token_request = new \OpenAPI\Client\Model\PaymentProcessorTokenRequest(); // \OpenAPI\Client\Model\PaymentProcessorTokenRequest | account information
+$token_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest | account information
 
 try {
     $result = $apiInstance->generatePaymentProcessorToken($token_request);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **token_request** | [**\OpenAPI\Client\Model\PaymentProcessorTokenRequest**](../Model/PaymentProcessorTokenRequest.md)| account information | |
+| **token_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenRequest**](../Model/PaymentProcessorTokenRequest.md)| account information | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentProcessorTokenResponse**](../Model/PaymentProcessorTokenResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentProcessorTokenResponse**](../Model/PaymentProcessorTokenResponse.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountTokenApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

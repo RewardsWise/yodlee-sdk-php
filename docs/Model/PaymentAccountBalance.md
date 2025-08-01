@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **last_updated** | **string** | The date time the account information was last retrieved from the provider site and updated in the Yodlee system.&lt;br&gt;&lt;b&gt;Endpoints&lt;/b&gt;:&lt;ul&gt;&lt;li&gt;GET /partner/paymentProcessor/account&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/balance&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/holder&lt;/li&gt;&lt;/ul&gt; | [optional] [readonly]
 **account_name** | **string** | The account name as it appears at the site.&lt;br&gt;&lt;b&gt;Endpoints&lt;/b&gt;:&lt;ul&gt;&lt;li&gt;GET /partner/paymentProcessor/account&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/balance&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/holder&lt;/li&gt;&lt;/ul&gt; | [optional] [readonly]
 **account_type** | **string** | The type of account that is aggregated, i.e., savings, checking, charge, etc. The account type is derived based on the attributes of the account. &lt;br&gt;&lt;b&gt;Endpoints&lt;/b&gt;:&lt;ul&gt;&lt;li&gt;GET /partner/paymentProcessor/account&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/balance&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/holder&lt;/li&gt;&lt;/ul&gt; | [optional] [readonly]
-**current_balance** | [**\OpenAPI\Client\Model\Money**](Money.md) |  | [optional]
+**current_balance** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\Money**](Money.md) |  | [optional]
 **id** | **int** | The primary key of the account resource and the unique identifier for the account.&lt;br&gt;&lt;br&gt;&lt;b&gt;Endpoints&lt;/b&gt;:&lt;ul&gt;&lt;li&gt;GET /partner/paymentProcessor/account&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/balance&lt;/li&gt;&lt;li&gt;GET /partner/paymentProcessor/account/holder&lt;/li&gt;&lt;/ul&gt; | [optional] [readonly]
-**available_balance** | [**\OpenAPI\Client\Model\Money**](Money.md) |  | [optional]
+**available_balance** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\Money**](Money.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

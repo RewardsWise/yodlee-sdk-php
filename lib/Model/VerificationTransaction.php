@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * VerificationTransaction Class Doc Comment
@@ -58,7 +58,7 @@ class VerificationTransaction implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\Money',
+        'amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'base_type' => 'string'
     ];
 
@@ -330,7 +330,7 @@ class VerificationTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\Money
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money
      */
     public function getAmount()
     {
@@ -340,7 +340,7 @@ class VerificationTransaction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\Money $amount amount
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money $amount amount
      *
      * @return self
      */

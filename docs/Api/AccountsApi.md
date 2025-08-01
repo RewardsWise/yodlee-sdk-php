@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountsApi
+# RewardsWise\Yodlee\OpenAPI\Client\AccountsApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -19,7 +19,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createManualAccount()`
 
 ```php
-createManualAccount($account_param): \OpenAPI\Client\Model\CreatedAccountResponse
+createManualAccount($account_param): \RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedAccountResponse
 ```
 
 Add Manual Account
@@ -34,12 +34,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$account_param = new \OpenAPI\Client\Model\CreateAccountRequest(); // \OpenAPI\Client\Model\CreateAccountRequest | accountParam
+$account_param = new \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateAccountRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateAccountRequest | accountParam
 
 try {
     $result = $apiInstance->createManualAccount($account_param);
@@ -53,11 +53,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account_param** | [**\OpenAPI\Client\Model\CreateAccountRequest**](../Model/CreateAccountRequest.md)| accountParam | |
+| **account_param** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\CreateAccountRequest**](../Model/CreateAccountRequest.md)| accountParam | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreatedAccountResponse**](../Model/CreatedAccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\CreatedAccountResponse**](../Model/CreatedAccountResponse.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -130,7 +130,7 @@ No authorization required
 ## `evaluateAddress()`
 
 ```php
-evaluateAddress($address_param): \OpenAPI\Client\Model\EvaluateAddressResponse
+evaluateAddress($address_param): \RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAddressResponse
 ```
 
 Evaluate Address
@@ -145,12 +145,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$address_param = new \OpenAPI\Client\Model\EvaluateAddressRequest(); // \OpenAPI\Client\Model\EvaluateAddressRequest | addressParam
+$address_param = new \RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAddressRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAddressRequest | addressParam
 
 try {
     $result = $apiInstance->evaluateAddress($address_param);
@@ -164,11 +164,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **address_param** | [**\OpenAPI\Client\Model\EvaluateAddressRequest**](../Model/EvaluateAddressRequest.md)| addressParam | |
+| **address_param** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAddressRequest**](../Model/EvaluateAddressRequest.md)| addressParam | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EvaluateAddressResponse**](../Model/EvaluateAddressResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAddressResponse**](../Model/EvaluateAddressResponse.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ No authorization required
 ## `getAccount()`
 
 ```php
-getAccount($account_id, $convert_to_currency, $include): \OpenAPI\Client\Model\AccountResponse
+getAccount($account_id, $convert_to_currency, $include): \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountResponse
 ```
 
 Get Account Details
@@ -201,7 +201,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountResponse**](../Model/AccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountResponse**](../Model/AccountResponse.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ No authorization required
 ## `getAllAccounts()`
 
 ```php
-getAllAccounts($account_id, $container, $convert_to_currency, $include, $provider_account_id, $request_id, $status): \OpenAPI\Client\Model\AccountResponse
+getAllAccounts($account_id, $container, $convert_to_currency, $include, $provider_account_id, $request_id, $status): \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountResponse
 ```
 
 Get Accounts
@@ -261,7 +261,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -296,7 +296,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountResponse**](../Model/AccountResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountResponse**](../Model/AccountResponse.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ No authorization required
 ## `getAssociatedAccounts()`
 
 ```php
-getAssociatedAccounts($provider_account_id): \OpenAPI\Client\Model\AssociatedAccountsResponse
+getAssociatedAccounts($provider_account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\AssociatedAccountsResponse
 ```
 
 Associated Accounts
@@ -329,7 +329,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -352,7 +352,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssociatedAccountsResponse**](../Model/AssociatedAccountsResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AssociatedAccountsResponse**](../Model/AssociatedAccountsResponse.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 ## `getHistoricalBalances()`
 
 ```php
-getHistoricalBalances($account_id, $from_date, $include_cf, $interval, $skip, $to_date, $top): \OpenAPI\Client\Model\AccountHistoricalBalancesResponse
+getHistoricalBalances($account_id, $from_date, $include_cf, $interval, $skip, $to_date, $top): \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHistoricalBalancesResponse
 ```
 
 Get Historical Balances
@@ -385,7 +385,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -420,7 +420,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountHistoricalBalancesResponse**](../Model/AccountHistoricalBalancesResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHistoricalBalancesResponse**](../Model/AccountHistoricalBalancesResponse.md)
 
 ### Authorization
 
@@ -438,7 +438,7 @@ No authorization required
 ## `getLatestBalances()`
 
 ```php
-getLatestBalances($account_id, $provider_account_id): \OpenAPI\Client\Model\AccountBalanceResponse
+getLatestBalances($account_id, $provider_account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountBalanceResponse
 ```
 
 Get Latest Balances
@@ -453,7 +453,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -478,7 +478,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountBalanceResponse**](../Model/AccountBalanceResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountBalanceResponse**](../Model/AccountBalanceResponse.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ No authorization required
 ## `migrateAccounts()`
 
 ```php
-migrateAccounts($provider_account_id): \OpenAPI\Client\Model\AccountMigrationResponse
+migrateAccounts($provider_account_id): \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountMigrationResponse
 ```
 
 Migrate Accounts
@@ -511,7 +511,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -534,7 +534,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountMigrationResponse**](../Model/AccountMigrationResponse.md)
+[**\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountMigrationResponse**](../Model/AccountMigrationResponse.md)
 
 ### Authorization
 
@@ -567,13 +567,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new RewardsWise\Yodlee\OpenAPI\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 56; // int | accountId
-$account_request = new \OpenAPI\Client\Model\UpdateAccountRequest(); // \OpenAPI\Client\Model\UpdateAccountRequest | accountRequest
+$account_request = new \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountRequest(); // \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountRequest | accountRequest
 
 try {
     $apiInstance->updateAccount($account_id, $account_request);
@@ -587,7 +587,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **int**| accountId | |
-| **account_request** | [**\OpenAPI\Client\Model\UpdateAccountRequest**](../Model/UpdateAccountRequest.md)| accountRequest | |
+| **account_request** | [**\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateAccountRequest**](../Model/UpdateAccountRequest.md)| accountRequest | |
 
 ### Return type
 

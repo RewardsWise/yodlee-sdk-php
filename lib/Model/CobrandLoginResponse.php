@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * CobrandLoginResponse Class Doc Comment
@@ -58,7 +58,7 @@ class CobrandLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'session' => '\OpenAPI\Client\Model\CobrandSession',
+        'session' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandSession',
         'cobrand_id' => 'int',
         'application_id' => 'string',
         'locale' => 'string'
@@ -314,7 +314,7 @@ class CobrandLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets session
      *
-     * @return \OpenAPI\Client\Model\CobrandSession|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandSession|null
      */
     public function getSession()
     {
@@ -324,7 +324,7 @@ class CobrandLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets session
      *
-     * @param \OpenAPI\Client\Model\CobrandSession|null $session session
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandSession|null $session session
      *
      * @return self
      */

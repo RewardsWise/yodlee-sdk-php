@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentAccountHolder Class Doc Comment
@@ -62,8 +62,8 @@ class PaymentAccountHolder implements ModelInterface, ArrayAccess, \JsonSerializ
         'last_updated' => 'string',
         'account_name' => 'string',
         'account_type' => 'string',
-        'profile' => '\OpenAPI\Client\Model\AccountProfileDetail',
-        'holder' => '\OpenAPI\Client\Model\AccountHolderData[]',
+        'profile' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountProfileDetail',
+        'holder' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolderData[]',
         'id' => 'int'
     ];
 
@@ -483,7 +483,7 @@ class PaymentAccountHolder implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets profile
      *
-     * @return \OpenAPI\Client\Model\AccountProfileDetail|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountProfileDetail|null
      */
     public function getProfile()
     {
@@ -493,7 +493,7 @@ class PaymentAccountHolder implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets profile
      *
-     * @param \OpenAPI\Client\Model\AccountProfileDetail|null $profile profile
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountProfileDetail|null $profile profile
      *
      * @return self
      */
@@ -510,7 +510,7 @@ class PaymentAccountHolder implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets holder
      *
-     * @return \OpenAPI\Client\Model\AccountHolderData[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolderData[]|null
      */
     public function getHolder()
     {
@@ -520,7 +520,7 @@ class PaymentAccountHolder implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets holder
      *
-     * @param \OpenAPI\Client\Model\AccountHolderData[]|null $holder Holder details of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountHolderData[]|null $holder Holder details of the account.<br><b>Endpoints</b>:<li>GET /partner/paymentProcessor/account/holder</li></ul>
      *
      * @return self
      */

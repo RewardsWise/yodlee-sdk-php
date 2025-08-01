@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * DataExtractsUserDataResponse Class Doc Comment
@@ -58,7 +58,7 @@ class DataExtractsUserDataResponse implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_data' => '\OpenAPI\Client\Model\DataExtractsUserData[]'
+        'user_data' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserData[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class DataExtractsUserDataResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets user_data
      *
-     * @return \OpenAPI\Client\Model\DataExtractsUserData[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserData[]|null
      */
     public function getUserData()
     {
@@ -303,7 +303,7 @@ class DataExtractsUserDataResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets user_data
      *
-     * @param \OpenAPI\Client\Model\DataExtractsUserData[]|null $user_data user_data
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\DataExtractsUserData[]|null $user_data user_data
      *
      * @return self
      */

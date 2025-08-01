@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdateTransaction Class Doc Comment
@@ -62,7 +62,7 @@ class UpdateTransaction implements ModelInterface, ArrayAccess, \JsonSerializabl
         'container' => 'string',
         'is_physical' => 'bool',
         'detail_category_id' => 'int',
-        'description' => '\OpenAPI\Client\Model\Description',
+        'description' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Description',
         'memo' => 'string',
         'transaction_source_id' => 'string',
         'merchant_type' => 'string',
@@ -581,7 +581,7 @@ class UpdateTransaction implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets description
      *
-     * @return \OpenAPI\Client\Model\Description|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Description|null
      */
     public function getDescription()
     {
@@ -591,7 +591,7 @@ class UpdateTransaction implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets description
      *
-     * @param \OpenAPI\Client\Model\Description|null $description description
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Description|null $description description
      *
      * @return self
      */

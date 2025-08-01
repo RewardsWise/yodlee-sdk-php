@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * Coverage Class Doc Comment
@@ -58,7 +58,7 @@ class Coverage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\CoverageAmount[]',
+        'amount' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\CoverageAmount[]',
         'plan_type' => 'string',
         'end_date' => 'string',
         'type' => 'string',
@@ -387,7 +387,7 @@ class Coverage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\CoverageAmount[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CoverageAmount[]|null
      */
     public function getAmount()
     {
@@ -397,7 +397,7 @@ class Coverage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\CoverageAmount[]|null $amount The coverage amount-related details.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: insurance,investment<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CoverageAmount[]|null $amount The coverage amount-related details.<br><br><b>Aggregated / Manual</b>: Aggregated<br><b>Applicable containers</b>: insurance,investment<br><b>Endpoints</b>:<ul><li>GET accounts</li><li>GET accounts/{accountId}</li></ul>
      *
      * @return self
      */

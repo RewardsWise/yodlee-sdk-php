@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * StatementResponse Class Doc Comment
@@ -58,7 +58,7 @@ class StatementResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'statement' => '\OpenAPI\Client\Model\Statement[]'
+        'statement' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Statement[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class StatementResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets statement
      *
-     * @return \OpenAPI\Client\Model\Statement[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Statement[]|null
      */
     public function getStatement()
     {
@@ -303,7 +303,7 @@ class StatementResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets statement
      *
-     * @param \OpenAPI\Client\Model\Statement[]|null $statement statement
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Statement[]|null $statement statement
      *
      * @return self
      */

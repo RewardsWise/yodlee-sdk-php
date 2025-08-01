@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProvidersDataset Class Doc Comment
@@ -59,7 +59,7 @@ class ProvidersDataset implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'attribute' => '\OpenAPI\Client\Model\Attribute[]'
+        'attribute' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Attribute[]'
     ];
 
     /**
@@ -365,7 +365,7 @@ class ProvidersDataset implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets attribute
      *
-     * @return \OpenAPI\Client\Model\Attribute[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Attribute[]|null
      */
     public function getAttribute()
     {
@@ -375,7 +375,7 @@ class ProvidersDataset implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets attribute
      *
-     * @param \OpenAPI\Client\Model\Attribute[]|null $attribute The name of the dataset attribute suported by the provider.<br><br><b>Endpoints</b>:<ul><li>GET providers/{providerId}</li><li>GET providers</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Attribute[]|null $attribute The name of the dataset attribute suported by the provider.<br><br><b>Endpoints</b>:<ul><li>GET providers/{providerId}</li><li>GET providers</li></ul>
      *
      * @return self
      */

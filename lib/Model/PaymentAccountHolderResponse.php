@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * PaymentAccountHolderResponse Class Doc Comment
@@ -58,7 +58,7 @@ class PaymentAccountHolderResponse implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account' => '\OpenAPI\Client\Model\PaymentAccountHolder[]'
+        'account' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolder[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class PaymentAccountHolderResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\PaymentAccountHolder[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolder[]|null
      */
     public function getAccount()
     {
@@ -303,7 +303,7 @@ class PaymentAccountHolderResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\PaymentAccountHolder[]|null $account account
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\PaymentAccountHolder[]|null $account account
      *
      * @return self
      */

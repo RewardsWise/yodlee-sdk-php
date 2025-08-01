@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,11 +37,11 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
+use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
+use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
+use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
+use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderAccountsApi Class Doc Comment
@@ -155,7 +155,7 @@ class ProviderAccountsApi
      * @param  int $provider_account_id providerAccountId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -172,7 +172,7 @@ class ProviderAccountsApi
      * @param  int $provider_account_id providerAccountId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -209,7 +209,7 @@ class ProviderAccountsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -379,12 +379,12 @@ class ProviderAccountsApi
      * Update Account
      *
      * @param  string $provider_account_ids comma separated providerAccountIds (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCredentialsOrRefreshProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UpdatedProviderAccountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function editCredentialsOrRefreshProviderAccount($provider_account_ids, $provider_account_request = null, string $contentType = self::contentTypes['editCredentialsOrRefreshProviderAccount'][0])
     {
@@ -398,12 +398,12 @@ class ProviderAccountsApi
      * Update Account
      *
      * @param  string $provider_account_ids comma separated providerAccountIds (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCredentialsOrRefreshProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UpdatedProviderAccountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function editCredentialsOrRefreshProviderAccountWithHttpInfo($provider_account_ids, $provider_account_request = null, string $contentType = self::contentTypes['editCredentialsOrRefreshProviderAccount'][0])
     {
@@ -435,13 +435,13 @@ class ProviderAccountsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UpdatedProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -463,7 +463,7 @@ class ProviderAccountsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UpdatedProviderAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse',
                 $request,
                 $response,
             );
@@ -472,7 +472,7 @@ class ProviderAccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UpdatedProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -480,7 +480,7 @@ class ProviderAccountsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class ProviderAccountsApi
      * Update Account
      *
      * @param  string $provider_account_ids comma separated providerAccountIds (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCredentialsOrRefreshProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -520,7 +520,7 @@ class ProviderAccountsApi
      * Update Account
      *
      * @param  string $provider_account_ids comma separated providerAccountIds (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCredentialsOrRefreshProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -528,7 +528,7 @@ class ProviderAccountsApi
      */
     public function editCredentialsOrRefreshProviderAccountAsyncWithHttpInfo($provider_account_ids, $provider_account_request = null, string $contentType = self::contentTypes['editCredentialsOrRefreshProviderAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UpdatedProviderAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\UpdatedProviderAccountResponse';
         $request = $this->editCredentialsOrRefreshProviderAccountRequest($provider_account_ids, $provider_account_request, $contentType);
 
         return $this->client
@@ -571,7 +571,7 @@ class ProviderAccountsApi
      * Create request for operation 'editCredentialsOrRefreshProviderAccount'
      *
      * @param  string $provider_account_ids comma separated providerAccountIds (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest|null $provider_account_request loginForm or field entity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCredentialsOrRefreshProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -678,9 +678,9 @@ class ProviderAccountsApi
      * @param  string|null $provider_ids Comma separated providerIds. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllProviderAccounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProviderAccountResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse
      */
     public function getAllProviderAccounts($include = null, $provider_ids = null, string $contentType = self::contentTypes['getAllProviderAccounts'][0])
     {
@@ -697,9 +697,9 @@ class ProviderAccountsApi
      * @param  string|null $provider_ids Comma separated providerIds. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllProviderAccounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProviderAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllProviderAccountsWithHttpInfo($include = null, $provider_ids = null, string $contentType = self::contentTypes['getAllProviderAccounts'][0])
     {
@@ -731,7 +731,7 @@ class ProviderAccountsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse',
                         $request,
                         $response,
                     );
@@ -753,7 +753,7 @@ class ProviderAccountsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ProviderAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse',
                 $request,
                 $response,
             );
@@ -762,7 +762,7 @@ class ProviderAccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -810,7 +810,7 @@ class ProviderAccountsApi
      */
     public function getAllProviderAccountsAsyncWithHttpInfo($include = null, $provider_ids = null, string $contentType = self::contentTypes['getAllProviderAccounts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProviderAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountResponse';
         $request = $this->getAllProviderAccountsRequest($include, $provider_ids, $contentType);
 
         return $this->client
@@ -957,9 +957,9 @@ class ProviderAccountsApi
      * @param  string|null $request_id The unique identifier for the request that returns contextual data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProviderAccountDetailResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function getProviderAccount($provider_account_id, $include = null, $request_id = null, string $contentType = self::contentTypes['getProviderAccount'][0])
     {
@@ -977,9 +977,9 @@ class ProviderAccountsApi
      * @param  string|null $request_id The unique identifier for the request that returns contextual data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProviderAccountDetailResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProviderAccountWithHttpInfo($provider_account_id, $include = null, $request_id = null, string $contentType = self::contentTypes['getProviderAccount'][0])
     {
@@ -1011,13 +1011,13 @@ class ProviderAccountsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ProviderAccountDetailResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1039,7 +1039,7 @@ class ProviderAccountsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ProviderAccountDetailResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse',
                 $request,
                 $response,
             );
@@ -1048,7 +1048,7 @@ class ProviderAccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProviderAccountDetailResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1056,7 +1056,7 @@ class ProviderAccountsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1106,7 +1106,7 @@ class ProviderAccountsApi
      */
     public function getProviderAccountAsyncWithHttpInfo($provider_account_id, $include = null, $request_id = null, string $contentType = self::contentTypes['getProviderAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProviderAccountDetailResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountDetailResponse';
         $request = $this->getProviderAccountRequest($provider_account_id, $include, $request_id, $contentType);
 
         return $this->client
@@ -1267,9 +1267,9 @@ class ProviderAccountsApi
      * @param  string|null $provider_account_id Comma separated providerAccountIds. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderAccountProfiles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProviderAccountUserProfileResponse
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse
      * @deprecated
      */
     public function getProviderAccountProfiles($provider_account_id = null, string $contentType = self::contentTypes['getProviderAccountProfiles'][0])
@@ -1286,9 +1286,9 @@ class ProviderAccountsApi
      * @param  string|null $provider_account_id Comma separated providerAccountIds. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderAccountProfiles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProviderAccountUserProfileResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function getProviderAccountProfilesWithHttpInfo($provider_account_id = null, string $contentType = self::contentTypes['getProviderAccountProfiles'][0])
@@ -1321,7 +1321,7 @@ class ProviderAccountsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ProviderAccountUserProfileResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse',
                         $request,
                         $response,
                     );
@@ -1343,7 +1343,7 @@ class ProviderAccountsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ProviderAccountUserProfileResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse',
                 $request,
                 $response,
             );
@@ -1352,7 +1352,7 @@ class ProviderAccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProviderAccountUserProfileResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1400,7 +1400,7 @@ class ProviderAccountsApi
      */
     public function getProviderAccountProfilesAsyncWithHttpInfo($provider_account_id = null, string $contentType = self::contentTypes['getProviderAccountProfiles'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProviderAccountUserProfileResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountUserProfileResponse';
         $request = $this->getProviderAccountProfilesRequest($provider_account_id, $contentType);
 
         return $this->client
@@ -1533,12 +1533,12 @@ class ProviderAccountsApi
      * Add Account
      *
      * @param  int $provider_id providerId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AddedProviderAccountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function linkProviderAccount($provider_id, $provider_account_request, string $contentType = self::contentTypes['linkProviderAccount'][0])
     {
@@ -1552,12 +1552,12 @@ class ProviderAccountsApi
      * Add Account
      *
      * @param  int $provider_id providerId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AddedProviderAccountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkProviderAccountWithHttpInfo($provider_id, $provider_account_request, string $contentType = self::contentTypes['linkProviderAccount'][0])
     {
@@ -1589,13 +1589,13 @@ class ProviderAccountsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\AddedProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1617,7 +1617,7 @@ class ProviderAccountsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\AddedProviderAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse',
                 $request,
                 $response,
             );
@@ -1626,7 +1626,7 @@ class ProviderAccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AddedProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1634,7 +1634,7 @@ class ProviderAccountsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1652,7 +1652,7 @@ class ProviderAccountsApi
      * Add Account
      *
      * @param  int $provider_id providerId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1674,7 +1674,7 @@ class ProviderAccountsApi
      * Add Account
      *
      * @param  int $provider_id providerId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1682,7 +1682,7 @@ class ProviderAccountsApi
      */
     public function linkProviderAccountAsyncWithHttpInfo($provider_id, $provider_account_request, string $contentType = self::contentTypes['linkProviderAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AddedProviderAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\AddedProviderAccountResponse';
         $request = $this->linkProviderAccountRequest($provider_id, $provider_account_request, $contentType);
 
         return $this->client
@@ -1725,7 +1725,7 @@ class ProviderAccountsApi
      * Create request for operation 'linkProviderAccount'
      *
      * @param  int $provider_id providerId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRequest $provider_account_request loginForm or field entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1834,12 +1834,12 @@ class ProviderAccountsApi
      *
      * Refresh Provider Account
      *
-     * @param  \OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RefreshProviderAccountResponse|\OpenAPI\Client\Model\YodleeError
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
      */
     public function refreshProviderAccount($refresh_request, string $contentType = self::contentTypes['refreshProviderAccount'][0])
     {
@@ -1852,12 +1852,12 @@ class ProviderAccountsApi
      *
      * Refresh Provider Account
      *
-     * @param  \OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshProviderAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RefreshProviderAccountResponse|\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
      */
     public function refreshProviderAccountWithHttpInfo($refresh_request, string $contentType = self::contentTypes['refreshProviderAccount'][0])
     {
@@ -1889,13 +1889,13 @@ class ProviderAccountsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\RefreshProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $request,
                         $response,
                     );
@@ -1917,7 +1917,7 @@ class ProviderAccountsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\RefreshProviderAccountResponse',
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse',
                 $request,
                 $response,
             );
@@ -1926,7 +1926,7 @@ class ProviderAccountsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RefreshProviderAccountResponse',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1934,7 +1934,7 @@ class ProviderAccountsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1951,7 +1951,7 @@ class ProviderAccountsApi
      *
      * Refresh Provider Account
      *
-     * @param  \OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1972,7 +1972,7 @@ class ProviderAccountsApi
      *
      * Refresh Provider Account
      *
-     * @param  \OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1980,7 +1980,7 @@ class ProviderAccountsApi
      */
     public function refreshProviderAccountAsyncWithHttpInfo($refresh_request, string $contentType = self::contentTypes['refreshProviderAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\RefreshProviderAccountResponse';
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\RefreshProviderAccountResponse';
         $request = $this->refreshProviderAccountRequest($refresh_request, $contentType);
 
         return $this->client
@@ -2022,7 +2022,7 @@ class ProviderAccountsApi
     /**
      * Create request for operation 'refreshProviderAccount'
      *
-     * @param  \OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountRefreshRequest $refresh_request refreshRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshProviderAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2116,10 +2116,10 @@ class ProviderAccountsApi
      * Update Preferences
      *
      * @param  int $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePreferences'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2134,10 +2134,10 @@ class ProviderAccountsApi
      * Update Preferences
      *
      * @param  int $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePreferences'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2174,7 +2174,7 @@ class ProviderAccountsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\YodleeError',
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2192,7 +2192,7 @@ class ProviderAccountsApi
      * Update Preferences
      *
      * @param  int $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePreferences'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2214,7 +2214,7 @@ class ProviderAccountsApi
      * Update Preferences
      *
      * @param  int $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePreferences'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2252,7 +2252,7 @@ class ProviderAccountsApi
      * Create request for operation 'updatePreferences'
      *
      * @param  int $provider_account_id providerAccountId (required)
-     * @param  \OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
+     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ProviderAccountPreferencesRequest $preferences preferences (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePreferences'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

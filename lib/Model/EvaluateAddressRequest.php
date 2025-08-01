@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * EvaluateAddressRequest Class Doc Comment
@@ -58,7 +58,7 @@ class EvaluateAddressRequest implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\OpenAPI\Client\Model\EvaluateAccountAddress'
+        'address' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAccountAddress'
     ];
 
     /**
@@ -296,7 +296,7 @@ class EvaluateAddressRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\EvaluateAccountAddress
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAccountAddress
      */
     public function getAddress()
     {
@@ -306,7 +306,7 @@ class EvaluateAddressRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\EvaluateAccountAddress $address address
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\EvaluateAccountAddress $address address
      *
      * @return self
      */

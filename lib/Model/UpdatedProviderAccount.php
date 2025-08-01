@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * UpdatedProviderAccount Class Doc Comment
@@ -59,7 +59,7 @@ class UpdatedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'last_updated' => 'string',
-        'login_form' => '\OpenAPI\Client\Model\LoginForm[]',
+        'login_form' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\LoginForm[]',
         'created_date' => 'string',
         'aggregation_source' => 'string',
         'oauth_migration_status' => 'string',
@@ -68,7 +68,7 @@ class UpdatedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerial
         'is_manual' => 'bool',
         'id' => 'int',
         'auth_type' => 'string',
-        'dataset' => '\OpenAPI\Client\Model\AccountDataset[]',
+        'dataset' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]',
         'status' => 'string'
     ];
 
@@ -511,7 +511,7 @@ class UpdatedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets login_form
      *
-     * @return \OpenAPI\Client\Model\LoginForm[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\LoginForm[]|null
      */
     public function getLoginForm()
     {
@@ -521,7 +521,7 @@ class UpdatedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets login_form
      *
-     * @param \OpenAPI\Client\Model\LoginForm[]|null $login_form This entity gets returned in the response for only MFA based provider accounts during the add/update account polling process. This indicates that the MFA information is expected from the user to complete the process. This represents the structure of MFA form that is displayed to the user in the provider site.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\LoginForm[]|null $login_form This entity gets returned in the response for only MFA based provider accounts during the add/update account polling process. This indicates that the MFA information is expected from the user to complete the process. This represents the structure of MFA form that is displayed to the user in the provider site.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li></ul>
      *
      * @return self
      */
@@ -784,7 +784,7 @@ class UpdatedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets dataset
      *
-     * @return \OpenAPI\Client\Model\AccountDataset[]|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null
      */
     public function getDataset()
     {
@@ -794,7 +794,7 @@ class UpdatedProviderAccount implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dataset
      *
-     * @param \OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li><li>GET dataExtracts/userData</li></ul>
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\AccountDataset[]|null $dataset Logical grouping of dataset attributes into datasets such as Basic Aggregation Data, Account Profile and Documents.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts</li><li>POST providerAccounts</li><li>PUT providerAccounts/{providerAccountId}</li><li>GET providerAccounts/{providerAccountId}</li><li>GET dataExtracts/userData</li></ul>
      *
      * @return self
      */

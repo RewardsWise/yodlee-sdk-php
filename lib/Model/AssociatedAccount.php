@@ -27,10 +27,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace RewardsWise\Yodlee\OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
 /**
  * AssociatedAccount Class Doc Comment
@@ -59,17 +59,17 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'last_updated' => 'string',
-        'balance' => '\OpenAPI\Client\Model\Money',
+        'balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'account_name' => 'string',
         'provider_id' => 'string',
         'account_type' => 'string',
-        'current_balance' => '\OpenAPI\Client\Model\Money',
+        'current_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money',
         'provider_account_id' => 'int',
         'container' => 'string',
         'id' => 'int',
         'account_number' => 'string',
         'provider_name' => 'string',
-        'available_balance' => '\OpenAPI\Client\Model\Money'
+        'available_balance' => '\RewardsWise\Yodlee\OpenAPI\Client\Model\Money'
     ];
 
     /**
@@ -437,7 +437,7 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getBalance()
     {
@@ -447,7 +447,7 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $balance balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $balance balance
      *
      * @return self
      */
@@ -545,7 +545,7 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets current_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getCurrentBalance()
     {
@@ -555,7 +555,7 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets current_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $current_balance current_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $current_balance current_balance
      *
      * @return self
      */
@@ -717,7 +717,7 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets available_balance
      *
-     * @return \OpenAPI\Client\Model\Money|null
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null
      */
     public function getAvailableBalance()
     {
@@ -727,7 +727,7 @@ class AssociatedAccount implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets available_balance
      *
-     * @param \OpenAPI\Client\Model\Money|null $available_balance available_balance
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\Money|null $available_balance available_balance
      *
      * @return self
      */
