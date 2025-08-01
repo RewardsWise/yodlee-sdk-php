@@ -1,0 +1,9 @@
+# # ProvidersCountResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**provider** | [**\OpenAPI\Client\Model\ProvidersCount**](ProvidersCount.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
