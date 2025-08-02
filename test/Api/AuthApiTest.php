@@ -28,6 +28,7 @@
 
 namespace RewardsWise\Yodlee\OpenAPI\Client\Test\Api;
 
+use RewardsWise\Yodlee\OpenAPI\Client\Api\AuthApi;
 use \RewardsWise\Yodlee\OpenAPI\Client\Configuration;
 use \RewardsWise\Yodlee\OpenAPI\Client\ApiException;
 use \RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
@@ -106,6 +107,8 @@ class AuthApiTest extends TestCase
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
+
+        AuthApi::generateAccessToken();
     }
 
     /**

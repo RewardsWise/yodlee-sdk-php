@@ -38,6 +38,13 @@ namespace RewardsWise\Yodlee\OpenAPI\Client;
  */
 class HeaderSelector
 {
+    private $default_headers = [];
+
+    public function __construct($headers = [])
+    {
+        $this->default_headers = $headers;
+    }
+
     /**
      * @param string[] $accept
      * @param string   $contentType
@@ -46,7 +53,7 @@ class HeaderSelector
      */
     public function selectHeaders(array $accept, string $contentType, bool $isMultipart): array
     {
-        $headers = [];
+        $headers = $this->default_headers;
 
         $accept = $this->selectAcceptHeader($accept);
         if ($accept !== null) {

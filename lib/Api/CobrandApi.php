@@ -39,7 +39,6 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use RewardsWise\Yodlee\OpenAPI\Client\ApiException;
 use RewardsWise\Yodlee\OpenAPI\Client\Configuration;
-use RewardsWise\Yodlee\OpenAPI\Client\FormDataProcessor;
 use RewardsWise\Yodlee\OpenAPI\Client\HeaderSelector;
 use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
 
@@ -53,27 +52,7 @@ use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
  */
 class CobrandApi
 {
-    /**
-     * @var ClientInterface
-     */
-    protected $client;
-
-    /**
-     * @var Configuration
-     */
-    protected $config;
-
-    /**
-     * @var HeaderSelector
-     */
-    protected $headerSelector;
-
-    /**
-     * @var int Host index
-     */
-    protected $hostIndex;
-
-    /** @var string[] $contentTypes **/
+    /** @var string[] $contentTypes * */
     public const contentTypes = [
         'cobrandLogin' => [
             'application/json',
@@ -97,32 +76,39 @@ class CobrandApi
             'application/json',
         ],
     ];
+    /**
+     * @var ClientInterface
+     */
+    protected $client;
+    /**
+     * @var Configuration
+     */
+    protected $config;
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
+    /**
+     * @var int Host index
+     */
+    protected $hostIndex;
 
     /**
      * @param ClientInterface $client
-     * @param Configuration   $config
-     * @param HeaderSelector  $selector
-     * @param int             $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param Configuration $config
+     * @param HeaderSelector $selector
+     * @param int $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
         ?ClientInterface $client = null,
-        ?Configuration $config = null,
-        ?HeaderSelector $selector = null,
-        int $hostIndex = 0
-    ) {
+        ?Configuration   $config = null,
+        ?HeaderSelector  $selector = null,
+        int              $hostIndex = 0
+    )
+    {
         $this->client = $client ?: new Client();
         $this->config = $config ?: Configuration::getDefaultConfiguration();
         $this->headerSelector = $selector ?: new HeaderSelector();
-        $this->hostIndex = $hostIndex;
-    }
-
-    /**
-     * Set the host index
-     *
-     * @param int $hostIndex Host index (required)
-     */
-    public function setHostIndex($hostIndex): void
-    {
         $this->hostIndex = $hostIndex;
     }
 
@@ -134,6 +120,16 @@ class CobrandApi
     public function getHostIndex()
     {
         return $this->hostIndex;
+    }
+
+    /**
+     * Set the host index
+     *
+     * @param int $hostIndex Host index (required)
+     */
+    public function setHostIndex($hostIndex): void
+    {
+        $this->hostIndex = $hostIndex;
     }
 
     /**
@@ -149,12 +145,12 @@ class CobrandApi
      *
      * Cobrand Login
      *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function cobrandLogin($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
@@ -167,12 +163,12 @@ class CobrandApi
      *
      * Cobrand Login
      *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function cobrandLoginWithHttpInfo($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
@@ -185,14 +181,14 @@ class CobrandApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -200,8 +196,7 @@ class CobrandApi
 
             $statusCode = $response->getStatusCode();
 
-
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
                         '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse',
@@ -222,18 +217,17 @@ class CobrandApi
                     );
             }
 
-            
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
                     sprintf(
                         '[%d] Error connecting to the API (%s)',
                         $statusCode,
-                        (string) $request->getUri()
+                        (string)$request->getUri()
                     ),
                     $statusCode,
                     $response->getHeaders(),
-                    (string) $response->getBody()
+                    (string)$response->getBody()
                 );
             }
 
@@ -269,93 +263,20 @@ class CobrandApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation cobrandLoginAsync
-     *
-     * Cobrand Login
-     *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function cobrandLoginAsync($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
-    {
-        return $this->cobrandLoginAsyncWithHttpInfo($cobrand_login_request, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation cobrandLoginAsyncWithHttpInfo
-     *
-     * Cobrand Login
-     *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function cobrandLoginAsyncWithHttpInfo($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
-    {
-        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse';
-        $request = $this->cobrandLoginRequest($cobrand_login_request, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'cobrandLogin'
      *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     public function cobrandLoginRequest($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
@@ -376,11 +297,8 @@ class CobrandApi
         $multipart = false;
 
 
-
-
-
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -440,82 +358,72 @@ class CobrandApi
     }
 
     /**
-     * Operation cobrandLogout
+     * Create http client option
      *
-     * Cobrand Logout
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
-     *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
+     * @return array of http client options
+     * @throws \RuntimeException on file opening failure
      */
-    public function cobrandLogout(string $contentType = self::contentTypes['cobrandLogout'][0])
+    protected function createHttpClientOption()
     {
-        $this->cobrandLogoutWithHttpInfo($contentType);
-    }
-
-    /**
-     * Operation cobrandLogoutWithHttpInfo
-     *
-     * Cobrand Logout
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
-     *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function cobrandLogoutWithHttpInfo(string $contentType = self::contentTypes['cobrandLogout'][0])
-    {
-        $request = $this->cobrandLogoutRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-        
-
-            throw $e;
         }
+
+        return $options;
+    }
+
+    private function handleResponseWithDataType(
+        string            $dataType,
+        RequestInterface  $request,
+        ResponseInterface $response
+    ): array
+    {
+        if ($dataType === '\SplFileObject') {
+            $content = $response->getBody(); //stream goes to serializer
+        } else {
+            $content = (string)$response->getBody();
+            if ($dataType !== 'string') {
+                try {
+                    $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                } catch (\JsonException $exception) {
+                    throw new ApiException(
+                        sprintf(
+                            'Error JSON decoding server response (%s)',
+                            $request->getUri()
+                        ),
+                        $response->getStatusCode(),
+                        $response->getHeaders(),
+                        $content
+                    );
+                }
+            }
+        }
+
+        return [
+            ObjectSerializer::deserialize($content, $dataType, []),
+            $response->getStatusCode(),
+            $response->getHeaders()
+        ];
     }
 
     /**
-     * Operation cobrandLogoutAsync
+     * Operation cobrandLoginAsync
      *
-     * Cobrand Logout
+     * Cobrand Login
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
-    public function cobrandLogoutAsync(string $contentType = self::contentTypes['cobrandLogout'][0])
+    public function cobrandLoginAsync($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
-        return $this->cobrandLogoutAsyncWithHttpInfo($contentType)
+        return $this->cobrandLoginAsyncWithHttpInfo($cobrand_login_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -524,25 +432,39 @@ class CobrandApi
     }
 
     /**
-     * Operation cobrandLogoutAsyncWithHttpInfo
+     * Operation cobrandLoginAsyncWithHttpInfo
      *
-     * Cobrand Logout
+     * Cobrand Login
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginRequest $cobrand_login_request cobrandLoginRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogin'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
-    public function cobrandLogoutAsyncWithHttpInfo(string $contentType = self::contentTypes['cobrandLogout'][0])
+    public function cobrandLoginAsyncWithHttpInfo($cobrand_login_request, string $contentType = self::contentTypes['cobrandLogin'][0])
     {
-        $returnType = '';
-        $request = $this->cobrandLogoutRequest($contentType);
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandLoginResponse';
+        $request = $this->cobrandLoginRequest($cobrand_login_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string)$response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -555,19 +477,83 @@ class CobrandApi
                         ),
                         $statusCode,
                         $response->getHeaders(),
-                        (string) $response->getBody()
+                        (string)$response->getBody()
                     );
                 }
             );
     }
 
     /**
+     * Operation cobrandLogout
+     *
+     * Cobrand Logout
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     *
+     * @return void
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     */
+    public function cobrandLogout(string $contentType = self::contentTypes['cobrandLogout'][0])
+    {
+        $this->cobrandLogoutWithHttpInfo($contentType);
+    }
+
+    /**
+     * Operation cobrandLogoutWithHttpInfo
+     *
+     * Cobrand Logout
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     *
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     */
+    public function cobrandLogoutWithHttpInfo(string $contentType = self::contentTypes['cobrandLogout'][0])
+    {
+        $request = $this->cobrandLogoutRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+
+            throw $e;
+        }
+    }
+
+    /**
      * Create request for operation 'cobrandLogout'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     public function cobrandLogoutRequest(string $contentType = self::contentTypes['cobrandLogout'][0])
     {
@@ -579,9 +565,6 @@ class CobrandApi
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
-
-
-
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -638,17 +621,75 @@ class CobrandApi
     }
 
     /**
+     * Operation cobrandLogoutAsync
+     *
+     * Cobrand Logout
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     */
+    public function cobrandLogoutAsync(string $contentType = self::contentTypes['cobrandLogout'][0])
+    {
+        return $this->cobrandLogoutAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cobrandLogoutAsyncWithHttpInfo
+     *
+     * Cobrand Logout
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['cobrandLogout'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     */
+    public function cobrandLogoutAsyncWithHttpInfo(string $contentType = self::contentTypes['cobrandLogout'][0])
+    {
+        $returnType = '';
+        $request = $this->cobrandLogoutRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string)$response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation createSubscriptionEvent
      *
      * Subscribe Event
      *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return void
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function createSubscriptionEvent($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
@@ -661,13 +702,13 @@ class CobrandApi
      *
      * Subscribe Event
      *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function createSubscriptionEventWithHttpInfo($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
@@ -681,14 +722,14 @@ class CobrandApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -709,85 +750,21 @@ class CobrandApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation createSubscriptionEventAsync
-     *
-     * Subscribe Event
-     *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function createSubscriptionEventAsync($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
-    {
-        return $this->createSubscriptionEventAsyncWithHttpInfo($event_name, $event_request, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation createSubscriptionEventAsyncWithHttpInfo
-     *
-     * Subscribe Event
-     *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function createSubscriptionEventAsyncWithHttpInfo($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
-    {
-        $returnType = '';
-        $request = $this->createSubscriptionEventRequest($event_name, $event_request, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'createSubscriptionEvent'
      *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      * @deprecated
      */
     public function createSubscriptionEventRequest($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
@@ -816,7 +793,6 @@ class CobrandApi
         $multipart = false;
 
 
-
         // path params
         if ($event_name !== null) {
             $resourcePath = str_replace(
@@ -828,7 +804,7 @@ class CobrandApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -888,16 +864,80 @@ class CobrandApi
     }
 
     /**
+     * Operation createSubscriptionEventAsync
+     *
+     * Subscribe Event
+     *
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function createSubscriptionEventAsync($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
+    {
+        return $this->createSubscriptionEventAsyncWithHttpInfo($event_name, $event_request, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createSubscriptionEventAsyncWithHttpInfo
+     *
+     * Subscribe Event
+     *
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\CreateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionEvent'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function createSubscriptionEventAsyncWithHttpInfo($event_name, $event_request, string $contentType = self::contentTypes['createSubscriptionEvent'][0])
+    {
+        $returnType = '';
+        $request = $this->createSubscriptionEventRequest($event_name, $event_request, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string)$response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation deleteSubscribedEvent
      *
      * Delete Subscription
      *
-     * @param  string $event_name eventName (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return void
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function deleteSubscribedEvent($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
@@ -910,12 +950,12 @@ class CobrandApi
      *
      * Delete Subscription
      *
-     * @param  string $event_name eventName (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function deleteSubscribedEventWithHttpInfo($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
@@ -929,14 +969,14 @@ class CobrandApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -957,82 +997,20 @@ class CobrandApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation deleteSubscribedEventAsync
-     *
-     * Delete Subscription
-     *
-     * @param  string $event_name eventName (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function deleteSubscribedEventAsync($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
-    {
-        return $this->deleteSubscribedEventAsyncWithHttpInfo($event_name, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation deleteSubscribedEventAsyncWithHttpInfo
-     *
-     * Delete Subscription
-     *
-     * @param  string $event_name eventName (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function deleteSubscribedEventAsyncWithHttpInfo($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
-    {
-        $returnType = '';
-        $request = $this->deleteSubscribedEventRequest($event_name, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'deleteSubscribedEvent'
      *
-     * @param  string $event_name eventName (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      * @deprecated
      */
     public function deleteSubscribedEventRequest($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
@@ -1054,7 +1032,6 @@ class CobrandApi
         $multipart = false;
 
 
-
         // path params
         if ($event_name !== null) {
             $resourcePath = str_replace(
@@ -1066,7 +1043,7 @@ class CobrandApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -1119,15 +1096,77 @@ class CobrandApi
     }
 
     /**
+     * Operation deleteSubscribedEventAsync
+     *
+     * Delete Subscription
+     *
+     * @param string $event_name eventName (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function deleteSubscribedEventAsync($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
+    {
+        return $this->deleteSubscribedEventAsyncWithHttpInfo($event_name, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation deleteSubscribedEventAsyncWithHttpInfo
+     *
+     * Delete Subscription
+     *
+     * @param string $event_name eventName (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubscribedEvent'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function deleteSubscribedEventAsyncWithHttpInfo($event_name, string $contentType = self::contentTypes['deleteSubscribedEvent'][0])
+    {
+        $returnType = '';
+        $request = $this->deleteSubscribedEventRequest($event_name, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string)$response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation getPublicKey
      *
      * Get Public Key
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function getPublicKey(string $contentType = self::contentTypes['getPublicKey'][0])
@@ -1141,11 +1180,11 @@ class CobrandApi
      *
      * Get Public Key
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function getPublicKeyWithHttpInfo(string $contentType = self::contentTypes['getPublicKey'][0])
@@ -1159,14 +1198,14 @@ class CobrandApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -1175,7 +1214,7 @@ class CobrandApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
                         '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse',
@@ -1184,18 +1223,17 @@ class CobrandApi
                     );
             }
 
-            
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
                     sprintf(
                         '[%d] Error connecting to the API (%s)',
                         $statusCode,
-                        (string) $request->getUri()
+                        (string)$request->getUri()
                     ),
                     $statusCode,
                     $response->getHeaders(),
-                    (string) $response->getBody()
+                    (string)$response->getBody()
                 );
             }
 
@@ -1215,92 +1253,19 @@ class CobrandApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation getPublicKeyAsync
-     *
-     * Get Public Key
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function getPublicKeyAsync(string $contentType = self::contentTypes['getPublicKey'][0])
-    {
-        return $this->getPublicKeyAsyncWithHttpInfo($contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getPublicKeyAsyncWithHttpInfo
-     *
-     * Get Public Key
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function getPublicKeyAsyncWithHttpInfo(string $contentType = self::contentTypes['getPublicKey'][0])
-    {
-        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse';
-        $request = $this->getPublicKeyRequest($contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'getPublicKey'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      * @deprecated
      */
     public function getPublicKeyRequest(string $contentType = self::contentTypes['getPublicKey'][0])
@@ -1315,11 +1280,8 @@ class CobrandApi
         $multipart = false;
 
 
-
-
-
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -1372,125 +1334,19 @@ class CobrandApi
     }
 
     /**
-     * Operation getSubscribedEvents
+     * Operation getPublicKeyAsync
      *
-     * Get Subscribed Events
+     * Get Public Key
      *
-     * @param  string|null $event_name eventName (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse
-     * @deprecated
-     */
-    public function getSubscribedEvents($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
-    {
-        list($response) = $this->getSubscribedEventsWithHttpInfo($event_name, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation getSubscribedEventsWithHttpInfo
-     *
-     * Get Subscribed Events
-     *
-     * @param  string|null $event_name eventName (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
-     *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse, HTTP status code, HTTP response headers (array of strings)
-     * @deprecated
-     */
-    public function getSubscribedEventsWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
-    {
-        $request = $this->getSubscribedEventsRequest($event_name, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    return $this->handleResponseWithDataType(
-                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
-                $request,
-                $response,
-            );
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-            }
-        
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getSubscribedEventsAsync
-     *
-     * Get Subscribed Events
-     *
-     * @param  string|null $event_name eventName (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      * @deprecated
      */
-    public function getSubscribedEventsAsync($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
+    public function getPublicKeyAsync(string $contentType = self::contentTypes['getPublicKey'][0])
     {
-        return $this->getSubscribedEventsAsyncWithHttpInfo($event_name, $contentType)
+        return $this->getPublicKeyAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1499,21 +1355,20 @@ class CobrandApi
     }
 
     /**
-     * Operation getSubscribedEventsAsyncWithHttpInfo
+     * Operation getPublicKeyAsyncWithHttpInfo
      *
-     * Get Subscribed Events
+     * Get Public Key
      *
-     * @param  string|null $event_name eventName (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getPublicKey'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      * @deprecated
      */
-    public function getSubscribedEventsAsyncWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
+    public function getPublicKeyAsyncWithHttpInfo(string $contentType = self::contentTypes['getPublicKey'][0])
     {
-        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse';
-        $request = $this->getSubscribedEventsRequest($event_name, $contentType);
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandPublicKeyResponse';
+        $request = $this->getPublicKeyRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1522,7 +1377,7 @@ class CobrandApi
                     if ($returnType === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
-                        $content = (string) $response->getBody();
+                        $content = (string)$response->getBody();
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1545,25 +1400,128 @@ class CobrandApi
                         ),
                         $statusCode,
                         $response->getHeaders(),
-                        (string) $response->getBody()
+                        (string)$response->getBody()
                     );
                 }
             );
     }
 
     /**
+     * Operation getSubscribedEvents
+     *
+     * Get Subscribed Events
+     *
+     * @param string|null $event_name eventName (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     *
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @deprecated
+     */
+    public function getSubscribedEvents($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
+    {
+        list($response) = $this->getSubscribedEventsWithHttpInfo($event_name, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getSubscribedEventsWithHttpInfo
+     *
+     * Get Subscribed Events
+     *
+     * @param string|null $event_name eventName (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     *
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @deprecated
+     */
+    public function getSubscribedEventsWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
+    {
+        $request = $this->getSubscribedEventsRequest($event_name, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch ($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
+                        $request,
+                        $response,
+                    );
+            }
+
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string)$request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string)$response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+
+
+            throw $e;
+        }
+    }
+
+    /**
      * Create request for operation 'getSubscribedEvents'
      *
-     * @param  string|null $event_name eventName (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     * @param string|null $event_name eventName (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      * @deprecated
      */
     public function getSubscribedEventsRequest($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
     {
-
 
 
         $resourcePath = '/cobrand/config/notifications/events';
@@ -1584,10 +1542,8 @@ class CobrandApi
         ) ?? []);
 
 
-
-
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -1640,17 +1596,92 @@ class CobrandApi
     }
 
     /**
+     * Operation getSubscribedEventsAsync
+     *
+     * Get Subscribed Events
+     *
+     * @param string|null $event_name eventName (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function getSubscribedEventsAsync($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
+    {
+        return $this->getSubscribedEventsAsyncWithHttpInfo($event_name, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getSubscribedEventsAsyncWithHttpInfo
+     *
+     * Get Subscribed Events
+     *
+     * @param string|null $event_name eventName (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getSubscribedEvents'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function getSubscribedEventsAsyncWithHttpInfo($event_name = null, string $contentType = self::contentTypes['getSubscribedEvents'][0])
+    {
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\CobrandNotificationResponse';
+        $request = $this->getSubscribedEventsRequest($event_name, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string)$response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string)$response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation updateSubscribedEvent
      *
      * Update Subscription
      *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return void
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function updateSubscribedEvent($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
@@ -1663,13 +1694,13 @@ class CobrandApi
      *
      * Update Subscription
      *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @deprecated
      */
     public function updateSubscribedEventWithHttpInfo($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
@@ -1683,14 +1714,14 @@ class CobrandApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -1711,85 +1742,21 @@ class CobrandApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation updateSubscribedEventAsync
-     *
-     * Update Subscription
-     *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function updateSubscribedEventAsync($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
-    {
-        return $this->updateSubscribedEventAsyncWithHttpInfo($event_name, $event_request, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation updateSubscribedEventAsyncWithHttpInfo
-     *
-     * Update Subscription
-     *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @deprecated
-     */
-    public function updateSubscribedEventAsyncWithHttpInfo($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
-    {
-        $returnType = '';
-        $request = $this->updateSubscribedEventRequest($event_name, $event_request, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'updateSubscribedEvent'
      *
-     * @param  string $event_name eventName (required)
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      * @deprecated
      */
     public function updateSubscribedEventRequest($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
@@ -1818,7 +1785,6 @@ class CobrandApi
         $multipart = false;
 
 
-
         // path params
         if ($event_name !== null) {
             $resourcePath = str_replace(
@@ -1830,7 +1796,7 @@ class CobrandApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -1890,63 +1856,76 @@ class CobrandApi
     }
 
     /**
-     * Create http client option
+     * Operation updateSubscribedEventAsync
      *
-     * @throws \RuntimeException on file opening failure
-     * @return array of http client options
+     * Update Subscription
+     *
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
      */
-    protected function createHttpClientOption()
+    public function updateSubscribedEventAsync($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
     {
-        $options = [];
-        if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
-            if (!$options[RequestOptions::DEBUG]) {
-                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
-            }
-        }
-
-        return $options;
+        return $this->updateSubscribedEventAsyncWithHttpInfo($event_name, $event_request, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
     }
 
-    private function handleResponseWithDataType(
-        string $dataType,
-        RequestInterface $request,
-        ResponseInterface $response
-    ): array {
-        if ($dataType === '\SplFileObject') {
-            $content = $response->getBody(); //stream goes to serializer
-        } else {
-            $content = (string) $response->getBody();
-            if ($dataType !== 'string') {
-                try {
-                    $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                } catch (\JsonException $exception) {
+    /**
+     * Operation updateSubscribedEventAsyncWithHttpInfo
+     *
+     * Update Subscription
+     *
+     * @param string $event_name eventName (required)
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\UpdateCobrandNotificationEventRequest $event_request eventRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscribedEvent'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     * @deprecated
+     */
+    public function updateSubscribedEventAsyncWithHttpInfo($event_name, $event_request, string $contentType = self::contentTypes['updateSubscribedEvent'][0])
+    {
+        $returnType = '';
+        $request = $this->updateSubscribedEventRequest($event_name, $event_request, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
                     throw new ApiException(
                         sprintf(
-                            'Error JSON decoding server response (%s)',
-                            $request->getUri()
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
                         ),
-                        $response->getStatusCode(),
+                        $statusCode,
                         $response->getHeaders(),
-                        $content
+                        (string)$response->getBody()
                     );
                 }
-            }
-        }
-
-        return [
-            ObjectSerializer::deserialize($content, $dataType, []),
-            $response->getStatusCode(),
-            $response->getHeaders()
-        ];
+            );
     }
 
     private function responseWithinRangeCode(
         string $rangeCode,
-        int $statusCode
-    ): bool {
-        $left = (int) ($rangeCode[0].'00');
-        $right = (int) ($rangeCode[0].'99');
+        int    $statusCode
+    ): bool
+    {
+        $left = (int)($rangeCode[0] . '00');
+        $right = (int)($rangeCode[0] . '99');
 
         return $statusCode >= $left && $statusCode <= $right;
     }

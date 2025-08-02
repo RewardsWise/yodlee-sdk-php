@@ -53,27 +53,7 @@ use RewardsWise\Yodlee\OpenAPI\Client\ObjectSerializer;
  */
 class AuthApi
 {
-    /**
-     * @var ClientInterface
-     */
-    protected $client;
-
-    /**
-     * @var Configuration
-     */
-    protected $config;
-
-    /**
-     * @var HeaderSelector
-     */
-    protected $headerSelector;
-
-    /**
-     * @var int Host index
-     */
-    protected $hostIndex;
-
-    /** @var string[] $contentTypes **/
+    /** @var string[] $contentTypes * */
     public const contentTypes = [
         'deleteApiKey' => [
             'application/json',
@@ -91,32 +71,39 @@ class AuthApi
             'application/json',
         ],
     ];
+    /**
+     * @var ClientInterface
+     */
+    protected $client;
+    /**
+     * @var Configuration
+     */
+    protected $config;
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
+    /**
+     * @var int Host index
+     */
+    protected $hostIndex;
 
     /**
      * @param ClientInterface $client
-     * @param Configuration   $config
-     * @param HeaderSelector  $selector
-     * @param int             $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param Configuration $config
+     * @param HeaderSelector $selector
+     * @param int $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
         ?ClientInterface $client = null,
-        ?Configuration $config = null,
-        ?HeaderSelector $selector = null,
-        int $hostIndex = 0
-    ) {
+        ?Configuration   $config = null,
+        ?HeaderSelector  $selector = null,
+        int              $hostIndex = 0
+    )
+    {
         $this->client = $client ?: new Client();
         $this->config = $config ?: Configuration::getDefaultConfiguration();
         $this->headerSelector = $selector ?: new HeaderSelector();
-        $this->hostIndex = $hostIndex;
-    }
-
-    /**
-     * Set the host index
-     *
-     * @param int $hostIndex Host index (required)
-     */
-    public function setHostIndex($hostIndex): void
-    {
         $this->hostIndex = $hostIndex;
     }
 
@@ -128,6 +115,16 @@ class AuthApi
     public function getHostIndex()
     {
         return $this->hostIndex;
+    }
+
+    /**
+     * Set the host index
+     *
+     * @param int $hostIndex Host index (required)
+     */
+    public function setHostIndex($hostIndex): void
+    {
+        $this->hostIndex = $hostIndex;
     }
 
     /**
@@ -143,12 +140,12 @@ class AuthApi
      *
      * Delete API Key
      *
-     * @param  string $key key (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
+     * @param string $key key (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return void
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function deleteApiKey($key, string $contentType = self::contentTypes['deleteApiKey'][0])
     {
@@ -160,12 +157,12 @@ class AuthApi
      *
      * Delete API Key
      *
-     * @param  string $key key (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
+     * @param string $key key (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function deleteApiKeyWithHttpInfo($key, string $contentType = self::contentTypes['deleteApiKey'][0])
     {
@@ -178,14 +175,14 @@ class AuthApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -206,10 +203,119 @@ class AuthApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
+    }
+
+    /**
+     * Create request for operation 'deleteApiKey'
+     *
+     * @param string $key key (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
+     */
+    public function deleteApiKeyRequest($key, string $contentType = self::contentTypes['deleteApiKey'][0])
+    {
+
+        // verify the required parameter 'key' is set
+        if ($key === null || (is_array($key) && count($key) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $key when calling deleteApiKey'
+            );
+        }
+
+        $resourcePath = '/auth/apiKey/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($key !== null) {
+            $resourcePath = str_replace(
+                '{' . 'key' . '}',
+                ObjectSerializer::toPathValue($key),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json;charset=UTF-8',],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Create http client option
+     *
+     * @return array of http client options
+     * @throws \RuntimeException on file opening failure
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
     }
 
     /**
@@ -217,11 +323,11 @@ class AuthApi
      *
      * Delete API Key
      *
-     * @param  string $key key (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
+     * @param string $key key (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function deleteApiKeyAsync($key, string $contentType = self::contentTypes['deleteApiKey'][0])
     {
@@ -238,11 +344,11 @@ class AuthApi
      *
      * Delete API Key
      *
-     * @param  string $key key (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
+     * @param string $key key (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function deleteApiKeyAsyncWithHttpInfo($key, string $contentType = self::contentTypes['deleteApiKey'][0])
     {
@@ -266,53 +372,103 @@ class AuthApi
                         ),
                         $statusCode,
                         $response->getHeaders(),
-                        (string) $response->getBody()
+                        (string)$response->getBody()
                     );
                 }
             );
     }
 
     /**
-     * Create request for operation 'deleteApiKey'
+     * Operation deleteToken
      *
-     * @param  string $key key (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteApiKey'] to see the possible values for this operation
+     * Delete Token
      *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
+     *
+     * @return void
      * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
-    public function deleteApiKeyRequest($key, string $contentType = self::contentTypes['deleteApiKey'][0])
+    public function deleteToken(string $contentType = self::contentTypes['deleteToken'][0])
     {
+        $this->deleteTokenWithHttpInfo($contentType);
+    }
 
-        // verify the required parameter 'key' is set
-        if ($key === null || (is_array($key) && count($key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $key when calling deleteApiKey'
-            );
+    /**
+     * Operation deleteTokenWithHttpInfo
+     *
+     * Delete Token
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
+     *
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     */
+    public function deleteTokenWithHttpInfo(string $contentType = self::contentTypes['deleteToken'][0])
+    {
+        $request = $this->deleteTokenRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+
+
+            throw $e;
         }
+    }
 
-
-        $resourcePath = '/auth/apiKey/{key}';
+    /**
+     * Create request for operation 'deleteToken'
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
+     */
+    public function deleteTokenRequest(string $contentType = self::contentTypes['deleteToken'][0])
+    {
+        $resourcePath = '/auth/token';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-
-
-        // path params
-        if ($key !== null) {
-            $resourcePath = str_replace(
-                '{' . 'key' . '}',
-                ObjectSerializer::toPathValue($key),
-                $resourcePath
-            );
-        }
-
-
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -365,86 +521,14 @@ class AuthApi
     }
 
     /**
-     * Operation deleteToken
-     *
-     * Delete Token
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
-     *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteToken(string $contentType = self::contentTypes['deleteToken'][0])
-    {
-        $this->deleteTokenWithHttpInfo($contentType);
-    }
-
-    /**
-     * Operation deleteTokenWithHttpInfo
-     *
-     * Delete Token
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
-     *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteTokenWithHttpInfo(string $contentType = self::contentTypes['deleteToken'][0])
-    {
-        $request = $this->deleteTokenRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-            }
-        
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation deleteTokenAsync
      *
      * Delete Token
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function deleteTokenAsync(string $contentType = self::contentTypes['deleteToken'][0])
     {
@@ -461,10 +545,10 @@ class AuthApi
      *
      * Delete Token
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function deleteTokenAsyncWithHttpInfo(string $contentType = self::contentTypes['deleteToken'][0])
     {
@@ -488,86 +572,10 @@ class AuthApi
                         ),
                         $statusCode,
                         $response->getHeaders(),
-                        (string) $response->getBody()
+                        (string)$response->getBody()
                     );
                 }
             );
-    }
-
-    /**
-     * Create request for operation 'deleteToken'
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteToken'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function deleteTokenRequest(string $contentType = self::contentTypes['deleteToken'][0])
-    {
-
-
-        $resourcePath = '/auth/token';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'DELETE',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
     }
 
     /**
@@ -575,13 +583,13 @@ class AuthApi
      *
      * Generate Access Token
      *
-     * @param  string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
+     * @param string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function generateAccessToken($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
     {
@@ -594,13 +602,13 @@ class AuthApi
      *
      * Generate Access Token
      *
-     * @param  string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
+     * @param string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function generateAccessTokenWithHttpInfo($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
     {
@@ -613,14 +621,14 @@ class AuthApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -629,7 +637,7 @@ class AuthApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
                         '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse',
@@ -650,18 +658,17 @@ class AuthApi
                     );
             }
 
-            
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
                     sprintf(
                         '[%d] Error connecting to the API (%s)',
                         $statusCode,
-                        (string) $request->getUri()
+                        (string)$request->getUri()
                     ),
                     $statusCode,
                     $response->getHeaders(),
-                    (string) $response->getBody()
+                    (string)$response->getBody()
                 );
             }
 
@@ -697,101 +704,24 @@ class AuthApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation generateAccessTokenAsync
-     *
-     * Generate Access Token
-     *
-     * @param  string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function generateAccessTokenAsync($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
-    {
-        return $this->generateAccessTokenAsyncWithHttpInfo($client_id, $secret, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation generateAccessTokenAsyncWithHttpInfo
-     *
-     * Generate Access Token
-     *
-     * @param  string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function generateAccessTokenAsyncWithHttpInfo($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
-    {
-        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse';
-        $request = $this->generateAccessTokenRequest($client_id, $secret, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'generateAccessToken'
      *
-     * @param  string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
+     * @param string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     public function generateAccessTokenRequest($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
     {
-
-
 
 
         $resourcePath = '/auth/token';
@@ -802,13 +732,11 @@ class AuthApi
         $multipart = false;
 
 
-
-
         // form params
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'client_id' => $client_id,
+            'clientId' => $client_id,
             'secret' => $secret,
         ]);
 
@@ -816,7 +744,7 @@ class AuthApi
         $multipart = $formDataProcessor->has_file;
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -868,17 +796,126 @@ class AuthApi
         );
     }
 
+    private function handleResponseWithDataType(
+        string            $dataType,
+        RequestInterface  $request,
+        ResponseInterface $response
+    ): array
+    {
+        if ($dataType === '\SplFileObject') {
+            $content = $response->getBody(); //stream goes to serializer
+        } else {
+            $content = (string)$response->getBody();
+            if ($dataType !== 'string') {
+                try {
+                    $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                } catch (\JsonException $exception) {
+                    throw new ApiException(
+                        sprintf(
+                            'Error JSON decoding server response (%s)',
+                            $request->getUri()
+                        ),
+                        $response->getStatusCode(),
+                        $response->getHeaders(),
+                        $content
+                    );
+                }
+            }
+        }
+
+        return [
+            ObjectSerializer::deserialize($content, $dataType, []),
+            $response->getStatusCode(),
+            $response->getHeaders()
+        ];
+    }
+
+    /**
+     * Operation generateAccessTokenAsync
+     *
+     * Generate Access Token
+     *
+     * @param string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     */
+    public function generateAccessTokenAsync($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
+    {
+        return $this->generateAccessTokenAsyncWithHttpInfo($client_id, $secret, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation generateAccessTokenAsyncWithHttpInfo
+     *
+     * Generate Access Token
+     *
+     * @param string|null $client_id clientId issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string|null $secret secret issued by Yodlee is used to generate the OAuth token for authentication. (optional)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateAccessToken'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     */
+    public function generateAccessTokenAsyncWithHttpInfo($client_id = null, $secret = null, string $contentType = self::contentTypes['generateAccessToken'][0])
+    {
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ClientCredentialTokenResponse';
+        $request = $this->generateAccessTokenRequest($client_id, $secret, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string)$response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string)$response->getBody()
+                    );
+                }
+            );
+    }
+
     /**
      * Operation generateApiKey
      *
      * Generate API Key
      *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function generateApiKey($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
@@ -891,12 +928,12 @@ class AuthApi
      *
      * Generate API Key
      *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
      * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse|\RewardsWise\Yodlee\OpenAPI\Client\Model\YodleeError, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function generateApiKeyWithHttpInfo($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
@@ -909,14 +946,14 @@ class AuthApi
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
                 );
             } catch (ConnectException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
+                    (int)$e->getCode(),
                     null,
                     null
                 );
@@ -925,7 +962,7 @@ class AuthApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
                         '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
@@ -940,18 +977,17 @@ class AuthApi
                     );
             }
 
-            
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
                     sprintf(
                         '[%d] Error connecting to the API (%s)',
                         $statusCode,
-                        (string) $request->getUri()
+                        (string)$request->getUri()
                     ),
                     $statusCode,
                     $response->getHeaders(),
-                    (string) $response->getBody()
+                    (string)$response->getBody()
                 );
             }
 
@@ -979,93 +1015,20 @@ class AuthApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
     }
 
     /**
-     * Operation generateApiKeyAsync
-     *
-     * Generate API Key
-     *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function generateApiKeyAsync($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
-    {
-        return $this->generateApiKeyAsyncWithHttpInfo($api_key_request, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation generateApiKeyAsyncWithHttpInfo
-     *
-     * Generate API Key
-     *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function generateApiKeyAsyncWithHttpInfo($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
-    {
-        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse';
-        $request = $this->generateApiKeyRequest($api_key_request, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'generateApiKey'
      *
-     * @param  \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     public function generateApiKeyRequest($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
@@ -1086,11 +1049,8 @@ class AuthApi
         $multipart = false;
 
 
-
-
-
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -1150,119 +1110,19 @@ class AuthApi
     }
 
     /**
-     * Operation getApiKeys
+     * Operation generateApiKeyAsync
      *
-     * Get API Keys
+     * Generate API Key
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse
-     */
-    public function getApiKeys(string $contentType = self::contentTypes['getApiKeys'][0])
-    {
-        list($response) = $this->getApiKeysWithHttpInfo($contentType);
-        return $response;
-    }
-
-    /**
-     * Operation getApiKeysWithHttpInfo
-     *
-     * Get API Keys
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
-     *
-     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getApiKeysWithHttpInfo(string $contentType = self::contentTypes['getApiKeys'][0])
-    {
-        $request = $this->getApiKeysRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    return $this->handleResponseWithDataType(
-                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
-                $request,
-                $response,
-            );
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-            }
-        
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getApiKeysAsync
-     *
-     * Get API Keys
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
-    public function getApiKeysAsync(string $contentType = self::contentTypes['getApiKeys'][0])
+    public function generateApiKeyAsync($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
-        return $this->getApiKeysAsyncWithHttpInfo($contentType)
+        return $this->generateApiKeyAsyncWithHttpInfo($api_key_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1271,19 +1131,20 @@ class AuthApi
     }
 
     /**
-     * Operation getApiKeysAsyncWithHttpInfo
+     * Operation generateApiKeyAsyncWithHttpInfo
      *
-     * Get API Keys
+     * Generate API Key
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     * @param \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyRequest $api_key_request apiKeyRequest (required)
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['generateApiKey'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
-    public function getApiKeysAsyncWithHttpInfo(string $contentType = self::contentTypes['getApiKeys'][0])
+    public function generateApiKeyAsyncWithHttpInfo($api_key_request, string $contentType = self::contentTypes['generateApiKey'][0])
     {
         $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse';
-        $request = $this->getApiKeysRequest($contentType);
+        $request = $this->generateApiKeyRequest($api_key_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1292,7 +1153,7 @@ class AuthApi
                     if ($returnType === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
-                        $content = (string) $response->getBody();
+                        $content = (string)$response->getBody();
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1315,19 +1176,119 @@ class AuthApi
                         ),
                         $statusCode,
                         $response->getHeaders(),
-                        (string) $response->getBody()
+                        (string)$response->getBody()
                     );
                 }
             );
     }
 
     /**
+     * Operation getApiKeys
+     *
+     * Get API Keys
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     *
+     * @return \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     */
+    public function getApiKeys(string $contentType = self::contentTypes['getApiKeys'][0])
+    {
+        list($response) = $this->getApiKeysWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getApiKeysWithHttpInfo
+     *
+     * Get API Keys
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     *
+     * @return array of \RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \RewardsWise\Yodlee\OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     */
+    public function getApiKeysWithHttpInfo(string $contentType = self::contentTypes['getApiKeys'][0])
+    {
+        $request = $this->getApiKeysRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string)$e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int)$e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch ($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
+                        $request,
+                        $response,
+                    );
+            }
+
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string)$request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string)$response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+
+
+            throw $e;
+        }
+    }
+
+    /**
      * Create request for operation 'getApiKeys'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     public function getApiKeysRequest(string $contentType = self::contentTypes['getApiKeys'][0])
     {
@@ -1341,11 +1302,8 @@ class AuthApi
         $multipart = false;
 
 
-
-
-
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json;charset=UTF-8', ],
+            ['application/json;charset=UTF-8',],
             $contentType,
             $multipart
         );
@@ -1398,63 +1356,83 @@ class AuthApi
     }
 
     /**
-     * Create http client option
+     * Operation getApiKeysAsync
      *
-     * @throws \RuntimeException on file opening failure
-     * @return array of http client options
+     * Get API Keys
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
-    protected function createHttpClientOption()
+    public function getApiKeysAsync(string $contentType = self::contentTypes['getApiKeys'][0])
     {
-        $options = [];
-        if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
-            if (!$options[RequestOptions::DEBUG]) {
-                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
-            }
-        }
-
-        return $options;
+        return $this->getApiKeysAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
     }
 
-    private function handleResponseWithDataType(
-        string $dataType,
-        RequestInterface $request,
-        ResponseInterface $response
-    ): array {
-        if ($dataType === '\SplFileObject') {
-            $content = $response->getBody(); //stream goes to serializer
-        } else {
-            $content = (string) $response->getBody();
-            if ($dataType !== 'string') {
-                try {
-                    $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                } catch (\JsonException $exception) {
+    /**
+     * Operation getApiKeysAsyncWithHttpInfo
+     *
+     * Get API Keys
+     *
+     * @param string $contentType The value for the Content-Type header. Check self::contentTypes['getApiKeys'] to see the possible values for this operation
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
+     */
+    public function getApiKeysAsyncWithHttpInfo(string $contentType = self::contentTypes['getApiKeys'][0])
+    {
+        $returnType = '\RewardsWise\Yodlee\OpenAPI\Client\Model\ApiKeyResponse';
+        $request = $this->getApiKeysRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string)$response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
                     throw new ApiException(
                         sprintf(
-                            'Error JSON decoding server response (%s)',
-                            $request->getUri()
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
                         ),
-                        $response->getStatusCode(),
+                        $statusCode,
                         $response->getHeaders(),
-                        $content
+                        (string)$response->getBody()
                     );
                 }
-            }
-        }
-
-        return [
-            ObjectSerializer::deserialize($content, $dataType, []),
-            $response->getStatusCode(),
-            $response->getHeaders()
-        ];
+            );
     }
 
     private function responseWithinRangeCode(
         string $rangeCode,
-        int $statusCode
-    ): bool {
-        $left = (int) ($rangeCode[0].'00');
-        $right = (int) ($rangeCode[0].'99');
+        int    $statusCode
+    ): bool
+    {
+        $left = (int)($rangeCode[0] . '00');
+        $right = (int)($rangeCode[0] . '99');
 
         return $statusCode >= $left && $statusCode <= $right;
     }
